@@ -378,11 +378,22 @@ input:checked + .slider:before { transform: translateX(20px); }
 /* === POPRAWKI MOBILNE === */
 @media (max-width: 767px) {
     .logo {
-        font-size: 1.2rem;
+        font-size: 1.1rem; /* Zmniejszenie czcionki logo */
+        flex-shrink: 1; /* Pozwala logo się zwęzić, jeśli brakuje miejsca */
     }
     .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 0.75rem; /* Zmniejszenie paddingu kontenera */
+        padding-right: 0.75rem;
+    }
+    .header-controls {
+        gap: 0.5rem; /* Zmniejszenie odstępu między przełącznikiem języka a hamburgerem */
+    }
+    .language-switcher {
+        gap: 0.4rem; /* Zmniejszenie odstępów między flagami */
+    }
+    .language-switcher img {
+        width: 24px; /* Zmniejszenie flag */
+        height: auto;
     }
     section {
         padding-top: 4rem;
