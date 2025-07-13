@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amber & Azure Residences | Luksusowe Apartamenty w Sea & Forest</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="#hero" class="logo" data-key="logo">Amber & Azure <span class="logo-accent">Residences</span></a>
+            <div class="header-controls">
+                <div class="language-switcher">
+                    <img src="https://flagcdn.com/w40/pl.png" alt="Język Polski" data-lang="pl">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="English Language" data-lang="en">
+                    <img src="https://flagcdn.com/w40/de.png" alt="Deutsche Sprache" data-lang="de">
+                </div>
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-links" id="nav-links">
+        <a href="#filozofia" data-key="navPhilosophy">Filozofia</a>
+        <a href="#apartamenty" data-key="navApartments">Apartamenty</a>
+        <a href="#udogodnienia" data-key="navAmenities">Udogodnienia</a>
+        <a href="#atrakcje" data-key="navAttractions">Atrakcje</a>
+        <a href="#kontakt" data-key="navContact">Kontakt</a>
+    </nav>
+
+    <main>
+        <section id="hero">
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="apartament.mp4" type="video/mp4">
+                <span data-key="videoError">Twoja przeglądarka nie obsługuje wideo w tle.</span>
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 data-key="heroTitle">Amber & Azure Residences</h1>
+                <p data-key="heroSubtitle">Twoja Przystań, Gdzie Las Całuje Morze</p>
+                <a href="#apartamenty" class="hero-cta" data-key="heroCta">Poznaj Nasze Apartamenty</a>
+            </div>
+        </section>
+
+        <section id="filozofia">
+             <div class="container">
+                <div class="intro-box">
+                    <h2 data-key="philosophyTitle">Prawdziwy luksus to czas i przestrzeň.</h2>
+                    <p class="section-subtitle" data-key="philosophySubtitle">W Amber & Azure Residences wierzymy, że autentyczny odpoczynek rodzi się z harmonii z naturą. Dlatego stworzyliśmy dwa wyjątkowe apartamenty w sercu kompleksu Sea & Forest, które pozwalają zwolnić, odetchnąć i na nowo połączyć się ze sobą i z otoczeniem.</p>
+                    <p data-key="introText">Jako nasi Goście, otrzymujecie klucze nie tylko do luksusowego wnętrza, ale także do bogactwa udogodnień całego resortu, wkomponowanego w malowniczą otulinę Wolińskiego Parku Narodowego. To zaproszenie do doświadczania, odczuwania i czerpania z natury pełnymi garściami.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="apartamenty">
+            <div class="container">
+                <h2 data-key="apartmentsMainTitle">Twoje Prywatne Apartamenty</h2>
+                <p class="section-subtitle" data-key="apartmentsMainSubtitle">Każdy z naszych apartamentów to unikalna historia opowiedziana przez design, komfort i bliskość natury. Wybierz swoją idealną przestrzeň do relaksu.</p>
+                
+                <article class="suite-showcase" id="amber-suite">
+                    <header class="suite-header">
+                        <h3 class="suite-title" data-key="amberTitle">Apartament Amber Suite</h3>
+                    </header>
+                    <p class="suite-main-description" data-key="amberDesc">Wejdź do świata ciepła i elegancji. Apartament Amber Suite o powierzchni 37 m² został zaprojektowany z myślą o Gościach ceniących sobie przytulny luksus. Jego wystrój sprzyja relaksowi i tworzy atmosferę domowego ciepła.</p>
+                    <div class="suite-body">
+                        <div class="gallery-container">
+                            <div class="gallery-main-image">
+                                <img src="https://picsum.photos/seed/amber1/800/600" alt="Amber Suite" id="amber-main-img">
+                            </div>
+                            <div class="thumbnail-scroll-wrapper">
+                                <button class="scroll-arrow left" id="amber-scroll-left">&lt;</button>
+                                <div class="thumbnail-scroll-container" id="amber-thumbnails">
+                                    <img src="https://picsum.photos/seed/amber1/150/100" data-image="https://picsum.photos/seed/amber1/800/600" class="thumbnail-item active-thumb" alt="Amber Suite - Widok 1">
+                                    <img src="https://picsum.photos/seed/amber2/150/100" data-image="https://picsum.photos/seed/amber2/800/600" class="thumbnail-item" alt="Amber Suite - Widok 2">
+                                    <img src="https://picsum.photos/seed/amber3/150/100" data-image="https://picsum.photos/seed/amber3/800/600" class="thumbnail-item" alt="Amber Suite - Widok 3">
+                                    <img src="https://picsum.photos/seed/amber4/150/100" data-image="https://picsum.photos/seed/amber4/800/600" class="thumbnail-item" alt="Amber Suite - Widok 4">
+                                    <img src="https://picsum.photos/seed/amber5/150/100" data-image="https://picsum.photos/seed/amber5/800/600" class="thumbnail-item" alt="Amber Suite - Widok 5">
+                                    <img src="https://picsum.photos/seed/amber6/150/100" data-image="https://picsum.photos/seed/amber6/800/600" class="thumbnail-item" alt="Amber Suite - Widok 6">
+                                </div>
+                                <button class="scroll-arrow right" id="amber-scroll-right">&gt;</button>
+                            </div>
+                        </div>
+                        <div class="suite-content">
+                            <ul class="suite-details-list">
+                                <li data-key="amberDetail1"><b>Salon:</b> Wygodna, rozkładana sofa, nowoczesny TV i duża ława dopełniają strefę wypoczynku.</li>
+                                <li data-key="amberDetail2"><b>Aneks Kuchenny:</b> W pełni wyposażony, z elegancką wyspą i hokerami, idealny do wspólnych śniadań.</li>
+                                <li data-key="amberDetail3"><b>Sypialnia:</b> Intymna oaza z podwójnym łóżkiem (160x200 cm) i osobnym telewizorem.</li>
+                                <li data-key="amberDetail4"><b>Taras:</b> Ogromny, 15-metrowy, umeblowany taras z kojącym widokiem na Wolińskiego Park Narodowy.</li>
+                                <li data-key="amberDetail5"><b>Klimatyzacja:</b> Pełen komfort termiczny w obu pomieszczeniach.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="suite-showcase" id="azure-suite">
+                    <header class="suite-header">
+                        <h3 class="suite-title" data-key="azureTitle">Apartament Azure Suite</h3>
+                    </header>
+                    <p class="suite-main-description" data-key="azureDesc">Propozycja dla tych, którzy cenią sobie klasyczną elegancję połączoną z nowoczesną funkcjonalnością. Apartament Azure o powierzchni 37 m² to przestrzeň, która otula i pozwala w pełni cieszyć się każdą chwilą pobytu.</p>
+                     <div class="suite-body">
+                        <div class="gallery-container">
+                            <div class="gallery-main-image">
+                                <img src="https://picsum.photos/seed/azure1/800/600" alt="Azure Suite" id="azure-main-img">
+                            </div>
+                            <div class="thumbnail-scroll-wrapper">
+                                <button class="scroll-arrow left" id="azure-scroll-left">&lt;</button>
+                                <div class="thumbnail-scroll-container" id="azure-thumbnails">
+                                    <img src="https://picsum.photos/seed/azure1/150/100" data-image="https://picsum.photos/seed/azure1/800/600" class="thumbnail-item active-thumb" alt="Azure Suite - Widok 1">
+                                    <img src="https://picsum.photos/seed/azure2/150/100" data-image="https://picsum.photos/seed/azure2/800/600" class="thumbnail-item" alt="Azure Suite - Widok 2">
+                                    <img src="https://picsum.photos/seed/azure3/150/100" data-image="https://picsum.photos/seed/azure3/800/600" class="thumbnail-item" alt="Azure Suite - Widok 3">
+                                    <img src="https://picsum.photos/seed/azure4/150/100" data-image="https://picsum.photos/seed/azure4/800/600" class="thumbnail-item" alt="Azure Suite - Widok 4">
+                                    <img src="https://picsum.photos/seed/azure5/150/100" data-image="https://picsum.photos/seed/azure5/800/600" class="thumbnail-item" alt="Azure Suite - Widok 5">
+                                    <img src="https://picsum.photos/seed/azure6/150/100" data-image="https://picsum.photos/seed/azure6/800/600" class="thumbnail-item" alt="Azure Suite - Widok 6">
+                                </div>
+                                <button class="scroll-arrow right" id="azure-scroll-right">&gt;</button>
+                            </div>
+                        </div>
+                        <div class="suite-content">
+                            <ul class="suite-details-list">
+                                <li data-key="azureDetail1"><b>Salon:</b> Przestronny i jasny, z komfortową sofą, eleganckim stolikiem kawowym i nowoczesnym TV.</li>
+                                <li data-key="azureDetail2"><b>Aneks Kuchenny:</b> Pełna swoboda i niezależność dzięki nowoczesnej płycie, zmywarce i kompletnemu wyposażeniu.</li>
+                                <li data-key="azureDetail3"><b>Część jadalniana:</b> Piękny, okrągły stół z krzesłami tworzy przytulny kącik do wspólnych posiłków.</li>
+                                <li data-key="azureDetail4"><b>Sypialnia:</b> Luksusowe, podwójne łóżko (160x200 cm) i osobny telewizor dla pełnego relaksu.</li>
+                                <li data-key="azureDetail5"><b>Taras:</b> Imponujący, 15-metrowy taras z widokiem na las, dostępny z obu pokoi.</li>
+                                <li data-key="azureDetail6"><b>Klimatyzacja:</b> Indywidualnie sterowana dla idealnej temperatury o każdej porze roku.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="udogodnienia">
+            <div class="container">
+                <h2 data-key="amenitiesComplexTitle">Udogodnienia Kompleksu Sea & Forest</h2>
+                <p class="section-subtitle" data-key="amenitiesComplexSubtitle">Jako Goście Amber & Azure Residences macie Paňstwo nieograniczony dostęp do wszystkich atrakcji i udogodnieň resortu.</p>
+                <div class="amenities-grid cols-2">
+                    <div class="amenity-item">
+                        <h3 data-key="wellnessPoolsTitle">Dwa Baseny i Jacuzzi</h3>
+                        <p data-key="wellnessPoolsDesc">Do Paňstwa dyspozycji oddajemy całoroczny, podgrzewany basen zewnętrzny, basen wewnętrzny z brodzikiem dla dzieci oraz dwa zewnętrzne jacuzzi, idealne na relaks pod gwiazdami.</p>
+                    </div>
+                    <div class="amenity-item">
+                        <h3 data-key="wellnessSaunaTitle">Świat Saun</h3>
+                        <p data-key="wellnessSaunaDesc">Poczujcie, jak uchodzi z Was całe napięcie w saunie o delikatnym, leśnym aromacie żywicy. To prawdziwy detoks dla ciała i umysłu.</p>
+                    </div>
+                    <div class="amenity-item">
+                        <h3 data-key="wellnessSpaTitle">Strefa SPA "Shept"</h3>
+                        <p data-key="wellnessSpaDesc">Dwa kameralne gabinety, w których można doświadczyć autorskich zabiegów i masaży inspirowanych bogactwem lasu, aby zapewnić pełną regenerację.</p>
+                    </div>
+                    <div class="amenity-item">
+                        <h3 data-key="restoBarTitle">Restauracja i Bar "For Rest"</h3>
+                        <p data-key="restoBarDesc">Restauracja a'la carte serwująca dania oparte na lokalnych, sezonowych produktach oraz elegancki Lobby Café & Bar na poranną kawę lub wieczornego drinka.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="atrakcje">
+            <div class="container">
+                <h2 data-key="attractionsTitle">Odkryj Skarby Wyspy Wolin</h2>
+                <p class="section-subtitle" data-key="attractionsSubtitle">Wyjątkowa lokalizacja zapewnia nieograniczone możliwości odkrywania uroków regionu.</p>
+                <div class="amenities-grid cols-3">
+                    <div class="amenity-item">
+                        <h3 data-key="attraction1Title">Plaża na Wyciągnięcie Ręki</h3>
+                        <p data-key="attraction1Desc">Na piękną, szeroką plażę dotrzesz malowniczym spacerem przez las lub korzystając z komfortowego, cichego busika elektrycznego.</p>
+                    </div>
+                    <div class="amenity-item">
+                        <h3 data-key="attraction2Title">Woliňski Park Narodowy</h3>
+                        <p data-key="attraction2Desc">Ruszaj na szlaki prosto z apartamentu. Czekają na Ciebie klif Gosaň, Jezioro Turkusowe oraz Zagroda Pokazowa Żubrów.</p>
+                    </div>
+                    <div class="amenity-item">
+                        <h3 data-key="attraction3Title">Uroki Międzyzdrojów</h3>
+                        <p data-key="attraction3Desc">Spaceruj słynną Aleją Gwiazd, wejdź na 395-metrowe molo, odwiedź Oceanarium i Gabinet Figur Woskowych.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="info-praktyczne">
+            <div class="container">
+                 <h2 data-key="infoTitle">Informacje praktyczne</h2>
+                 <div class="info-grid">
+                    <p data-key="infoParking">Do każdego apartamentu przypisane jest miejsce parkingowe w garażu podziemnym (płatne dodatkowo 70 PLN/doba).</p>
+                    <p data-key="infoPets">Akceptujemy zwierzęta – zabierz swojego pupila na wakacje (obowiązuje dodatkowa opłata 100 PLN/doba).</p>
+                 </div>
+            </div>
+        </section>
+
+        <section id="kontakt">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="location-column">
+                        <h3 data-key="locationTitle">Nasza Lokalizacja</h3>
+                        <p data-key="locationDesc">Znajdziesz nas w kompleksie Sea & Forest, w otulinie Woliňskiego Parku Narodowego, zaledwie krótki spacer od plaży.</p>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2368.593922896571!2d14.44751401584738!3d53.9295359801048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa91a45156a091%3A0x1613b3b469657059!2sPromenada%20Gwiazd%201%2C%2072-500%20Mi%C4%99dzyzdroje%2C%20Polska!5e0!3m2!1spl!2spl!4v1689262800000!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="contact-column">
+                        <h3 data-key="contactTitle">Zarezerwuj Pobyt</h3>
+                        <p data-key="contactDesc">Wybierz Amber lub Azure Suite i zanurz się w luksusie, spokoju i naturze. Czekamy na Twój kontakt.</p>
+                         <div class="contact-card">
+                            <h4 class="card-title">Amber & Azure Residences</h4>
+                            <p class="role" data-key="contactRole">Twoja Luksusowa Przystaň w Sea & Forest</p>
+                            <div class="contact-buttons">
+                                <a href="tel:+48123456789" class="btn-call" data-key="contactBtnCall">Zadzwoň: +48 123 456 789</a>
+                                <a href="mailto:kontakt@amberandazure.pl" class="btn-email" data-key="contactBtnMail">Napisz: kontakt@amberandazure.pl</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-links">
+            <span data-key="footerRights">© 2025 Amber & Azure Residences. Wszelkie prawa zastrzeżone.</span> | 
+            <a href="#privacy-policy" class="privacy-link" data-key="footerPrivacy">Polityka Prywatności</a>
+        </div>
+    </footer>
+    
+    <div class="cookie-overlay" id="cookie-overlay"></div>
+    <div class="cookie-consent-popup" id="cookie-consent-popup">
+        <div class="cookie-content">
+            <div class="cookie-main-content" id="cookie-main">
+                <h3 data-key="cookieTitle">Cenimy Twoją prywatność</h3>
+                <p data-key="cookieText">Używamy plików cookie, aby personalizować treści, udostępniać funkcje mediów społecznościowych i analizować nasz ruch. Udostępniamy również informacje o Twoim korzystaniu z naszej witryny naszym partnerom.</p>
+                <div class="cookie-main-buttons">
+                    <button class="cookie-btn-secondary" id="cookie-reject" data-key="cookieDeny">Odrzuć</button>
+                    <button class="cookie-btn-secondary" id="cookie-customize" data-key="cookieCustomize">Dostosuj</button>
+                    <button class="cookie-btn-main" id="cookie-accept" data-key="cookieAccept">Akceptuj wszystkie</button>
+                </div>
+            </div>
+            <div class="cookie-details-content" id="cookie-details">
+                <h4 data-key="cookieDetailsTitle">Dostosuj zgodę</h4>
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <strong>Niezbędne</strong>
+                        <label class="switch"><input type="checkbox" checked disabled><span class="slider round"></span></label>
+                    </div>
+                    <p data-key="cookieNecessaryDesc">Te pliki cookie są niezbędne do prawidłowego funkcjonowania strony i nie mogą zostać wyłączone.</p>
+                </div>
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <strong>Analityczne</strong>
+                        <label class="switch"><input type="checkbox" id="cookie-analytics" checked><span class="slider round"></span></label>
+                    </div>
+                    <p data-key="cookieAnalyticsDesc">Te pliki cookie pozwalają nam analizować ruch na stronie i ulepszać jej działanie.</p>
+                </div>
+                 <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <strong>Marketingowe</strong>
+                        <label class="switch"><input type="checkbox" id="cookie-marketing" checked><span class="slider round"></span></label>
+                    </div>
+                    <p data-key="cookieMarketingDesc">Te pliki cookie pomagają nam dostarczać spersonalizowane reklamy, które mogą Cię zainteresować.</p>
+                </div>
+                <div class="cookie-details-buttons">
+                     <button class="cookie-btn-main" id="cookie-save" data-key="cookieSave">Zapisz ustawienia</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-policy-page" id="privacy-policy-page">
+        <div class="privacy-content">
+            <a href="#" class="privacy-close-btn">×</a>
+            <h2 data-key="privacyTitle">Polityka Prywatności</h2>
+            <p data-key="privacyIntro"></p>
+            <h3 data-key="privacyAdminTitle"></h3>
+            <p data-key="privacyAdminText"></p>
+            <h3 data-key="privacyDataTitle"></h3>
+            <p data-key="privacyDataText"></p>
+            <h3 data-key="privacyCookiesTitle"></h3>
+            <p data-key="privacyCookiesText"></p>
+            <h3 data-key="privacyRightsTitle"></h3>
+            <p data-key="privacyRightsText"></p>
+            <ul>
+                <li data-key="privacyRight1"></li>
+                <li data-key="privacyRight2"></li>
+                <li data-key="privacyRight3"></li>
+                <li data-key="privacyRight4"></li>
+                <li data-key="privacyRight5"></li>
+            </ul>
+            <h3 data-key="privacyChangesTitle"></h3>
+            <p data-key="privacyChangesText"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
