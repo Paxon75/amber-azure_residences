@@ -189,6 +189,7 @@ section {
     margin: 0 auto 2.5rem auto;
     color: var(--color-text-medium);
     font-size: 1.1rem;
+    text-wrap: pretty;
 }
 
 .suite-body {
