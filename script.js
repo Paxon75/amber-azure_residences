@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
             wifi: '<b>Internet:</b> Szybkie, darmowe Wi-Fi dostępne w całym apartamencie.',
             calendarTitle: 'Zaplanuj Swój Wypoczynek',
             calendarDesc: 'Poniższy kalendarz w czasie rzeczywistym odzwierciedla dostępne terminy. Zapraszamy do rezerwacji, aby zapewnić sobie niezapomniane chwile w sercu natury.',
+            ctaTitle: 'Chcesz zarezerwować pobyt?',
+            ctaDesc: 'Skontaktuj się z nami bezpośrednio: <a href="mailto:rezerwacja@seaforest.pl">rezerwacja@seaforest.pl</a> lub <a href="tel:+48914660501">+48 914 660 501</a>.',
             amenitiesComplexTitle: 'Udogodnienia Kompleksu Sea & Forest',
             amenitiesComplexSubtitle: 'Jako Goście Amber & Azure Residences macie Państwo nieograniczony dostęp do wszystkich atrakcji i udogodnień resortu.',
             wellnessPoolsTitle: 'Dwa Baseny i Jacuzzi',
@@ -128,6 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
             wifi: '<b>Internet:</b> Fast, free Wi-Fi available throughout the apartment.',
             calendarTitle: 'Plan Your Getaway',
             calendarDesc: 'The calendar below reflects real-time availability. We invite you to make a reservation to ensure unforgettable moments in the heart of nature.',
+            ctaTitle: 'Want to book your stay?',
+            ctaDesc: 'Contact us directly: <a href="mailto:rezerwacja@seaforest.pl">rezerwacja@seaforest.pl</a> or <a href="tel:+48914660501">+48 914 660 501</a>.',
             amenitiesComplexTitle: 'Sea & Forest Complex Amenities',
             amenitiesComplexSubtitle: 'As Guests of Amber & Azure Residences, you have unlimited access to all the attractions and amenities of the resort.',
             wellnessPoolsTitle: 'Two Pools and Jacuzzi',
@@ -205,6 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
             wifi: '<b>Internet:</b> Schnelles, kostenloses WLAN in der gesamten Wohnung verfügbar.',
             calendarTitle: 'Planen Sie Ihren Aufenthalt',
             calendarDesc: 'Der folgende Kalender zeigt die Verfügbarkeit in Echtzeit. Wir laden Sie ein, eine Reservierung vorzunehmen, um unvergessliche Momente im Herzen der Natur zu gewährleisten.',
+            ctaTitle: 'Möchten Sie Ihren Aufenthalt buchen?',
+            ctaDesc: 'Kontaktieren Sie uns direkt: <a href="mailto:rezerwacja@seaforest.pl">rezerwacja@seaforest.pl</a> oder <a href="tel:+48914660501">+48 914 660 501</a>.',
             amenitiesComplexTitle: 'Annehmlichkeiten des Sea & Forest Komplexes',
             amenitiesComplexSubtitle: 'Als Gäste der Amber & Azure Residences haben Sie uneingeschränkten Zugang zu allen Attraktionen und Annehmlichkeiten des Resorts.',
             wellnessPoolsTitle: 'Zwei Pools und Jacuzzi',
@@ -435,6 +441,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // === Logika Pływającego Przycisku CTA ===
+    const ctaButton = document.getElementById('cta-button');
+    const ctaBubble = document.getElementById('cta-bubble');
+    const closeBubble = document.getElementById('close-bubble');
+
+    if(ctaButton && ctaBubble && closeBubble) {
+        ctaButton.addEventListener('click', () => {
+            ctaBubble.classList.toggle('active');
+        });
+
+        closeBubble.addEventListener('click', () => {
+            ctaBubble.classList.remove('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!ctaButton.contains(e.target) && !ctaBubble.contains(e.target)) {
+                ctaBubble.classList.remove('active');
+            }
+        });
+    }
+
 
     // Inicjalizacja obu galerii
     initializeGallery('amber-suite');
