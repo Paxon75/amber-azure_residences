@@ -304,11 +304,60 @@ section {
 }
 
 .suite-content { padding-top: 0; }
-.suite-details-list { list-style: none; padding: 0; }
-.suite-details-list li { padding-left: 2rem; position: relative; margin-bottom: 1rem; }
-.suite-details-list li::before { content: '✔'; position: absolute; left: 0; font-size: 1.2rem; }
-#amber-suite .suite-details-list li::before { color: var(--color-amber); }
-#azure-suite .suite-details-list li::before { color: var(--color-azure); }
+.suite-details-list { 
+    list-style: none; 
+    padding: 0; 
+}
+.suite-details-list li { 
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+.suite-details-list li i {
+    font-size: 1.2rem;
+    margin-top: 0.25rem;
+    width: 20px;
+    text-align: center;
+}
+#amber-suite .suite-details-list li i { color: var(--color-amber); }
+#azure-suite .suite-details-list li i { color: var(--color-azure); }
+
+.suite-calendar {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+.calendar-title {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+.calendar-description {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    color: var(--color-text-medium);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.calendar-wrapper {
+    position: relative;
+    padding-bottom: 75%; /* Aspect ratio 4:3 */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+.calendar-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 
 /* --- Sekcja Info Praktyczne & Kontakt --- */
 #info-praktyczne { background-color: var(--color-white); text-align: center; }
@@ -444,5 +493,8 @@ input:checked + .slider:before { transform: translateX(20px); }
     }
     .scroll-arrow.right {
         right: 5px;
+    }
+    .calendar-wrapper {
+        padding-bottom: 100%; /* Lepszy aspect ratio dla mobile */
     }
 }
