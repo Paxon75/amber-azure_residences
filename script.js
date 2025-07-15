@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
             logo: 'Amber & Azure Residences',
             navPhilosophy: 'Filozofia',
             navApartments: 'Apartamenty',
+            navAmberCalendar: 'Kalendarz Amber',
+            navAzureCalendar: 'Kalendarz Azure',
             navAmenities: 'Udogodnienia',
             navAttractions: 'Atrakcje',
             navContact: 'Kontakt',
@@ -100,6 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
             logo: 'Amber & Azure Residences',
             navPhilosophy: 'Philosophy',
             navApartments: 'Apartments',
+            navAmberCalendar: 'Amber Calendar',
+            navAzureCalendar: 'Azure Calendar',
             navAmenities: 'Amenities',
             navAttractions: 'Attractions',
             navContact: 'Contact',
@@ -179,6 +183,8 @@ document.addEventListener('DOMContentLoaded', () => {
             logo: 'Amber & Azure Residences',
             navPhilosophy: 'Philosophie',
             navApartments: 'Apartments',
+            navAmberCalendar: 'Amber Kalender',
+            navAzureCalendar: 'Azure Kalender',
             navAmenities: 'Annehmlichkeiten',
             navAttractions: 'Attraktionen',
             navContact: 'Kontakt',
@@ -247,7 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // === Logika Menu Hamburger ===
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navMenu = document.getElementById('nav-links');
-    const navMenuLinks = navMenu.querySelectorAll('a');
 
     const toggleMenu = () => {
         const isOpen = navMenu.classList.toggle('is-open');
@@ -260,13 +265,20 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleMenu();
     });
 
-    navMenuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('is-open')) {
-                toggleMenu();
-            }
-        });
+    document.addEventListener('click', (e) => {
+        const isClickInsideMenu = navMenu.contains(e.target);
+        const isClickOnHamburger = hamburgerBtn.contains(e.target);
+        if (navMenu.classList.contains('is-open') && !isClickInsideMenu && !isClickOnHamburger) {
+            toggleMenu();
+        }
     });
+
+    navMenu.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A' && navMenu.classList.contains('is-open')) {
+            toggleMenu();
+        }
+    });
+
 
     // === Logika Przełączania Języków ===
     const languageSwitcher = document.querySelector('.language-switcher');
@@ -448,7 +460,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBubble = document.getElementById('close-bubble');
 
     if(ctaButton && ctaBubble && closeBubble) {
-        ctaButton.addEventListener('click', () => {
+        ctaButton.addEventListener('click', (e) => {
+            e.stopPropagation();
             ctaBubble.classList.toggle('active');
         });
 
