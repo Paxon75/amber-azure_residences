@@ -9,85 +9,116 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Lato', sans-serif; background-color: #f8f8f8; }
+        body { font-family: 'Lato', sans-serif; background-color: #fdfdfd; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .gallery-item { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .gallery-item:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .gallery-item:hover { transform: scale(1.03); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
         .lightbox { transition: opacity 0.3s ease; }
     </style>
 </head>
 <body class="antialiased text-gray-800">
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-6 py-4 text-center">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-5 text-center">
             <h1 class="text-3xl md:text-4xl text-[#0A2342]">Amber & Azure Residences</h1>
-            <p class="text-lg text-gray-600">Galeria Zdjęć</p>
+            <p class="text-lg text-gray-600 mt-1">Galeria Zdjęć</p>
         </div>
     </header>
     <main class="container mx-auto p-4 md:p-8">
         <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             
-                <div class="gallery-item cursor-pointer rounded-lg overflow-hidden shadow-lg">
+                <a href="https://paxon75.github.io/amber-azure_residences/w1.jpg
+https://paxon75.github.io/amber-azure_residences/w2.jpg
+https://paxon75.github.io/amber-azure_residences/w1.jpg
+https://paxon75.github.io/amber-azure_residences/w2.jpg
+https://paxon75.github.io/amber-azure_residences/w1.jpg
+https://paxon75.github.io/amber-azure_residences/w2.jpg" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
                     <img src="https://paxon75.github.io/amber-azure_residences/w1.jpg
+https://paxon75.github.io/amber-azure_residences/w2.jpg
+https://paxon75.github.io/amber-azure_residences/w1.jpg
+https://paxon75.github.io/amber-azure_residences/w2.jpg
+https://paxon75.github.io/amber-azure_residences/w1.jpg
 https://paxon75.github.io/amber-azure_residences/w2.jpg" alt="Zdjęcie 1" class="w-full h-full object-cover" data-index="0">
-                </div>
+                </a>
             
         </div>
     </main>
-    <div id="lightbox" class="lightbox fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50 hidden opacity-0">
-        <button id="close-lightbox" class="absolute top-4 right-4 text-white text-4xl leading-none hover:text-gray-300">&times;</button>
-        <button id="prev-image" class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-gray-300">‹</button>
-        <button id="next-image" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-gray-300">›</button>
-        <div class="max-w-4xl max-h-[90vh]">
-            <img id="lightbox-image" src="" alt="Powiększone zdjęcie" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl">
+    <div id="lightbox" class="lightbox fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50 hidden opacity-0">
+        <button id="close-lightbox" class="absolute top-4 right-4 text-white text-5xl leading-none hover:text-gray-300 z-10">&times;</button>
+        <button id="prev-image" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white text-5xl hover:text-gray-300">‹</button>
+        <button id="next-image" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white text-5xl hover:text-gray-300">›</button>
+        <div class="max-w-5xl max-h-[90vh] w-full h-full flex items-center justify-center">
+            <img id="lightbox-image" src="" alt="Powiększone zdjęcie" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl">
         </div>
     </div>
     <footer class="text-center py-6 mt-8 border-t">
         <p class="text-sm text-gray-500">&copy; 2024 Amber & Azure Residences</p>
     </footer>
 <script>
-    const galleryGrid = document.getElementById('gallery-grid');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const closeLightboxBtn = document.getElementById('close-lightbox');
-    const prevBtn = document.getElementById('prev-image');
-    const nextBtn = document.getElementById('next-image');
-    let currentImageIndex = 0;
-    const images = Array.from(galleryGrid.querySelectorAll('img')).map(img => img.src);
+    document.addEventListener('DOMContentLoaded', () => {
+        const galleryGrid = document.getElementById('gallery-grid');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const closeLightboxBtn = document.getElementById('close-lightbox');
+        const prevBtn = document.getElementById('prev-image');
+        const nextBtn = document.getElementById('next-image');
 
-    function openLightbox(index) {
-        currentImageIndex = parseInt(index);
-        lightboxImage.src = images[currentImageIndex];
-        lightbox.classList.remove('hidden');
-        setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
-    }
-    function closeLightbox() {
-        lightbox.classList.add('opacity-0');
-        setTimeout(() => lightbox.classList.add('hidden'), 300);
-    }
-    function showPrevImage() {
-        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        lightboxImage.src = images[currentImageIndex];
-    }
-    function showNextImage() {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        lightboxImage.src = images[currentImageIndex];
-    }
-    galleryGrid.addEventListener('click', (e) => {
-        if (e.target.tagName === 'IMG') {
-            openLightbox(e.target.dataset.index);
+        const imageElements = Array.from(galleryGrid.querySelectorAll('a'));
+        const images = imageElements.map(el => el.href);
+        let currentImageIndex = 0;
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            lightboxImage.src = images[currentImageIndex];
+            lightbox.classList.remove('hidden');
+            setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
+            updateNavButtons();
         }
-    });
-    closeLightboxBtn.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) closeLightbox();
-    });
-    prevBtn.addEventListener('click', showPrevImage);
-    nextBtn.addEventListener('click', showNextImage);
-    document.addEventListener('keydown', (e) => {
-        if (lightbox.classList.contains('hidden')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') showPrevImage();
-        if (e.key === 'ArrowRight') showNextImage();
+
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            setTimeout(() => lightbox.classList.add('hidden'), 300);
+        }
+        
+        function updateNavButtons() {
+            prevBtn.style.display = currentImageIndex === 0 ? 'none' : 'block';
+            nextBtn.style.display = currentImageIndex === images.length - 1 ? 'none' : 'block';
+        }
+
+        function showPrevImage() {
+            if (currentImageIndex > 0) {
+                openLightbox(currentImageIndex - 1);
+            }
+        }
+
+        function showNextImage() {
+            if (currentImageIndex < images.length - 1) {
+                openLightbox(currentImageIndex + 1);
+            }
+        }
+
+        imageElements.forEach((el, index) => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                openLightbox(index);
+            });
+        });
+
+        closeLightboxBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        prevBtn.addEventListener('click', showPrevImage);
+        nextBtn.addEventListener('click', showNextImage);
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') showPrevImage();
+                if (e.key === 'ArrowRight') showNextImage();
+            }
+        });
     });
 </script>
 </body>
