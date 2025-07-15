@@ -9,152 +9,325 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Lato', sans-serif; background-color: #fdfdfd; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        /* --- Konfiguracja globalna i dopasowanie do stylu strony --- */
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- Stylizacja siatki galerii --- */
         .gallery-item {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            cursor: pointer;
+            aspect-ratio: 1 / 1; /* Nowoczesny CSS dla kwadratowych proporcji */
         }
+
         .gallery-item:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.08);
         }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Nakładka z ikoną lupy */
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(10, 35, 66, 0.7), transparent);
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        /* --- Stylizacja Lightboxa --- */
         .lightbox {
             transition: opacity 0.3s ease;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        #lightbox-content {
+             transition: transform 0.3s ease, opacity 0.3s ease;
+             transform: scale(0.95);
+             opacity: 0;
+        }
+
+        #lightbox-content.loaded {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+        .lightbox-nav-btn {
+            background-color: rgba(10, 35, 66, 0.5);
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease;
+        }
+        .lightbox-nav-btn:hover {
+            background-color: rgba(10, 35, 66, 0.8);
         }
     </style>
 </head>
-<body class="antialiased text-gray-800">
+<body class="antialiased">
 
-    <header class="bg-white shadow-sm">
+    <!-- Nagłówek strony -->
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-40 border-b border-gray-200">
         <div class="container mx-auto px-6 py-5 text-center">
-            <h1 class="text-3xl md:text-4xl text-[#0A2342]">Amber & Azure Residences</h1>
-            <p class="text-lg text-gray-600 mt-1">Galeria Zdjęć</p>
+            <h1 class="text-3xl md:text-4xl text-[#0A2342] font-serif">Amber & Azure Residences</h1>
+            <p class="text-lg text-gray-600 mt-2">Galeria</p>
         </div>
     </header>
 
-    <main class="container mx-auto p-4 md:p-8">
-        <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            <!-- 
-                INSTRUKCJA:
-                Wklej tutaj linki do swoich zdjęć. Możesz dodać ich dowolną ilość.
-                Każde zdjęcie powinno być w osobnym bloku <a><img>...</a>.
-                Po prostu skopiuj poniższy blok i podmień linki.
-            -->
-
+    <!-- Główna zawartość - Siatka ze zdjęciami -->
+    <main class="container mx-auto p-4 sm:p-6 md:p-8">
+        <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            
+            <!-- INSTRUKCJA: Wklej tutaj linki do swoich zdjęć. -->
             <!-- Zdjęcie 1 -->
-            <a href="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop" alt="Elegancki salon" class="w-full h-full object-cover">
+            <a href="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop" class="gallery-item block">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800&auto=format&fit=crop" alt="Elegancki salon z wygodną kanapą">
+                <div class="overlay">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
             </a>
             <!-- Zdjęcie 2 -->
-            <a href="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2070&auto=format&fit=crop" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2070&auto=format&fit=crop" alt="Nowoczesna sypialnia" class="w-full h-full object-cover">
+            <a href="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2070&auto=format&fit=crop" class="gallery-item block">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop" alt="Nowoczesna sypialnia w stonowanych barwach">
+                <div class="overlay">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
             </a>
             <!-- Zdjęcie 3 -->
-            <a href="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=2071&auto=format&fit=crop" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=2071&auto=format&fit=crop" alt="Jasne wnętrze" class="w-full h-full object-cover">
+            <a href="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=2071&auto=format&fit=crop" class="gallery-item block">
+                <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=800&auto=format&fit=crop" alt="Jasne i przestronne wnętrze z dużymi oknami">
+                <div class="overlay">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
             </a>
             <!-- Zdjęcie 4 -->
-            <a href="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2070&auto=format&fit=crop" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2070&auto=format&fit=crop" alt="Minimalistyczna kuchnia" class="w-full h-full object-cover">
+            <a href="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2070&auto=format&fit=crop" class="gallery-item block">
+                <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=800&auto=format&fit=crop" alt="Minimalistyczna kuchnia z drewnianymi akcentami">
+                 <div class="overlay">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
             </a>
-             <!-- Zdjęcie 5 -->
-            <a href="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2070&auto=format&fit=crop" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2070&auto=format&fit=crop" alt="Minimalistyczna kuchnia" class="w-full h-full object-cover">
+            <!-- Zdjęcie 5 -->
+            <a href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" class="gallery-item block">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Zewnętrzny widok domu o zachodzie słońca">
+                 <div class="overlay">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
             </a>
-             <!-- Zdjęcie 6 -->
-            <a href="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2070&auto=format&fit=crop" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2070&auto=format&fit=crop" alt="Minimalistyczna kuchnia" class="w-full h-full object-cover">
+            <!-- Zdjęcie 6 -->
+            <a href="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1916&auto=format&fit=crop" class="gallery-item block">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800&auto=format&fit=crop" alt="Stylowy fotel w kąciku do czytania">
+                 <div class="overlay">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
             </a>
-             <!-- Zdjęcie 7 -->
-            <a href="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2070&auto=format&fit=crop" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2070&auto=format&fit=crop" alt="Minimalistyczna kuchnia" class="w-full h-full object-cover">
+            <!-- Zdjęcie 7 -->
+            <a href="https://images.unsplash.com/photo-1617806118233-18e1de247200?q=80&w=1964&auto=format&fit=crop" class="gallery-item block">
+                <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?q=80&w=800&auto=format&fit=crop" alt="Elegancka łazienka z wolnostojącą wanną">
+                 <div class="overlay">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
             </a>
-            <!-- Dodaj więcej zdjęć tutaj, kopiując powyższy blok -->
-
+            <!-- Zdjęcie 8 -->
+            <a href="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" class="gallery-item block">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop" alt="Nowoczesny dom z basenem i tarasem">
+                 <div class="overlay">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+            </a>
         </div>
     </main>
 
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50 hidden opacity-0">
-        <button id="close-lightbox" class="absolute top-4 right-4 text-white text-5xl leading-none hover:text-gray-300 z-10">&times;</button>
-        <button id="prev-image" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white text-5xl hover:text-gray-300">‹</button>
-        <button id="next-image" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white text-5xl hover:text-gray-300">›</button>
-        <div class="max-w-5xl max-h-[90vh] w-full h-full flex items-center justify-center">
-            <img id="lightbox-image" src="" alt="Powiększone zdjęcie" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl">
+    <!-- Lightbox (okno powiększonego zdjęcia) -->
+    <div id="lightbox" class="lightbox fixed inset-0 bg-black/90 flex items-center justify-center p-4 z-50 hidden opacity-0">
+        
+        <!-- Kontener dla całej zawartości lightboxa (obraz, przyciski, opisy) -->
+        <div id="lightbox-content" class="w-full h-full flex flex-col items-center justify-center relative">
+            <!-- Przycisk zamykania -->
+            <button id="close-lightbox" class="absolute top-0 right-0 m-4 text-white z-20 lightbox-nav-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <!-- Przycisk poprzedniego zdjęcia -->
+            <button id="prev-image" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white z-20 lightbox-nav-btn">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            
+            <!-- Przycisk następnego zdjęcia -->
+            <button id="next-image" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white z-20 lightbox-nav-btn">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+
+            <!-- Kontener na obrazek (dla lepszej kontroli nad animacją) -->
+            <div class="max-w-6xl max-h-[80vh] w-full h-full flex items-center justify-center relative">
+                <div id="loader" class="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin absolute z-0"></div>
+                <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl relative z-10">
+            </div>
+
+            <!-- Opis i licznik -->
+            <div class="text-center text-white mt-4 z-10">
+                <p id="lightbox-caption" class="text-lg"></p>
+                <p id="lightbox-counter" class="text-sm text-gray-400"></p>
+            </div>
         </div>
     </div>
 
-    <footer class="text-center py-6 mt-8 border-t">
+    <!-- Stopka -->
+    <footer class="text-center py-8 mt-8 border-t border-gray-200">
         <p class="text-sm text-gray-500">&copy; 2024 Amber & Azure Residences</p>
     </footer>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const galleryGrid = document.getElementById('gallery-grid');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImage = document.getElementById('lightbox-image');
-        const closeLightboxBtn = document.getElementById('close-lightbox');
-        const prevBtn = document.getElementById('prev-image');
-        const nextBtn = document.getElementById('next-image');
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Elementy DOM ---
+    const galleryGrid = document.getElementById('gallery-grid');
+    if (!galleryGrid) return;
 
-        const imageElements = Array.from(galleryGrid.querySelectorAll('a'));
-        const images = imageElements.map(el => el.href);
-        let currentImageIndex = 0;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.getElementById('lightbox-content');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    const loader = document.getElementById('loader');
+    const closeLightboxBtn = document.getElementById('close-lightbox');
+    const prevBtn = document.getElementById('prev-image');
+    const nextBtn = document.getElementById('next-image');
 
-        function openLightbox(index) {
-            currentImageIndex = index;
-            lightboxImage.src = images[currentImageIndex];
-            lightbox.classList.remove('hidden');
-            setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
-            updateNavButtons();
-        }
+    // --- Pobieranie danych o obrazach ---
+    const imageElements = Array.from(galleryGrid.querySelectorAll('a'));
+    const images = imageElements.map(el => ({
+        full: el.href,
+        alt: el.querySelector('img').alt
+    }));
+    let currentImageIndex = 0;
 
-        function closeLightbox() {
-            lightbox.classList.add('opacity-0');
-            setTimeout(() => lightbox.classList.add('hidden'), 300);
-        }
+    // --- Funkcje Lightboxa ---
+    function showImage(index) {
+        currentImageIndex = index;
+        const image_data = images[currentImageIndex];
+
+        // Pokaż loader i ukryj stary obraz (jeśli jest)
+        loader.style.display = 'block';
+        lightboxImage.style.opacity = '0';
+        lightboxCaption.textContent = '';
+        lightboxCounter.textContent = '';
         
-        function updateNavButtons() {
-            prevBtn.style.display = currentImageIndex === 0 ? 'none' : 'block';
-            nextBtn.style.display = currentImageIndex === images.length - 1 ? 'none' : 'block';
+        const img = new Image();
+        img.src = image_data.full;
+        
+        img.onload = () => {
+            loader.style.display = 'none';
+            lightboxImage.src = img.src;
+            lightboxImage.alt = image_data.alt;
+            lightboxImage.style.opacity = '1';
+            
+            lightboxCaption.textContent = image_data.alt;
+            lightboxCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+        };
+        
+        updateNavButtons();
+    }
+
+    function openLightbox(index) {
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+            lightbox.classList.remove('opacity-0');
+            lightboxContent.classList.add('loaded');
+        }, 10);
+        showImage(index);
+    }
+
+    function closeLightbox() {
+        document.body.style.overflow = '';
+        lightbox.classList.add('opacity-0');
+        lightboxContent.classList.remove('loaded');
+        setTimeout(() => {
+            lightbox.classList.add('hidden');
+            lightboxImage.src = "";
+        }, 300);
+    }
+
+    function showPrevImage() {
+        if (currentImageIndex > 0) {
+            showImage(currentImageIndex - 1);
         }
+    }
 
-        function showPrevImage() {
-            if (currentImageIndex > 0) {
-                openLightbox(currentImageIndex - 1);
-            }
+    function showNextImage() {
+        if (currentImageIndex < images.length - 1) {
+            showImage(currentImageIndex + 1);
         }
+    }
+    
+    function updateNavButtons() {
+        prevBtn.style.visibility = currentImageIndex === 0 ? 'hidden' : 'visible';
+        nextBtn.style.visibility = currentImageIndex === images.length - 1 ? 'hidden' : 'visible';
+    }
 
-        function showNextImage() {
-            if (currentImageIndex < images.length - 1) {
-                openLightbox(currentImageIndex + 1);
-            }
-        }
-
-        imageElements.forEach((el, index) => {
-            el.addEventListener('click', (e) => {
-                e.preventDefault();
-                openLightbox(index);
-            });
-        });
-
-        closeLightboxBtn.addEventListener('click', closeLightbox);
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        });
-        prevBtn.addEventListener('click', showPrevImage);
-        nextBtn.addEventListener('click', showNextImage);
-
-        document.addEventListener('keydown', (e) => {
-            if (!lightbox.classList.contains('hidden')) {
-                if (e.key === 'Escape') closeLightbox();
-                if (e.key === 'ArrowLeft') showPrevImage();
-                if (e.key === 'ArrowRight') showNextImage();
-            }
+    // --- Event Listeners ---
+    imageElements.forEach((el, index) => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            openLightbox(index);
         });
     });
+
+    closeLightboxBtn.addEventListener('click', closeLightbox);
+    
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    prevBtn.addEventListener('click', showPrevImage);
+    nextBtn.addEventListener('click', showNextImage);
+
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('hidden')) {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showPrevImage();
+            if (e.key === 'ArrowRight') showNextImage();
+        }
+    });
+});
 </script>
 
 </body>
