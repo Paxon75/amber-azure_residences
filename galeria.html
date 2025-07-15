@@ -11,37 +11,58 @@
     <style>
         body { font-family: 'Lato', sans-serif; background-color: #fdfdfd; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .gallery-item { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .gallery-item:hover { transform: scale(1.03); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-        .lightbox { transition: opacity 0.3s ease; }
+        .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .lightbox {
+            transition: opacity 0.3s ease;
+        }
     </style>
 </head>
 <body class="antialiased text-gray-800">
+
     <header class="bg-white shadow-sm">
         <div class="container mx-auto px-6 py-5 text-center">
             <h1 class="text-3xl md:text-4xl text-[#0A2342]">Amber & Azure Residences</h1>
             <p class="text-lg text-gray-600 mt-1">Galeria Zdjęć</p>
         </div>
     </header>
+
     <main class="container mx-auto p-4 md:p-8">
         <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            
-                <a href="https://paxon75.github.io/amber-azure_residences/w1.jpg
-https://paxon75.github.io/amber-azure_residences/w2.jpg
-https://paxon75.github.io/amber-azure_residences/w1.jpg
-https://paxon75.github.io/amber-azure_residences/w2.jpg
-https://paxon75.github.io/amber-azure_residences/w1.jpg
-https://paxon75.github.io/amber-azure_residences/w2.jpg" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://paxon75.github.io/amber-azure_residences/w1.jpg
-https://paxon75.github.io/amber-azure_residences/w2.jpg
-https://paxon75.github.io/amber-azure_residences/w1.jpg
-https://paxon75.github.io/amber-azure_residences/w2.jpg
-https://paxon75.github.io/amber-azure_residences/w1.jpg
-https://paxon75.github.io/amber-azure_residences/w2.jpg" alt="Zdjęcie 1" class="w-full h-full object-cover" data-index="0">
-                </a>
-            
+            <!-- 
+                INSTRUKCJA:
+                Wklej tutaj linki do swoich zdjęć. Możesz dodać ich dowolną ilość.
+                Każde zdjęcie powinno być w osobnym bloku <a><img>...</a>.
+                Po prostu skopiuj poniższy blok i podmień linki.
+            -->
+
+            <!-- Zdjęcie 1 -->
+            <a href="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop" alt="Elegancki salon" class="w-full h-full object-cover">
+            </a>
+            <!-- Zdjęcie 2 -->
+            <a href="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2070&auto=format&fit=crop" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2070&auto=format&fit=crop" alt="Nowoczesna sypialnia" class="w-full h-full object-cover">
+            </a>
+            <!-- Zdjęcie 3 -->
+            <a href="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=2071&auto=format&fit=crop" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
+                <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=2071&auto=format&fit=crop" alt="Jasne wnętrze" class="w-full h-full object-cover">
+            </a>
+            <!-- Zdjęcie 4 -->
+            <a href="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2070&auto=format&fit=crop" class="gallery-item block rounded-lg overflow-hidden shadow-lg">
+                <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2070&auto=format&fit=crop" alt="Minimalistyczna kuchnia" class="w-full h-full object-cover">
+            </a>
+            <!-- Dodaj więcej zdjęć tutaj, kopiując powyższy blok -->
+
         </div>
     </main>
+
+    <!-- Lightbox -->
     <div id="lightbox" class="lightbox fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50 hidden opacity-0">
         <button id="close-lightbox" class="absolute top-4 right-4 text-white text-5xl leading-none hover:text-gray-300 z-10">&times;</button>
         <button id="prev-image" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white text-5xl hover:text-gray-300">‹</button>
@@ -50,9 +71,11 @@ https://paxon75.github.io/amber-azure_residences/w2.jpg" alt="Zdjęcie 1" class=
             <img id="lightbox-image" src="" alt="Powiększone zdjęcie" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl">
         </div>
     </div>
+
     <footer class="text-center py-6 mt-8 border-t">
         <p class="text-sm text-gray-500">&copy; 2024 Amber & Azure Residences</p>
     </footer>
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const galleryGrid = document.getElementById('gallery-grid');
@@ -121,5 +144,6 @@ https://paxon75.github.io/amber-azure_residences/w2.jpg" alt="Zdjęcie 1" class=
         });
     });
 </script>
+
 </body>
 </html>
