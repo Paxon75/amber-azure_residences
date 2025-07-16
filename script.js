@@ -176,8 +176,13 @@ document.addEventListener('DOMContentLoaded', () => {
             privacyDataTitle: 'What data do we collect?', privacyDataText: 'We collect data that you voluntarily provide to us during phone or email contact, such as your name, phone number, and email address, to handle your inquiry and reservation.',
             privacyCookiesTitle: 'Cookies', privacyCookiesText: 'Our website uses cookies to remember your consent to their use. These are small text files stored on your device. We only use essential cookies for the basic functionality of the service.',
             privacyRightsTitle: 'Your Rights', privacyRightsText: 'In accordance with GDPR, you have the right to:',
-            privacyRight1: 'Access your personal data.', privacyRight2: 'Rectify your data.', privacyRight3: 'Erase your data ("right to be forgotten").', privacyRight4: 'Restrict data processing.', privacyRight5: 'Object to processing.',
-            privacyChangesTitle: 'Changes to the policy', privacyChangesText: 'We reserve the right to make changes to the privacy policy. We will inform you of any changes by publishing a new version of the policy on this page.'
+            privacyRight1: 'Access your personal data.',
+            privacyRight2: 'Rectify your data.',
+            privacyRight3: 'Erase your data ("right to be forgotten").',
+            privacyRight4: 'Restrict data processing.',
+            privacyRight5: 'Object to processing.',
+            privacyChangesTitle: 'Changes to the policy',
+            privacyChangesText: 'We reserve the right to make changes to the privacy policy. We will inform you of any changes by publishing a new version of the policy on this page.'
         },
         de: {
             logo: 'Amber & Azure Residences',
