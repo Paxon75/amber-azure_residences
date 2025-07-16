@@ -439,9 +439,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // === Logika ładowania kalendarzy (Poprawka dla Safari) ===
     function loadCalendars() {
         const calendarWrappers = document.querySelectorAll('.calendar-wrapper');
-        calendarWrappers.forEach((wrapper, index) => {
-            setTimeout(() => {
-                const iframeSrc = wrapper.dataset.src;
+        
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const wrapper = entry.target;
+                        const iframeSrc = wrapper.dataset.src;
+                        if (iframeSrc && wrapper.childElementCount === 0) {
+                            const iframe = document.createElement('iframe');
+                            iframe.setAttribute('src', iframeSrc);
+                            iframe.setAttribute('style', 'border: 0');
+                            iframe.setAttribute('width', '800');
+                            iframe.setAttribute('height', '600');
+                            iframe.setAttribute('frameborder', '0');
+                            iframe.setAttribute('scrolling', 'no');
+                            wrapper.appendChild(iframe);
+                        }
+                        observer.unobserve(wrapper);
+                    }
+                });
+            });
+
+            calendarWrappers.forEach(wrapper => {
+                observer.observe(wrapper);
+            });
+        } else {
+            // Fallback dla starszych przeglądarek
+            calendarWrappers.forEach(wrapper => {
+                 const iframeSrc = wrapper.dataset.src;
                 if (iframeSrc && wrapper.childElementCount === 0) {
                     const iframe = document.createElement('iframe');
                     iframe.setAttribute('src', iframeSrc);
@@ -452,8 +478,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     iframe.setAttribute('scrolling', 'no');
                     wrapper.appendChild(iframe);
                 }
-            }, index * 100); // Dodaje małe opóźnienie dla każdego kalendarza
-        });
+            });
+        }
     }
 
     // === Logika Pływającego Przycisku CTA ===
