@@ -434,7 +434,7 @@ section {
 }
 
 /* Nowe style dla sekcji pakietu */
-#pakiet-info {
+#food, #pakiet-info {
     background-color: var(--color-light-bg);
     padding-top: 6rem;
     padding-bottom: 6rem;
