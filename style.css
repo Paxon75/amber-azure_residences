@@ -406,8 +406,18 @@ section {
     text-decoration: none;
     transition: all 0.3s ease;
     font-size: 1rem;
-    white-space: nowrap;
+    white-space: nowrap; /* Zapobiega łamaniu tekstu na przyciskach */
+    text-overflow: ellipsis; /* Dodaje elipsę, jeśli tekst jest za długi */
+    overflow: hidden; /* Ukrywa przepełniony tekst */
 }
+@media (max-width: 480px) { /* Zmniejszenie rozmiaru czcionki dla bardzo małych ekranów */
+    .contact-buttons-inline .btn-email,
+    .contact-buttons-inline .btn-call {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.5rem;
+    }
+}
+
 
 .contact-buttons-inline .btn-email {
     background-color: var(--color-azure);
