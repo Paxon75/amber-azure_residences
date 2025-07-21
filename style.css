@@ -329,7 +329,8 @@ section {
 #amber-suite .suite-details-list li i { color: var(--color-amber); }
 #azure-suite .suite-details-list li i { color: var(--color-azure); }
 
-.suite-calendar {
+/* Usunięto style dla kalendarza, ponieważ kalendarz został usunięty */
+/* .suite-calendar {
     margin-top: 4rem;
     padding-top: 2rem;
     border-top: 1px solid #ddd;
@@ -349,7 +350,7 @@ section {
 }
 .calendar-wrapper {
     position: relative;
-    padding-bottom: 75%; /* Aspect ratio 4:3 */
+    padding-bottom: 75%;
     height: 0;
     overflow: hidden;
     border-radius: var(--radius);
@@ -362,7 +363,7 @@ section {
     width: 100%;
     height: 100%;
     border: 0;
-}
+} */
 
 /* Nowa sekcja dla informacji o dostępności Amber */
 .amber-soon-available {
