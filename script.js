@@ -3,30 +3,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // === SŁOWNIK TŁUMACZEŃ ===
     const translations = {
         pl: {
+            pageTitle: 'Amber & Azure Residences | Luksusowe Apartamenty w Sea & Forest',
             logo: 'Amber & Azure Residences',
             navPhilosophy: 'Filozofia',
             navApartments: 'Apartamenty',
-            navAmberCalendar: 'Kalendarz Amber',
             navAzureCalendar: 'Kalendarz Azure',
             navAmenities: 'Udogodnienia',
             navAttractions: 'Atrakcje',
+            navPracticalInfo: 'Informacje praktyczne', // Nowy element nawigacji
             navContact: 'Kontakt',
             videoError: 'Twoja przeglądarka nie obsługuje wideo w tle.',
             heroTitle: 'Amber & Azure Residences',
             heroSubtitle: 'Twoja Przystań, Gdzie Las Całuje Morze',
-            heroCta: 'Odkryj Apartamenty',
+            heroCta: 'Poznaj Nasze Apartamenty',
             philosophyTitle: 'Prawdziwy luksus to czas i przestrzeń.',
             philosophySubtitle: 'W Amber & Azure Residences wierzymy, że autentyczny odpoczynek rodzi się z harmonii z naturą. Stworzyliśmy dwa wyjątkowe apartamenty w sercu kompleksu Sea & Forest, które pozwalają zwolnić, odetchnąć i na nowo połączyć się ze sobą i z otoczeniem.',
             introText: 'Jako nasi Goście, otrzymujecie klucze nie tylko do luksusowego wnętrza, ale także do bogactwa udogodnień całego resortu, wkomponowanego w malowniczą otulinę Wolińskiego Parku Narodowego. To zaproszenie do doświadczania, odczuwania i czerpania z natury pełnymi garściami.',
             apartmentsMainTitle: 'Twoje Prywatne Apartamenty',
             apartmentsMainSubtitle: 'Każdy z naszych apartamentów to unikalna historia opowiedziana przez design, komfort i bliskość natury. Wybierz swoją idealną przestrzeň do relaksu.',
-            amberTitle: 'Apartament Amber Suite',
-            amberDesc: 'Wejdź do świata ciepła i elegancji inspirowanej bursztynem. Apartament o powierzchni 37 m² został zaprojektowany z myślą o Gościach ceniących sobie przytulny luksus i atmosferę domowego ciepła. To idealne miejsce na relaks po dniu pełnym wrażeń, z kojącym widokiem na las Wolińskiego Parku Narodowego bezpośrednio z Twojego prywatnego, 15-metrowego tarasu.',
-            amberDetail1: '<b>Salon:</b> Wygodna, rozkładana sofa, nowoczesny TV i duża ława dopełniają strefę wypoczynku.',
-            amberDetail2: '<b>Aneks Kuchenny:</b> W pełni wyposażony, z elegancką wyspą i hokerami, idealny do wspólnych śniadań.',
-            amberDetail3: '<b>Sypialnia:</b> Intymna oaza z podwójnym łóżkiem (160x200 cm) i osobnym telewizorem.',
-            amberDetail4: '<b>Taras:</b> Ogromny, 15-metrowy, umeblowany taras z kojącym widokiem na Wolińskiego Parku Narodowego.',
-            amberDetail5: '<b>Klimatyzacja:</b> Pełen komfort termiczny w obu pomieszczeniach.',
+            
+            // Nowe tłumaczenia dla sekcji "Amber wkrótce dostępny"
+            amberSoonTitle: 'Apartament Amber Suite - Wkrótce Dostępny!',
+            amberSoonDesc: 'Z niecierpliwością oczekujemy na ponowne otwarcie Apartamentu Amber Suite, który wkrótce będzie gotowy, aby ponownie gościć Państwa w swoich progach. Ten wyjątkowy apartament, inspirowany ciepłem bursztynu, oferuje niezapomniane wrażenia z pobytu w sercu Wolińskiego Parku Narodowego. Idealny dla tych, którzy cenią sobie przytulny luksus i bliskość natury.',
+            amberSoonContact: 'Chcesz być pierwszym, który dowie się o dostępności i specjalnych ofertach? Skontaktuj się z nami już dziś, aby wyrazić swoje zainteresowanie i otrzymać powiadomienie o otwarciu rezerwacji!',
+
             azureTitle: 'Apartament Azure Suite',
             azureDesc: 'Zanurz się w klasycznej elegancji połączonej z nowoczesną funkcjonalnością. Apartament Azure o powierzchni 37 m² to przestrzeń, która otula i pozwala w pełni cieszyć się każdą chwilą pobytu. Jasne, przestronne wnętrza i starannie dobrane dodatki tworzą atmosferę spokoju, a imponujący, 15-metrowy taras z widokiem na las jest idealnym miejscem na poranną kawę i wieczorny relaks.',
             azureDetail1: '<b>Salon:</b> Przestronny i jasny, z komfortową sofą, eleganckim stolikiem kawowym i nowoczesnym TV.',
@@ -40,6 +40,27 @@ document.addEventListener('DOMContentLoaded', () => {
             calendarDesc: 'Poniższy kalendarz w czasie rzeczywistym odzwierciedla dostępne terminy. Zapraszamy do rezerwacji, aby zapewnić sobie niezapomniane chwile w sercu natury.',
             ctaTitle: 'Chcesz zarezerwować pobyt?',
             ctaDesc: 'Skontaktuj się z nami bezpośrednio:<br><a href="mailto:amberazure.residences@gmail.com">amberazure.residences@gmail.com</a><br>Darek: <a href="tel:+48602229707">+48 602 229 707</a><br>Beata: <a href="tel:+48606410041">+48 606 410 041</a>',
+            
+            // Nowe i zaktualizowane tłumaczenia dla sekcji pakietu
+            packageInfoTitle: 'Pobyt bez wyżywienia - bezkosztowa anulacja',
+            packageInfoSubtitle: 'Szczegóły pakietu, który pozwoli Ci cieszyć się swobodą i naturą.',
+            packageIncludedTitle: 'W cenie pakietu',
+            packageIncluded1: 'Noclegi w komfortowych apartamentach z w pełni wyposażonym aneksem kuchennym, umożliwiającym samodzielne przygotowywanie posiłków.',
+            packageIncluded2: 'Nieograniczony dostęp do kompleksu Wellness, Aqua & Sport (podgrzewany basen zewnętrzny, basen wewnętrzny, jacuzzi, sauny oraz siłownia).',
+            packageIncluded3: 'Dostęp do atrakcji dla dzieci (sala zabaw, plac zabaw zewnętrzny, sezonowe programy animacyjne).',
+            packageIncluded4: 'Lokalizacja w cichej, leśnej okolicy z bezpośrednim dostępem do Wolińskiego Parku Narodowego.',
+            additionalAttractionsTitle: 'Dodatkowe atrakcje (za opłatą)',
+            additionalAttractions1: 'Restauracja For Rest.',
+            additionalAttractions2: 'Lobby Cafe & Bar.',
+            additionalAttractions3: 'Wypożyczalnia rowerów.',
+            additionalAttractions4: 'SPA Shept.',
+            mealsTitle: 'Wyżywienie',
+            mealsDesc: 'Pakiet "Pobyt bez wyżywienia" nie obejmuje posiłków. Apartamenty wyposażone są w aneksy kuchenne umożliwiające samodzielne przygotowywanie posiłków.',
+            importantInfoTitle: 'Ważne informacje',
+            importantInfo1: 'Zameldowanie od godziny 16:00, wymeldowanie do godziny 11:00.',
+            importantInfo2: 'Wymagana jest przedpłata w wysokości 30% wartości rezerwacji.',
+            importantInfo3: 'Bezkosztowa anulacja możliwa do 7 dni przed przyjazdem.',
+
             amenitiesComplexTitle: 'Udogodnienia Kompleksu Sea & Forest',
             amenitiesComplexSubtitle: 'Jako Goście Amber & Azure Residences macie Państwo nieograniczony dostęp do wszystkich atrakcji i udogodnień resortu.',
             wellnessPoolsTitle: 'Dwa Baseny i Jacuzzi',
@@ -48,6 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
             wellnessSaunaDesc: 'Poczujcie, jak uchodzi z Was całe napięcie w saunie o delikatnym, leśnym aromacie żywicy. To prawdziwy detoks dla ciała i umysłu.',
             wellnessSpaTitle: 'Strefa SPA "Shept"',
             wellnessSpaDesc: 'Dwa kameralne gabinety, w których można doświadczyć autorskich zabiegów i masaży inspirowanych bogactwem lasu, aby zapewnić pełną regenerację.',
+            kidsAmenitiesTitle: 'Udogodnienia dla dzieci', // Nowe udogodnienie
+            kidsAmenitiesDesc: 'Dla najmłodszych Gości przygotowaliśmy salę zabaw, zewnętrzny plac zabaw oraz sezonowe programy animacyjne, zapewniające rozrywkę na najwyższym poziomie.', // Nowe udogodnienie
+            sportEntertainmentTitle: 'Sport i rozrywka', // Nowe udogodnienie
+            sportEntertainmentDesc: 'Kompleks oferuje siłownię, baseny, a także dostęp do terenów zielonych idealnych do aktywności na świeżym powietrzu, takich jak spacery i jogging.', // Nowe udogodnienie
             restoBarTitle: "Restauracja i Bar \"For Rest\"",
             restoBarDesc: 'Restauracja a\'la carte serwująca dania oparte na lokalnych, sezonowych produktach oraz elegancki Lobby Café & Bar na poranną kawę lub wieczornego drinka.',
             attractionsTitle: 'Odkryj Skarby Wyspy Wolin',
@@ -55,12 +80,17 @@ document.addEventListener('DOMContentLoaded', () => {
             attraction1Title: 'Plaża na Wyciągnięcie Ręki',
             attraction1Desc: 'Na piękną, szeroką plażę dotrzesz malowniczym spacerem przez las lub korzystając z komfortowego, cichego busika elektrycznego.',
             attraction2Title: 'Woliński Park Narodowy',
-            attraction2Desc: 'Ruszaj na szlaki prosto z apartamentu. Czekają na Ciebie klif Gosań, Jezioro Turkusowe oraz Zagroda Pokazowa Żubrów.',
+            attraction2Desc: 'Ruszaj na szlaki prosto z apartamentu. Czekają na Ciebie klif Gosaň, Jezioro Turkusowe oraz Zagroda Pokazowa Żubrów.',
             attraction3Title: 'Uroki Międzyzdrojów',
             attraction3Desc: 'Spaceruj słynną Aleją Gwiazd, wejdź na 395-metrowe molo, odwiedź Oceanarium i Gabinet Figur Woskowych.',
             infoTitle: 'Informacje praktyczne',
-            infoParking: 'Do każdego apartamentu przypisane jest miejsce parkingowe w garażu podziemnym (płatne dodatkowo 70 PLN/doba).',
-            infoPets: 'Akceptujemy zwierzęta – zabierz swojego pupila na wakacje (obowiązuje dodatkowa opłata 100 PLN/doba).',
+            additionallyPaidTitle: 'Dodatkowo płatne', // Nowe
+            infoParking: 'Miejsce parkingowe w garażu podziemnym (70 PLN/doba).', // Zaktualizowano
+            infoPets: 'Pobyt zwierzęcia (100 PLN/doba).', // Zaktualizowano
+            goodToKnowTitle: 'Warto wiedzieć', // Nowe
+            goodToKnowWifi: 'Szybkie, darmowe Wi-Fi dostępne w całym apartamencie.', // Nowe
+            goodToKnowBedding: 'Pościel i ręczniki wliczone w cenę.', // Nowe
+            goodToKnowCleaning: 'Sprzątanie końcowe wliczone w cenę.', // Nowe
             locationTitle: 'Nasza Lokalizacja',
             locationDesc: 'Znajdziesz nas w kompleksie Sea & Forest, w otulinie Wolińskiego Parku Narodowego, zaledwie krótki spacer od plaży.',
             contactTitle: 'Zarezerwuj Pobyt',
@@ -86,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
             privacyTitle: 'Polityka Prywatności i Plików Cookies Strony Internetowej Amber & Azure Residences',
             privacyLastUpdated: 'Data ostatniej aktualizacji: 16.07.2025 r.',
             privacyS1Title: '§1 Postanowienia Ogólne',
-            privacyS1P1: 'Niniejsza polityka prywatności (zwana dalej „Polityką”) ma charakter informacyjny i określa zasady przetwarzania danych osobowych oraz wykorzystywania plików cookies na stronie internetowej dostępnej pod adresem: https://paxon75.github.io/amber-azure_residences/ (zwanej dalej „Serwisem”).',
-            privacyS1P2: 'Dbamy o Twoją prywatność i bezpieczeństwo Twoich danych osobowych, przetwarzając je zgodnie z wymogami Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych), zwanego dalej „RODO”.',
+            privacyS1P1: 'Niniejsza polityka prywatności (zwana dalej „Polityką”) ma charakter informacyjny i określa zasady przetwarzania danych osobowych oraz wykorzystywania plików cookies na stronie internetowej dostępnej pod adresem: https://aaresidences.github.io/amberazure/ (zwanej dalej „Serwisem”).',
+            privacyS1P2: 'Dbamy o Twoją prywatność i bezpieczeństwo Twoich danych osobowych, przetwarzając je zgodnie z wymogami Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnym przepływem takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych), zwanego dalej „RODO”.',
             privacyS2Title: '§2 Administrator Danych Osobowych',
             privacyS2P1: 'Administratorem Twoich danych osobowych jest MTM Dariusz Seferyński, prowadzący działalność gospodarczą pod adresem: ul. Księcia Józefa Poniatowskiego 11, 05-230 Kobyłka (zwany dalej „Administratorem”).',
             privacyS2P2: 'We wszystkich sprawach związanych z przetwarzaniem danych osobowych oraz realizacją przysługujących Ci praw możesz kontaktować się z Administratorem:',
@@ -140,13 +170,14 @@ document.addEventListener('DOMContentLoaded', () => {
             privacyS8P3: 'Niniejsza Polityka obowiązuje od dnia 16.07.2025 r.',
         },
         en: {
+            pageTitle: 'Amber & Azure Residences | Luxury Apartments in Sea & Forest',
             logo: 'Amber & Azure Residences',
             navPhilosophy: 'Philosophy',
             navApartments: 'Apartments',
-            navAmberCalendar: 'Amber Calendar',
             navAzureCalendar: 'Azure Calendar',
             navAmenities: 'Amenities',
             navAttractions: 'Attractions',
+            navPracticalInfo: 'Practical Info', // New nav item
             navContact: 'Contact',
             videoError: 'Your browser does not support background video.',
             heroTitle: 'Amber & Azure Residences',
@@ -157,13 +188,12 @@ document.addEventListener('DOMContentLoaded', () => {
             introText: 'As our Guests, you receive keys not only to a luxurious interior but also to the wealth of amenities of the entire resort, nestled in the picturesque buffer zone of the Woliński National Park. This is an invitation to experience, feel, and draw from nature to the fullest.',
             apartmentsMainTitle: 'Your Private Apartments',
             apartmentsMainSubtitle: 'Each of our apartments tells a unique story through design, comfort, and closeness to nature. Choose your ideal space for relaxation.',
-            amberTitle: 'Amber Suite Apartment',
-            amberDesc: 'Step into a world of warmth and elegance inspired by amber. This 37 m² apartment is designed for guests who appreciate cozy luxury and a homely atmosphere. It is the perfect place to relax after a day full of impressions, with a soothing view of the Woliński National Park forest directly from your private, 15-square-meter terrace.',
-            amberDetail1: '<b>Living Room:</b> A comfortable sofa bed, modern TV, and a large coffee table complete the relaxation area.',
-            amberDetail2: '<b>Kitchenette:</b> Fully equipped, with an elegant island and bar stools, perfect for shared breakfasts.',
-            amberDetail3: '<b>Bedroom:</b> An intimate oasis with a double bed (160x200 cm) and a separate television.',
-            amberDetail4: '<b>Terrace:</b> A huge, 15-square-meter furnished terrace with a soothing view of the Woliński National Park.',
-            amberDetail5: '<b>Air Conditioning:</b> Full thermal comfort in both rooms.',
+            
+            // New translations for "Amber coming soon" section
+            amberSoonTitle: 'Amber Suite Apartment - Coming Soon!',
+            amberSoonDesc: 'We are eagerly awaiting the reopening of the Amber Suite Apartment, which will soon be ready to welcome you again. This unique apartment, inspired by the warmth of amber, offers an unforgettable stay in the heart of the Woliński National Park. Perfect for those who appreciate cozy luxury and proximity to nature.',
+            amberSoonContact: 'Want to be the first to know about availability and special offers? Contact us today to express your interest and receive a notification when bookings open!',
+
             azureTitle: 'Azure Suite Apartment',
             azureDesc: 'Immerse yourself in classic elegance combined with modern functionality. The 37 m² Azure apartment is a space that envelops and allows you to fully enjoy every moment of your stay. Bright, spacious interiors and carefully selected accessories create an atmosphere of peace, and the impressive, 15-square-meter terrace with a forest view is the perfect place for a morning coffee and evening relaxation.',
             azureDetail1: '<b>Living Room:</b> Spacious and bright, with a comfortable sofa, an elegant coffee table, and a modern TV.',
@@ -177,6 +207,27 @@ document.addEventListener('DOMContentLoaded', () => {
             calendarDesc: 'The calendar below reflects real-time availability. We invite you to make a reservation to ensure unforgettable moments in the heart of nature.',
             ctaTitle: 'Want to book your stay?',
             ctaDesc: 'Contact us directly:<br><a href="mailto:amberazure.residences@gmail.com">amberazure.residences@gmail.com</a><br>Darek: <a href="tel:+48602229707">+48 602 229 707</a><br>Beata: <a href="tel:+48606410041">+48 606 410 041</a>',
+            
+            // New and updated translations for package section
+            packageInfoTitle: 'Stay without meals - free cancellation',
+            packageInfoSubtitle: 'Package details that will allow you to enjoy freedom and nature.',
+            packageIncludedTitle: 'Included in the package',
+            packageIncluded1: 'Accommodation in comfortable apartments with a fully equipped kitchenette, allowing guests to prepare their own meals.',
+            packageIncluded2: 'Unlimited access to the Wellness, Aqua & Sport complex (heated outdoor pool, indoor pool, jacuzzi, saunas, and gym).',
+            packageIncluded3: 'Access to attractions for children (playroom, outdoor playground, seasonal animation programs).',
+            packageIncluded4: 'Location in a quiet, forest area with direct access to the Woliński National Park.',
+            additionalAttractionsTitle: 'Additional attractions (for a fee)',
+            additionalAttractions1: 'For Rest Restaurant.',
+            additionalAttractions2: 'Lobby Cafe & Bar.',
+            additionalAttractions3: 'Bicycle rental.',
+            additionalAttractions4: 'SPA Shept.',
+            mealsTitle: 'Meals',
+            mealsDesc: 'The "Stay without meals" package does not include meals. Apartments are equipped with kitchenettes allowing guests to prepare their own meals.',
+            importantInfoTitle: 'Important information',
+            importantInfo1: 'Check-in from 4:00 PM, check-out until 11:00 AM.',
+            importantInfo2: 'A prepayment of 30% of the reservation value is required.',
+            importantInfo3: 'Free cancellation possible up to 7 days before arrival.',
+
             amenitiesComplexTitle: 'Sea & Forest Complex Amenities',
             amenitiesComplexSubtitle: 'As Guests of Amber & Azure Residences, you have unlimited access to all the attractions and amenities of the resort.',
             wellnessPoolsTitle: 'Two Pools and Jacuzzi',
@@ -185,6 +236,10 @@ document.addEventListener('DOMContentLoaded', () => {
             wellnessSaunaDesc: 'Feel the tension release in the sauna with a delicate, forest aroma of resin. It is a true detox for body and mind.',
             wellnessSpaTitle: 'SPA Zone "Shept"',
             wellnessSpaDesc: 'Two intimate treatment rooms where you can experience original treatments and massages inspired by the richness of the forest to ensure full regeneration.',
+            kidsAmenitiesTitle: 'Amenities for children',
+            kidsAmenitiesDesc: 'For our youngest guests, we have prepared a playroom, an outdoor playground, and seasonal animation programs, ensuring top-level entertainment.',
+            sportEntertainmentTitle: 'Sport and entertainment',
+            sportEntertainmentDesc: 'The complex offers a gym, swimming pools, and access to green areas ideal for outdoor activities such as walking and jogging.',
             restoBarTitle: 'Restaurant and Bar "For Rest"',
             restoBarDesc: 'An a\'la carte restaurant serving dishes based on local, seasonal products, and an elegant Lobby Café & Bar for a morning coffee or an evening drink.',
             attractionsTitle: 'Discover the Treasures of Wolin Island',
@@ -196,8 +251,13 @@ document.addEventListener('DOMContentLoaded', () => {
             attraction3Title: 'Charms of Międzyzdroje',
             attraction3Desc: 'Stroll along the famous Avenue of Stars, walk the 395-meter pier, visit the Oceanarium, and the Wax Museum.',
             infoTitle: 'Practical Information',
-            infoParking: 'A parking space in the underground garage is assigned to each apartment (additional fee of 70 PLN/day).',
-            infoPets: 'We accept pets – bring your furry friend on vacation (additional fee of 100 PLN/day applies).',
+            additionallyPaidTitle: 'Additionally paid',
+            infoParking: 'Parking space in the underground garage (70 PLN/day).',
+            infoPets: 'Pet stay (100 PLN/day).',
+            goodToKnowTitle: 'Good to know',
+            goodToKnowWifi: 'Fast, free Wi-Fi available throughout the apartment.',
+            goodToKnowBedding: 'Bed linen and towels included in the price.',
+            goodToKnowCleaning: 'Final cleaning included in the price.',
             locationTitle: 'Our Location',
             locationDesc: 'You will find us in the Sea & Forest complex, in the buffer zone of the Woliński National Park, just a short walk from the beach.',
             contactTitle: 'Book Your Stay',
@@ -218,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
             privacyTitle: 'Privacy and Cookies Policy of Amber & Azure Residences Website',
             privacyLastUpdated: 'Last updated: 16.07.2025',
             privacyS1Title: '§1 General Provisions',
-            privacyS1P1: 'This privacy policy (hereinafter referred to as the "Policy") is for informational purposes and defines the rules for processing personal data and using cookies on the website available at: https://paxon75.github.io/amber-azure_residences/ (hereinafter referred to as the "Service").',
+            privacyS1P1: 'This privacy policy (hereinafter referred to as the "Policy") is for informational purposes and defines the rules for processing personal data and using cookies on the website available at: https://aaresidences.github.io/amberazure/ (hereinafter referred to as the "Service").',
             privacyS1P2: 'We care about your privacy and the security of your personal data, processing it in accordance with the requirements of Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation), hereinafter referred to as "GDPR".',
             privacyS2Title: '§2 Personal Data Administrator',
             privacyS2P1: 'The administrator of your personal data is MTM Dariusz Seferyński, conducting business activity at: ul. Księcia Józefa Poniatowskiego 11, 05-230 Kobyłka (hereinafter referred to as the "Administrator").',
@@ -254,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
             privacyS5R4: 'Right to restriction of processing (Art. 18 GDPR).',
             privacyS5R5: 'Right to data portability (Art. 20 GDPR).',
             privacyS5R6: 'Right to object to data processing (Art. 21 GDPR).',
-            privacyS5R7: 'Right to withdraw consent at any time, without affecting the lawfulness of processing based on consent before its withdrawal. This applies in particular to data processing for marketing purposes.',
+            privacyS5R7: 'Right to withdraw consent in any time, without affecting the lawfulness of processing based on consent before its withdrawal. This applies in particular to data processing for marketing purposes.',
             privacyS5R8: 'Right to lodge a complaint with the supervisory authority, i.e., the President of the Personal Data Protection Office (ul. Stawki 2, 00-193 Warszawa), if you believe that the processing of your data violates GDPR provisions.',
             privacyS5P2: 'To exercise the above rights, please contact the Administrator using the contact details provided in §2.',
             privacyS6Title: '§6 Cookies',
@@ -272,13 +332,14 @@ document.addEventListener('DOMContentLoaded', () => {
             privacyS8P3: 'This Policy is effective from 16.07.2025.',
         },
         de: {
+            pageTitle: 'Amber & Azure Residences | Luxusapartments in Sea & Forest',
             logo: 'Amber & Azure Residences',
             navPhilosophy: 'Philosophie',
             navApartments: 'Apartments',
-            navAmberCalendar: 'Amber Kalender',
             navAzureCalendar: 'Azure Kalender',
             navAmenities: 'Annehmlichkeiten',
             navAttractions: 'Attraktionen',
+            navPracticalInfo: 'Praktische Informationen', // Neuer Navigationspunkt
             navContact: 'Kontakt',
             videoError: 'Ihr Browser unterstützt keine Hintergrundvideos.',
             heroTitle: 'Amber & Azure Residences',
@@ -289,26 +350,46 @@ document.addEventListener('DOMContentLoaded', () => {
             introText: 'Als unsere Gäste erhalten Sie nicht nur die Schlüssel zu einem luxuriösen Interieur, sondern auch zum Reichtum der Annehmlichkeiten des gesamten Resorts, eingebettet in die malerische Pufferzone des Nationalparks Wolin. Dies ist eine Einladung, die Natur in vollen Zügen zu erleben, zu fühlen und zu genießen.',
             apartmentsMainTitle: 'Ihre privaten Suiten',
             apartmentsMainSubtitle: 'Jedes unserer Apartments erzählt eine einzigartige Geschichte durch Design, Komfort und Naturverbundenheit. Wählen Sie Ihren idealen Ort zur Entspannung.',
-            amberTitle: 'Amber Suite Apartment',
-            amberDesc: 'Treten Sie ein in eine Welt der Wärme und Eleganz, inspiriert von Bernstein. Dieses 37 m² große Apartment wurde für Gäste entworfen, die gemütlichen Luxus und eine heimelige Atmosphäre schätzen. Es ist der perfekte Ort, um nach einem erlebnisreichen Tag zu entspannen, mit einem beruhigenden Blick auf den Wald des Nationalparks Wolin direkt von Ihrer privaten, 15 Quadratmeter großen Terrasse.',
-            amberDetail1: '<b>Wohnzimmer:</b> Ein bequemes Schlafsofa, ein moderner Fernseher und ein großer Couchtisch vervollständigen den Entspannungsbereich.',
-            amberDetail2: '<b>Küchenzeile:</b> Voll ausgestattet, mit einer eleganten Insel und Barhockern, ideal für gemeinsame Frühstücke.',
-            amberDetail3: '<b>Schlafzimmer:</b> Eine intime Oase mit einem Doppelbett (160x200 cm) und einem separaten Fernseher.',
-            amberDetail4: '<b>Terrasse:</b> Eine riesige, 15 Quadratmeter große möblierte Terrasse mit beruhigendem Blick auf den Nationalpark Wolin.',
-            amberDetail5: '<b>Klimaanlage:</b> Voller thermischer Komfort in beiden Zimmern.',
+            
+            // Neue Übersetzungen für den Bereich "Amber bald verfügbar"
+            amberSoonTitle: 'Amber Suite Apartment - Bald verfügbar!',
+            amberSoonDesc: 'Wir freuen uns auf die Wiedereröffnung des Amber Suite Apartments, das bald wieder bereit sein wird, Sie in seinen Räumen willkommen zu heißen. Dieses einzigartige Apartment, inspiriert von der Wärme des Bernsteins, bietet ein unvergessliches Aufenthaltserlebnis im Herzen des Nationalparks Wolin. Ideal für alle, die gemütlichen Luxus und die Nähe zur Natur schätzen.',
+            amberSoonContact: 'Möchten Sie als Erster über Verfügbarkeit und Sonderangebote informiert werden? Kontaktieren Sie uns noch heute, um Ihr Interesse zu bekunden und eine Benachrichtigung zu erhalten, wenn die Buchungen geöffnet werden!',
+
             azureTitle: 'Azure Suite Apartment',
             azureDesc: 'Tauchen Sie ein in klassische Eleganz, kombiniert mit moderner Funktionalität. Das 37 m² große Azure-Apartment ist ein Raum, der Sie umhüllt und Sie jeden Moment Ihres Aufenthalts genießen lässt. Helle, geräumige Innenräume und sorgfältig ausgewählte Accessoires schaffen eine Atmosphäre der Ruhe, und die beeindruckende, 15 Quadratmeter große Terrasse mit Waldblick ist der perfekte Ort für einen Morgenkaffee und abendliche Entspannung.',
             azureDetail1: '<b>Wohnzimmer:</b> Geräumig und hell, mit einem bequemen Sofa, einem eleganten Couchtisch und einem modernen Fernseher.',
             azureDetail2: '<b>Küchenzeile:</b> Volle Freiheit und Unabhängigkeit dank eines modernen Kochfelds, eines Geschirrspülers und einer kompletten Ausstattung.',
             azureDetail3: '<b>Essbereich:</b> Ein schöner, runder Tisch mit Krzeseln schafft eine gemütliche Ecke für gemeinsame Mahlzeiten.',
             azureDetail4: '<b>Schlafzimmer:</b> Ein luxuriöses Doppelbett (160x200 cm) und ein separater Fernseher für vollkommene Entspannung.',
-            azureDetail5: '<b>Terrasse:</b> Eine beeindruckende, 15 Quadratmeter große Terrasse mit Waldblick, zugänglich von beiden Zimmern.',
+            azureDetail5: '<b>Taras:</b> Eine beeindruckende, 15 Quadratmeter große Terrasse mit Waldblick, zugänglich von beiden Zimmern.',
             azureDetail6: '<b>Klimaanlage:</b> Individuell regulierbar für die perfekte Temperatur zu jeder Jahreszeit.',
             wifi: '<b>Internet:</b> Schnelles, kostenloses WLAN in der gesamten Wohnung verfügbar.',
             calendarTitle: 'Planen Sie Ihren Aufenthalt',
             calendarDesc: 'Der folgende Kalender zeigt die Verfügbarkeit in Echtzeit. Wir laden Sie ein, eine Reservierung vorzunehmen, um unvergessliche Momente im Herzen der Natur zu gewährleisten.',
             ctaTitle: 'Möchten Sie Ihren Aufenthalt buchen?',
             ctaDesc: 'Kontaktieren Sie uns direkt:<br><a href="mailto:amberazure.residences@gmail.com">amberazure.residences@gmail.com</a><br>Darek: <a href="tel:+48602229707">+48 602 229 707</a><br>Beata: <a href="tel:+48606410041">+48 606 410 041</a>',
+            
+            // Neue und aktualisierte Übersetzungen für den Paketbereich
+            packageInfoTitle: 'Aufenthalt ohne Verpflegung - kostenlose Stornierung',
+            packageInfoSubtitle: 'Paketdetails, die Ihnen die Freiheit und Natur genießen lassen.',
+            packageIncludedTitle: 'Im Paket enthalten',
+            packageIncluded1: 'Übernachtungen in komfortablen Apartments mit voll ausgestatteter Küchenzeile, die die Selbstverpflegung ermöglichen.',
+            packageIncluded2: 'Unbegrenzter Zugang zum Wellness-, Aqua- & Sportkomplex (beheizter Außenpool, Innenpool, Whirlpool, Saunen und Fitnessraum).',
+            packageIncluded3: 'Zugang zu Attraktionen für Kinder (Spielzimmer, Außenspielplatz, saisonale Animationsprogramme).',
+            packageIncluded4: 'Lage in einer ruhigen Waldgegend mit direktem Zugang zum Nationalpark Wolin.',
+            additionalAttractionsTitle: 'Zusätzliche Attraktionen (kostenpflichtig)',
+            additionalAttractions1: 'Restaurant For Rest.',
+            additionalAttractions2: 'Lobby Café & Bar.',
+            additionalAttractions3: 'Fahrradverleih.',
+            additionalAttractions4: 'SPA Shept.',
+            mealsTitle: 'Verpflegung',
+            mealsDesc: 'Das Paket "Aufenthalt ohne Verpflegung" beinhaltet keine Mahlzeiten. Die Apartments sind mit Küchenzeilen ausgestattet, die die Selbstverpflegung ermöglichen.',
+            importantInfoTitle: 'Wichtige Informationen',
+            importantInfo1: 'Check-in ab 16:00 Uhr, Check-out bis 11:00 Uhr.',
+            importantInfo2: 'Eine Vorauszahlung in Höhe von 30% des Buchungswertes ist erforderlich.',
+            importantInfo3: 'Kostenlose Stornierung bis zu 7 Tage vor Anreise möglich.',
+
             amenitiesComplexTitle: 'Annehmlichkeiten des Sea & Forest Komplexes',
             amenitiesComplexSubtitle: 'Als Gäste der Amber & Azure Residences haben Sie uneingeschränkten Zugang zu allen Attraktionen und Annehmlichkeiten des Resorts.',
             wellnessPoolsTitle: 'Zwei Pools und Jacuzzi',
@@ -317,6 +398,10 @@ document.addEventListener('DOMContentLoaded', () => {
             wellnessSaunaDesc: 'Spüren Sie, wie die Anspannung in der Sauna mit einem zarten Waldharz-Aroma von Ihnen abfällt. Ein echtes Detox für Körper und Geist.',
             wellnessSpaTitle: 'SPA-Zone "Shept"',
             wellnessSpaDesc: 'Zwei intime Behandlungsräume, in denen Sie einzigartige, von der Natur inspirierte Behandlungen und Massagen für eine vollständige Regeneration erleben können.',
+            kidsAmenitiesTitle: 'Annehmlichkeiten für Kinder',
+            kidsAmenitiesDesc: 'Für unsere jüngsten Gäste haben wir ein Spielzimmer, einen Außenspielplatz und saisonale Animationsprogramme vorbereitet, die Unterhaltung auf höchstem Niveau garantieren.',
+            sportEntertainmentTitle: 'Sport und Unterhaltung',
+            sportEntertainmentDesc: 'Der Komplex bietet einen Fitnessraum, Schwimmbäder sowie Zugang zu Grünflächen, die sich ideal für Outdoor-Aktivitäten wie Spaziergänge und Joggen eignen.',
             restoBarTitle: 'Restaurant und Bar "For Rest"',
             restoBarDesc: 'Ein A-la-carte-Restaurant mit Gerichten, die auf lokalen, saisonalen Produkten basieren, und eine elegante Lobby Café & Bar für einen Morgenkaffee oder einen abendlichen Drink.',
             attractionsTitle: 'Entdecken Sie die Schätze der Insel Wolin',
@@ -328,8 +413,13 @@ document.addEventListener('DOMContentLoaded', () => {
             attraction3Title: 'Die Reize von Misdroy',
             attraction3Desc: 'Schlendern Sie über die berühmte Promenade der Stars, gehen Sie auf die 395 Meter lange Seebrücke, besuchen Sie das Ozeanarium und das Wachsfigurenkabinett.',
             infoTitle: 'Praktische Informationen',
-            infoParking: 'Jedem Apartment ist ein Parkplatz in der Tiefgarage zugewiesen (zusätzliche Gebühr von 70 PLN/Tag).',
-            infoPets: 'Wir akzeptieren Haustiere – nehmen Sie Ihr Haustier mit in den Urlaub (es fällt eine zusätzliche Gebühr von 100 PLN/Tag an).',
+            additionallyPaidTitle: 'Zusätzlich kostenpflichtig',
+            infoParking: 'Parkplatz in der Tiefgarage (70 PLN/Tag).',
+            infoPets: 'Aufenthalt von Haustieren (100 PLN/Tag).',
+            goodToKnowTitle: 'Gut zu wissen',
+            goodToKnowWifi: 'Schnelles, kostenloses WLAN in der gesamten Wohnung verfügbar.',
+            goodToKnowBedding: 'Bettwäsche und Handtücher im Preis inbegriffen.',
+            goodToKnowCleaning: 'Endreinigung im Preis inbegriffen.',
             locationTitle: 'Unser Standort',
             locationDesc: 'Sie finden uns im Sea & Forest-Komplex, in der Pufferzone des Nationalparks Wolin, nur einen kurzen Spaziergang vom Strand entfernt.',
             contactTitle: 'Buchen Sie Ihren Aufenthalt',
@@ -340,12 +430,17 @@ document.addEventListener('DOMContentLoaded', () => {
             contactBtnCallBeata: 'Beata: +48 606 410 041',
             footerRights: '© 2025 Amber & Azure Residences. Alle Rechte vorbehalten.',
             footerPrivacy: 'Datenschutz-Bestimmungen',
+            cookieTitle: 'We value your privacy', cookieText: 'We use cookies to personalize content, provide social media features, and analyze our traffic. We also share information about your use of our site with our partners.', cookieDeny: 'Deny', cookieCustomize: 'Customize', cookieAccept: 'Allow all',
+            cookieDetailsTitle: 'Customize consent', cookieNecessaryDesc: 'These cookies are essential for the proper functioning of the website and cannot be disabled.',
+            cookieAnalyticsDesc: 'These cookies allow us to analyze site traffic and improve its performance.',
+            cookieMarketingDesc: 'These cookies help us deliver personalized ads that may be of interest to you.',
+            cookieSave: 'Save settings',
 
             // Privacy Policy Translations
             privacyTitle: 'Datenschutz- und Cookie-Richtlinie der Amber & Azure Residences Website',
             privacyLastUpdated: 'Zuletzt aktualisiert: 16.07.2025',
             privacyS1Title: '§1 Allgemeine Bestimmungen',
-            privacyS1P1: 'Diese Datenschutzrichtlinie (im Folgenden „Richtlinie“) dient zu Informationszwecken und legt die Regeln für die Verarbeitung personenbezogener Daten und die Verwendung von Cookies auf der Website unter folgender Adresse fest: https://paxon75.github.io/amber-azure_residences/ (im Folgenden „Dienst“).',
+            privacyS1P1: 'Diese Datenschutzrichtlinie (im Folgenden „Richtlinie“) dient zu Informationszwecken und legt die Regeln für die Verarbeitung personenbezogener Daten und die Verwendung von Cookies auf der Website unter folgender Adresse fest: https://aaresidences.github.io/amberazure/ (im Folgenden „Dienst“).',
             privacyS1P2: 'Wir legen Wert auf Ihre Privatsphäre und die Sicherheit Ihrer personenbezogenen Daten und verarbeiten diese gemäß den Anforderungen der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung), im Folgenden „DSGVO“ genannt.',
             privacyS2Title: '§2 Verantwortlicher für die Datenverarbeitung',
             privacyS2P1: 'Verantwortlicher für Ihre personenbezogenen Daten ist MTM Dariusz Seferyński, der seine Geschäftstätigkeit unter der Adresse: ul. Księcia Józefa Poniatowskiego 11, 05-230 Kobyłka (im Folgenden „Verantwortlicher“) ausübt.',
@@ -383,7 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
             privacyS5R6: 'Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO).',
             privacyS5R7: 'Recht, die Einwilligung jederzeit zu widerrufen, ohne die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung zu berühren. Dies gilt insbesondere für die Datenverarbeitung zu Marketingzwecken.',
             privacyS5R8: 'Recht, Beschwerde bei einer Aufsichtsbehörde einzulegen, d.h. dem Präsidenten des Amtes für den Schutz personenbezogener Daten (ul. Stawki 2, 00-193 Warszawa), wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen die Bestimmungen der DSGVO verstößt.',
-            privacyS5P2: 'Um die oben genannten Rechte auszuüben, wenden Sie sich bitte an den Verantwortlichen unter Verwendung der in §2 angegebenen Kontaktdaten.',
+            privacyS5P2: 'Um die oben genannten Rechte auszuümen, wenden Sie sich bitte an den Verantwortlichen unter Verwendung der in §2 angegebenen Kontaktdaten.',
             privacyS6Title: '§6 Cookies',
             privacyS6P1: 'Der Dienst sammelt keine Informationen automatisch, mit Ausnahme der in Cookies enthaltenen Informationen.',
             privacyS6P2: 'Cookies (sog. „Kekse“) sind IT-Daten, insbesondere Textdateien, die auf Ihrem Endgerät (z.B. Computer, Smartphone) gespeichert werden und für die Nutzung der Websites des Dienstes bestimmt sind.',
@@ -541,6 +636,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // === NOWA LOGIKA GALERII (BEZ ZEWNĘTRZNYCH BIBLIOTEK) ===
+    // Funkcja initializeGallery jest teraz używana tylko dla Azure Suite
     function initializeGallery(suiteId) {
         const gallery = document.getElementById(suiteId);
         if (!gallery) return;
@@ -587,8 +683,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // === Logika ładowania kalendarzy (Poprawka dla Safari) ===
+    // Funkcja loadCalendars jest teraz używana tylko dla Azure Suite
     function loadCalendars() {
-        const calendarWrappers = document.querySelectorAll('.calendar-wrapper');
+        // Pobieramy tylko kalendarz Azure
+        const azureCalendarWrapper = document.getElementById('azure-calendar-wrapper');
+        const calendarWrappers = azureCalendarWrapper ? [azureCalendarWrapper] : [];
         
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver((entries, observer) => {
@@ -655,11 +754,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // Inicjalizacja obu galerii
-    initializeGallery('amber-suite');
+    // Inicjalizacja galerii tylko dla Azure
     initializeGallery('azure-suite');
 
-    // Ładowanie kalendarzy
+    // Ładowanie kalendarzy tylko dla Azure
     loadCalendars();
 
 
