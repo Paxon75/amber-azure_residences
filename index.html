@@ -36,11 +36,7 @@
         <a href="#filozofia" data-key="navPhilosophy">Filozofia</a>
         <a href="#apartamenty" data-key="navApartments">Apartamenty</a>
         <a href="#azure-calendar" data-key="navAzureCalendar">Kalendarz Azure</a>
-        <a href="#food" data-key="navFood">Wyżywienie</a>
-        <a href="#pakiet-info" data-key="navPackageInfo">Szczegóły Pakietu</a>
-        <a href="#udogodnienia" data-key="navAmenities">Udogodnienia</a>
-        <a href="#atrakcje" data-key="navAttractions">Atrakcje</a>
-        <a href="#info-praktyczne" data-key="navPracticalInfo">Informacje praktyczne</a>
+        <a href="#detailed-info-accordion" data-key="navDetailedInfo">Szczegóły & Udogodnienia</a>
         <a href="#kontakt" data-key="navContact">Kontakt</a>
     </nav>
 
@@ -135,34 +131,30 @@
             </div>
         </section>
 
-        <section id="food" class="bg-white py-16">
+        <!-- Nowa sekcja z akordeonami -->
+        <section id="detailed-info-accordion">
             <div class="container">
-                <h2 class="section-title" data-key="mealsTitle">Wyżywienie</h2>
-                <p class="section-subtitle" data-key="mealsDesc">Pakiet "Pobyt bez wyżywienia" nie obejmuje posiłków. Apartamenty wyposażone są w aneksy kuchenne umożliwiające samodzielne przygotowywanie posiłków.</p>
+                <h2 class="section-title" data-key="detailedInfoMainTitle">Szczegółowe Informacje i Udogodnienia</h2>
+                <p class="section-subtitle" data-key="detailedInfoMainSubtitle">Wszystko, co musisz wiedzieć o Twoim pobycie w Sea & Forest Resort.</p>
 
                 <div class="accordion-container">
+                    <!-- Wyżywienie Accordion Item -->
                     <div class="accordion-item">
                         <button class="accordion-header">
                             <i class="fas fa-utensils accordion-icon-title"></i>
-                            <h3 data-key="foodFeaturesTitle">Co wyróżnia naszą kuchnię:</h3>
+                            <h3 data-key="mealsTitle">Wyżywienie</h3>
                             <i class="fas fa-chevron-down accordion-icon"></i>
                         </button>
                         <div class="accordion-content">
+                            <p data-key="mealsDesc" class="accordion-text-description"></p>
+                            <h4><i class="fas fa-star"></i> <span data-key="foodFeaturesTitle">Co wyróżnia naszą kuchnię:</span></h4>
                             <ul class="info-list">
                                 <li><i class="fas fa-leaf text-green-600"></i> <span data-key="foodFeature1"><b>Zero waste na talerzu</b> – nie mamy bufetów, za to przygotowujemy pyszne zestawy, tylko tyle ile potrzeba, wykorzystujemy każdy składnik do końca.</span></li>
                                 <li><i class="fas fa-fish text-blue-600"></i> <span data-key="foodFeature2"><b>Sea & Forest to Table</b> – współpracujemy z lokalnymi rybakami i dostawcami, by podawać świeże i sezonowe produkty.</span></li>
                                 <li><i class="fas fa-sun text-yellow-600"></i> <span data-key="foodFeature3"><b>Jemy na świeżym powietrzu</b> – posiłki smakują lepiej, gdy można je zjeść na tarasie lub zabrać na piknik.</span></li>
                                 <li><i class="fas fa-hourglass-half text-gray-600"></i> <span data-key="foodFeature4"><b>Kameralnie i w rytmie slow</b> – bez pośpiechu, tylko dobre jedzenie i spokój wokół.</span></li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <i class="fas fa-clock accordion-icon-title"></i>
-                            <h3 data-key="restaurantHoursTitle">Godziny otwarcia gastronomii:</h3>
-                            <i class="fas fa-chevron-down accordion-icon"></i>
-                        </button>
-                        <div class="accordion-content">
+                            <h4 class="mt-4 mb-2 text-lg font-semibold"><i class="fas fa-clock"></i> <span data-key="restaurantHoursTitle">Godziny otwarcia gastronomii:</span></h4>
                             <ul class="info-list">
                                 <li><i class="fas fa-utensils text-orange-500"></i> <span data-key="restaurantHours">Restauracja a la carte For Rest: codziennie 12:00 – 23:00</span></li>
                                 <li><i class="fas fa-coffee text-brown-500"></i> <span data-key="lobbyBarHours">Lobby Café & Bar: codziennie 12:00 – 23:00</span></li>
@@ -170,16 +162,8 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="sport-entertainment" class="bg-gray-50 py-16">
-            <div class="container">
-                <h2 class="section-title" data-key="sportEntertainmentTitle">Sport i rozrywka</h2>
-                <p class="section-subtitle" data-key="sportEntertainmentSubtitle">Czas na relaks, ruch i przygodę – tak, jak lubisz!</p>
-
-                <div class="accordion-container">
+                    <!-- Sport i rozrywka Accordion Item -->
                     <div class="accordion-item">
                         <button class="accordion-header">
                             <i class="fas fa-running accordion-icon-title"></i>
@@ -187,6 +171,7 @@
                             <i class="fas fa-chevron-down accordion-icon"></i>
                         </button>
                         <div class="accordion-content">
+                            <p data-key="sportEntertainmentSubtitle" class="accordion-text-description"></p>
                             <ul class="info-list">
                                 <li><i class="fas fa-bus text-blue-600"></i> <span data-key="sportEntertainment1"><b>Transport na plażę melexem</b> – kilka razy dziennie nasz hotelowy melex wygodnie dowiezie Cię na plażę.</span></li>
                                 <li><i class="fas fa-biking text-green-600"></i> <span data-key="sportEntertainment2"><b>Rowerowe przygody</b> – wypożyczasz rower (dodatkowa opłata) i ruszasz w trasę. Leśne ścieżki, klify, dzikie plaże – wybór należy do Ciebie.</span></li>
@@ -197,16 +182,8 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="wellness-spa-details" class="bg-white py-16">
-            <div class="container">
-                <h2 class="section-title" data-key="wellnessSpaTitle">Wellness & SPA</h2>
-                <p class="section-subtitle" data-key="wellnessSpaSubtitle">Tu ciało się odpręża, a głowa odpoczywa.</p>
-
-                <div class="accordion-container">
+                    <!-- Wellness & SPA Accordion Item -->
                     <div class="accordion-item">
                         <button class="accordion-header">
                             <i class="fas fa-spa accordion-icon-title"></i>
@@ -214,6 +191,7 @@
                             <i class="fas fa-chevron-down accordion-icon"></i>
                         </button>
                         <div class="accordion-content">
+                            <p data-key="wellnessSpaSubtitle" class="accordion-text-description"></p>
                             <ul class="info-list">
                                 <li><i class="fas fa-water text-blue-500"></i> <span data-key="wellnessSpa1"><b>Baseny i jacuzzi</b> – wewnętrzny basen z brodzikiem dla dzieci oraz całoroczny, podgrzewany basen zewnętrzny. Do tego dwa jacuzzi – na wieczorne odprężenie pod gwiazdami.</span></li>
                                 <li><i class="fas fa-hot-tub text-red-500"></i> <span data-key="wellnessSpa2"><b>Sauna fińska</b> – Rozgrzewasz ciało, chłodzisz się pod prysznicem, a potem odpoczywasz w leśnej strefie relaksu.</span></li>
@@ -221,7 +199,7 @@
                                 <li><i class="fas fa-hand-holding-heart text-pink-500"></i> <span data-key="wellnessSpa4"><b>SPA Shept</b> – autorskie zabiegi inspirowane naturą, bazujące na nauce i holistycznym podejściu do ciała i umysłu.</span></li>
                                 <li><i class="fas fa-snowflake text-cyan-500"></i> <span data-key="wellnessSpa5"><b>Cryo-sauna & kąpiele leśne</b> – gorąco polecamy terapie zimnem i spacery wśród drzew - idealne dla tych, którzy chcą się wzmocnić i dotlenić.</span></li>
                             </ul>
-                            <h4 class="mt-4 mb-2 text-lg font-semibold" data-key="restaurantHoursTitle">Godziny otwarcia:</h4>
+                            <h4 class="mt-4 mb-2 text-lg font-semibold"><i class="fas fa-clock"></i> <span data-key="restaurantHoursTitle">Godziny otwarcia:</span></h4>
                             <ul class="info-list">
                                 <li><i class="fas fa-clock text-gray-600"></i> <span data-key="spaSheptHours">SPA Shept: codziennie 9:00 – 21:00</span></li>
                                 <li><i class="fas fa-clock text-gray-600"></i> <span data-key="poolGymSaunaHours">Basen, siłownia, sauny: codziennie 7:00 – 21:00, 21:00 – 23:00 adults only</span></li>
@@ -229,16 +207,8 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="kids-details" class="bg-gray-50 py-16">
-            <div class="container">
-                <h2 class="section-title" data-key="kidsAmenitiesTitle">Udogodnienia dla dzieci</h2>
-                <p class="section-subtitle" data-key="kidsAmenitiesSubtitle">Dzieci u nas nie mają czasu na nudę, bo świat Sea & Forest to wielki plac zabaw.</p>
-
-                <div class="accordion-container">
+                    <!-- Udogodnienia dla dzieci Accordion Item -->
                     <div class="accordion-item">
                         <button class="accordion-header">
                             <i class="fas fa-child accordion-icon-title"></i>
@@ -246,6 +216,7 @@
                             <i class="fas fa-chevron-down accordion-icon"></i>
                         </button>
                         <div class="accordion-content">
+                            <p data-key="kidsAmenitiesSubtitle" class="accordion-text-description"></p>
                             <ul class="info-list">
                                 <li><i class="fas fa-gamepad text-purple-600"></i> <span data-key="kidsAmenities1">Sala zabaw Mewa Śmieszka</span></li>
                                 <li><i class="fas fa-tree text-green-600"></i> <span data-key="kidsAmenities2">Zewnętrzny plac zabaw</span></li>
@@ -260,117 +231,66 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="pakiet-info" class="bg-gray-50 py-16">
-            <div class="container">
-                <h2 class="section-title" data-key="packageInfoTitle">Pobyt bez wyżywienia - bezkosztowa anulacja</h2>
-                <p class="section-subtitle" data-key="packageInfoSubtitle">Szczegóły pakietu, który pozwoli Ci cieszyć się swobodą i naturą.</p>
+                    <!-- Atrakcje i lokalizacja Accordion Item -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <i class="fas fa-map-marker-alt accordion-icon-title"></i>
+                            <h3 data-key="attractionsLocationTitle">Atrakcje i lokalizacja</h3>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p data-key="attractionsLocationSubtitle" class="accordion-text-description"></p>
+                            <ul class="info-list">
+                                <li><i class="fas fa-umbrella-beach text-orange-500"></i> <span data-key="attraction1Title"><b>Plaża na Wyciągnięcie Ręki</b></span></li>
+                                <li><span data-key="attraction1Desc">Na piękną, szeroką plażę dotrzesz malowniczym spacerem przez las (ok. 10 minut) lub korzystając z komfortowego, cichego busika elektrycznego (kursuje sezonowo).</span></li>
+                                <li><i class="fas fa-mountain text-green-700"></i> <span data-key="attraction2Title"><b>Woliński Park Narodowy</b></span></li>
+                                <li><span data-key="attraction2Desc">Ruszaj na szlaki prosto z apartamentu. Czekają na Ciebie zapierające dech w piersiach widoki z klifu Gosaň, urokliwe Jezioro Turkusowe oraz edukacyjna Zagroda Pokazowa Żubrów.</span></li>
+                                <li><i class="fas fa-city text-blue-700"></i> <span data-key="attraction3Title"><b>Uroki Międzyzdrojów</b></span></li>
+                                <li><span data-key="attraction3Desc">Spaceruj słynną Aleją Gwiazd, podziwiaj widoki z 395-metrowego molo, odwiedź fascynujące Oceanarium i realistyczny Gabinet Figur Woskowych.</span></li>
+                            </ul>
+                        </div>
+                    </div>
 
-                <div class="info-card-grid">
-                    <div class="info-card">
-                        <h3 data-key="packageIncludedTitle">W cenie pakietu</h3>
-                        <ul class="info-list">
-                            <li><i class="fas fa-check-circle text-green-600"></i> <span data-key="packageIncluded1">Noclegi w komfortowych apartamentach z w pełni wyposażonym aneksem kuchennym, umożliwiającym samodzielne przygotowywanie posiłków.</span></li>
-                            <li><i class="fas fa-check-circle text-green-600"></i> <span data-key="packageIncluded2">Nieograniczony dostęp do kompleksu Wellness, Aqua & Sport (podgrzewany basen zewnętrzny, basen wewnętrzny, jacuzzi, sauny oraz siłownia).</span></li>
-                            <li><i class="fas fa-check-circle text-green-600"></i> <span data-key="packageIncluded3">Dostęp do atrakcji dla dzieci (sala zabaw, plac zabaw zewnętrzny, sezonowe programy animacyjne).</span></li>
-                            <li><i class="fas fa-check-circle text-green-600"></i> <span data-key="packageIncluded4">Lokalizacja w cichej, leśnej okolicy z bezpośrednim dostępem do Wolińskiego Parku Narodowego.</span></li>
-                        </ul>
+                    <!-- Dodatkowo płatne Accordion Item -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <i class="fas fa-money-bill-wave accordion-icon-title"></i>
+                            <h3 data-key="additionallyPaidTitle">Dodatkowo płatne</h3>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ul class="info-list">
+                                <li><i class="fas fa-car text-blue-600"></i> <span data-key="attractionsLocationParking">Parking – 70 PLN/doba.</span></li>
+                                <li><i class="fas fa-paw text-blue-600"></i> <span data-key="attractionsLocationPetStay">Pobyt zwierzaka: 90 PLN/doba.</span></li>
+                                <li><i class="fas fa-baby text-blue-600"></i> <span data-key="attractionsLocationCrib">Łóżeczko dla dzieci (0-3 lat): 30 PLN/doba.</span></li>
+                                <li><i class="fas fa-biking text-blue-600"></i> <span data-key="attractionsLocationBikeRental">Wypożyczalnia rowerów – więcej informacji na recepcji.</span></li>
+                                <li><i class="fas fa-charging-station text-blue-600"></i> <span data-key="attractionsLocationEVCharging">Stacja do ładowania samochodów elektrycznych.</span></li>
+                                <li><i class="fas fa-money-check-alt text-blue-600"></i> <span data-key="attractionsLocationClimateTax">Obowiązkowa opłata klimatyczna naliczana zgodnie z oficjalnymi stawkami na dany rok.</span></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="info-card">
-                        <h3 data-key="importantInfoTitle">Ważne informacje</h3>
-                        <ul class="info-list">
-                            <li><i class="fas fa-money-bill-wave text-red-600"></i> <span data-key="importantInfo1">Wymagana jest przedpłata w wysokości 30% wartości rezerwacji.</span></li>
-                            <li><i class="fas fa-calendar-times text-red-600"></i> <span data-key="importantInfo2">Bezkosztowa anulacja możliwa do 7 dni przed przyjazdem.</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="udogodnienia">
-            <div class="container">
-                <h2 data-key="amenitiesComplexTitle">Udogodnienia Kompleksu Sea & Forest</h2>
-                <p class="section-subtitle" data-key="amenitiesComplexSubtitle">Jako Goście Amber & Azure Residences macie Państwo nieograniczony dostęp do wszystkich atrakcji i udogodnieň resortu.</p>
-                <div class="amenities-grid cols-2">
-                    <div class="amenity-item">
-                        <h3 data-key="wellnessPoolsTitle">Dwa Baseny i Jacuzzi</h3>
-                        <p data-key="wellnessPoolsDesc">Do Paňstwa dyspozycji oddajemy całoroczny, podgrzewany basen zewnętrzny, basen wewnętrzny z brodzikiem dla dzieci oraz dwa zewnętrzne jacuzzi, idealne na relaks pod gwiazdami.</p>
-                    </div>
-                    <div class="amenity-item">
-                        <h3 data-key="wellnessSaunaTitle">Świat Saun</h3>
-                        <p data-key="wellnessSaunaDesc">Poczujcie, jak uchodzi z Was całe napięcie w saunie o delikatnym, leśnym aromacie żywicy. To prawdziwy detoks dla ciała i umysłu.</p>
-                    </div>
-                    <div class="amenity-item">
-                        <h3 data-key="wellnessSpaTitle">Wellness & SPA</h3>
-                        <p data-key="wellnessSpaDesc">Poczujcie, jak uchodzi z Was całe napięcie w strefie basenowej z jacuzzi i saunami. Dodatkowo, w Strefie SPA "Shept" (za opłatą) czekają kameralne gabinety z autorskimi zabiegami i masażami inspirowanymi bogactwem lasu, zapewniające pełną regenerację.</p>
-                    </div>
-                    <div class="amenity-item">
-                        <h3 data-key="kidsAmenitiesTitle">Udogodnienia dla dzieci</h3>
-                        <p data-key="kidsAmenitiesDesc">Dla najmłodszych Gości przygotowaliśmy salę zabaw, zewnętrzny plac zabaw oraz sezonowe programy animacyjne, zapewniające rozrywkę na najwyższym poziomie i niezapomniane wakacje.</p>
-                    </div>
-                    <div class="amenity-item">
-                        <h3 data-key="sportEntertainmentTitle">Sport i rozrywka</h3>
-                        <p data-key="sportEntertainmentDesc">Kompleks oferuje siłownię, baseny, a także dostęp do terenów zielonych idealnych do aktywności na świeżym powietrzu, takich jak spacery i jogging. Organizujemy również sezonowe programy animacyjne dla całej rodziny.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="atrakcje">
-            <div class="container">
-                <h2 class="section-title" data-key="attractionsTitle">Atrakcje i lokalizacja</h2>
-                <p class="section-subtitle" data-key="attractionsSubtitle">Wyjątkowa lokalizacja w otulinie Wolińskiego Parku Narodowego zapewnia nieograniczone możliwości odkrywania uroków regionu Międzyzdrojów.</p>
-                <div class="amenities-grid cols-3">
-                    <div class="amenity-item">
-                        <h3 data-key="attraction1Title">Plaża na Wyciągnięcie Ręki</h3>
-                        <p data-key="attraction1Desc">Na piękną, szeroką plażę dotrzesz malowniczym spacerem przez las (ok. 10 minut) lub korzystając z komfortowego, cichego busika elektrycznego (kursuje sezonowo).</p>
-                    </div>
-                    <div class="amenity-item">
-                        <h3 data-key="attraction2Title">Woliňski Park Narodowy</h3>
-                        <p data-key="attraction2Desc">Ruszaj na szlaki prosto z apartamentu. Czekają na Ciebie zapierające dech w piersiach widoki z klifu Gosaň, urokliwe Jezioro Turkusowe oraz edukacyjna Zagroda Pokazowa Żubrów.</p>
-                    </div>
-                    <div class="amenity-item">
-                        <h3 data-key="attraction3Title">Uroki Międzyzdrojów</h3>
-                        <p data-key="attraction3Desc">Spaceruj słynną Aleją Gwiazd, podziwiaj widoki z 395-metrowego molo, odwiedź fascynujące Oceanarium i realistyczny Gabinet Figur Woskowych.</p>
+                    <!-- Warto wiedzieć Accordion Item -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <i class="fas fa-info-circle accordion-icon-title"></i>
+                            <h3 data-key="goodToKnowTitle">Warto wiedzieć</h3>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ul class="info-list">
+                                <li><i class="fas fa-wifi text-green-600"></i> <span data-key="goodToKnowWifi">Szybkie, darmowe Wi-Fi dostępne w całym apartamencie i na terenie resortu.</span></li>
+                                <li><i class="fas fa-bed text-green-600"></i> <span data-key="goodToKnowBedding">Pościel i ręczniki wliczone w cenę pobytu.</span></li>
+                                <li><i class="fas fa-broom text-green-600"></i> <span data-key="goodToKnowCleaning">Sprzątanie końcowe apartamentu wliczone w cenę.</span></li>
+                                <li><i class="fas fa-clock text-green-600"></i> <span data-key="goodToKnowCheckIn">Zameldowanie od godziny 16:00.</span></li>
+                                <li><i class="fas fa-clock text-green-600"></i> <span data-key="goodToKnowCheckOut">Wymeldowanie do godziny 11:00.</span></li>
+                                <li><i class="fas fa-camera text-green-600"></i> <span data-key="attractionsLocationSamplePhotos">Zdjęcia umieszczone na stronie są zdjęciami przykładowymi (układ, wystrój, kolorystyka poszczególnych pokoi może różnić się między sobą).</span></li>
+                                <li><i class="fas fa-bed text-green-600"></i> <span data-key="attractionsLocationSingleBeds">Pojedyncze łóżka dostępne na życzenie: w części apartamentów istnieje możliwość zamówienia dwóch pojedynczych łóżek.</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        
-        <section id="info-praktyczne">
-            <div class="container">
-                 <h2 class="section-title" data-key="infoTitle">Informacje praktyczne</h2>
-                 <div class="info-card-grid">
-                    <div class="info-card">
-                        <h3 data-key="additionallyPaidTitle">Dodatkowo płatne</h3>
-                        <ul class="info-list">
-                            <li><i class="fas fa-car text-blue-600"></i> <span data-key="infoParking">Miejsce parkingowe w garażu podziemnym (70 PLN/doba) – rezerwacja zalecana.</span></li>
-                            <li><i class="fas fa-paw text-blue-600"></i> <span data-key="infoPets">Pobyt zwierzęcia (100 PLN/doba) – prosimy o wcześniejsze zgłoszenie.</span></li>
-                            <li><i class="fas fa-euro-sign text-blue-600"></i> <span data-key="additionalAttractions1">Restauracja For Rest.</span></li>
-                            <li><i class="fas fa-euro-sign text-blue-600"></i> <span data-key="additionalAttractions2">Lobby Cafe & Bar.</span></li>
-                            <li><i class="fas fa-euro-sign text-blue-600"></i> <span data-key="additionalAttractions3">Wypożyczalnia rowerów.</span></li>
-                            <li><i class="fas fa-euro-sign text-blue-600"></i> <span data-key="additionalAttractions4">SPA Shept.</span></li>
-                            <li><i class="fas fa-charging-station text-blue-600"></i> <span data-key="attractionsLocationEVCharging">Stacja do ładowania samochodów elektrycznych.</span></li>
-                            <li><i class="fas fa-money-check-alt text-blue-600"></i> <span data-key="attractionsLocationClimateTax">Obowiązkowa opłata klimatyczna naliczana zgodnie z oficjalnymi stawkami na dany rok.</span></li>
-                            <li><i class="fas fa-baby text-blue-600"></i> <span data-key="attractionsLocationCrib">Łóżeczko dla dzieci (0-3 lat): 30 PLN/doba.</span></li>
-                        </ul>
-                    </div>
-                    <div class="info-card">
-                        <h3 data-key="goodToKnowTitle">Warto wiedzieć</h3>
-                        <ul class="info-list">
-                            <li><i class="fas fa-wifi text-green-600"></i> <span data-key="goodToKnowWifi">Szybkie, darmowe Wi-Fi dostępne w całym apartamencie i na terenie resortu.</span></li>
-                            <li><i class="fas fa-bed text-green-600"></i> <span data-key="goodToKnowBedding">Pościel i ręczniki wliczone w cenę pobytu.</span></li>
-                            <li><i class="fas fa-broom text-green-600"></i> <span data-key="goodToKnowCleaning">Sprzątanie końcowe apartamentu wliczone w cenę.</span></li>
-                            <li><i class="fas fa-clock text-green-600"></i> <span data-key="goodToKnowCheckIn">Zameldowanie od godziny 16:00.</span></li>
-                            <li><i class="fas fa-clock text-green-600"></i> <span data-key="goodToKnowCheckOut">Wymeldowanie do godziny 11:00.</span></li>
-                            <li><i class="fas fa-camera text-green-600"></i> <span data-key="attractionsLocationSamplePhotos">Zdjęcia umieszczone na stronie są zdjęciami przykładowymi (układ, wystrój, kolorystyka poszczególnych pokoi może różnić się między sobą).</span></li>
-                            <li><i class="fas fa-bed text-green-600"></i> <span data-key="attractionsLocationSingleBeds">Pojedyncze łóżka dostępne na życzenie: w części apartamentów istnieje możliwość zamówienia dwóch pojedynczych łóżek.</span></li>
-                        </ul>
-                    </div>
-                 </div>
             </div>
         </section>
 
