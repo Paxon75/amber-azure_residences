@@ -595,9 +595,6 @@ section {
     transition: max-height 0.3s ease-out;
 }
 
-.accordion-content .info-list {
-    padding: 1rem 0 1.5rem 0; /* Adjust padding for content */
-}
 .accordion-content .accordion-text-description {
     padding: 1rem 0 0.5rem 0;
     color: var(--color-text-medium);
