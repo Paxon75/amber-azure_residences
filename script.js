@@ -274,9 +274,9 @@ document.addEventListener('DOMContentLoaded', () => {
             kidsAmenitiesSubtitle: 'Kinder haben bei uns keine Zeit für Langeweile, denn die Welt von Sea & Forest ist ein großer Spielplatz.',
             kidsAmenities1: 'Spielzimmer Mewa Śmieszka',
             kidsAmenities2: 'Außenspielplatz',
-            kidsAmenities3: 'Organisierte Animationen (saisonale Attraktion, detaillierter Attraktionsplan im Hotel und/oder Paket verfügbar)',
+            kidsAmenities3: 'Organisierte Animationen (saisonale Attraktion, detaillierter Attraktionsplan im Hotel und/nebo Paket verfügbar)',
             kidsAmenities4: 'Quest des Wolin-Stammes – unser Geländespiel für Kinder ab 7 Jahren.',
-            kidsAmenities5: 'Öko-Detektive – ein Lernspiel für die Kleinsten, voller Experimente und sensorischer Entdeckungen.',
+            kidsAmenities5: 'Öko-Detektywe – ein Lernspiel für die Kleinsten, voller Experimente und sensorischer Entdeckungen.',
             kidsAmenities6: 'Ganzjährig beheizter Außenpool und Innenpool mit Kinderbecken, Schwimmzubehör',
             kidsAmenities7: 'Auf Wunsch stellen wir den Apartments kostenfrei eine Babywanne, einen Tritthocker und einen Toilettensitzverkleinerer zur Verfügung',
             kidsAmenities8: 'Im Restaurant gibt es Hochstühle, und in den öffentlichen Toiletten Wickeltische.',
@@ -309,80 +309,80 @@ document.addEventListener('DOMContentLoaded', () => {
 
             locationTitle: 'Unser Standort',
             locationDesc: 'Sie finden uns im Sea & Forest-Kompleks, in der Pufferzone des Nationalparks Wolin, nur einen kurzen Spaziergang vom Strand entfernt.',
-            contactTitle: 'Zarezerwuj Pobyt',
-            contactDesc: 'Wybierz Amber lub Azure Suite i zanurz się w luksusie, spokoju i naturze. Czekamy na Twój kontakt.',
+            contactTitle: 'Buchen Sie Ihren Aufenthalt',
+            contactDesc: 'Wählen Sie die Amber oder Azure Suite i zanurz się w luksusie, spokoju i naturze. Czekamy na Twój kontakt.',
             contactRole: 'Twoja Luksusowa Przystaň w Sea & Forest',
-            contactBtnMail: 'Napisz: amberazure.residences@gmail.com',
+            contactBtnMail: 'Schreiben: amberazure.residences@gmail.com',
             contactBtnCallDarek: 'Darek: +48 602 229 707',
             contactBtnCallBeata: 'Beata: +48 606 410 041',
-            footerRights: '© 2025 Amber & Azure Residences. Wszelkie prawa zastrzeżone.',
-            footerPrivacy: 'Polityka Prywatności',
-            cookieTitle: 'Cenimy Twoją prywatność',
-            cookieText: 'Używamy plików cookie, aby personalizować treści, udostępniać funkcje mediów społecznościowych i analizować nasz ruch. Udostępniamy również informacje o Twoim korzystaniu z naszej witryny naszym partnerom.',
-            cookieDeny: 'Odrzuć',
-            cookieCustomize: 'Dostosuj',
-            cookieAccept: 'Akceptuj wszystkie',
-            cookieDetailsTitle: 'Dostosuj zgodę',
-            cookieNecessaryDesc: 'Te pliki cookie są niezbędne do prawidłowego funkcjonowania strony i nie mogą zostać wyłączone.',
-            cookieAnalyticsDesc: 'Te pliki cookie pozwalają nam analizować ruch na stronie i ulepszać jej działanie.',
-            cookieMarketingDesc: 'Te pliki cookie pomagają nam dostarczać spersonalizowane reklamy, które mogą Cię zainteresować.',
-            cookieSave: 'Zapisz ustawienia',
-            
-            privacyTitle: 'Polityka Prywatności i Plików Cookies Strony Internetowej Amber & Azure Residences',
-            privacyLastUpdated: 'Data ostatniej aktualizacji: 16.07.2025 r.',
-            privacyS1Title: '§1 Postanowienia Ogólne',
-            privacyS1P1: 'Niniejsza polityka prywatności (zwana dalej „Polityką”) ma charakter informacyjny i określa zasady przetwarzania danych osobowych oraz wykorzystywania plików cookies na stronie internetowej dostępnej pod adresem: https://aaresidences.github.io/amberazure/ (zwanej dalej „Serwisem”).',
-            privacyS1P2: 'Dbamy o Twoją prywatność i bezpieczeństwo Twoich danych osobowych, przetwarzając je zgodnie z wymogami Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnym przepływem takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych), zwanego dalej „RODO”.',
-            privacyS2Title: '§2 Administrator Danych Osobowych',
-            privacyS2P1: 'Administratorem Twoich danych osobowych jest MTM Dariusz Seferyński, prowadzący działalność gospodarczą pod adresem: ul. Księcia Józefa Poniatowskiego 11, 05-230 Kobyłka (zwany dalej „Administratorem”).',
-            privacyS2P2: 'We wszystkich sprawach związanych z przetwarzaniem danych osobowych oraz realizacją przysługujących Ci praw możesz kontaktować się z Administratorem:',
-            privacyS2Email: 'Pocztą elektroniczną: amberazure.residences@gmail.com',
-            privacyS2Phone: 'Telefonicznie: +48 602 229 707',
-            privacyS2Address: 'Pocztą tradycyjną: ul. Księcia Józefa Poniatowskiego 11, 05-230 Kobyłka',
-            privacyS3Title: '§3 Cele, Podstawy Prawne i Okres Przetwarzania Danych',
-            privacyS3P1: 'Administrator przetwarza Twoje dane osobowe w następujących celach:',
-            privacyS3S1Title: 'Obsługa zapytań i rezerwacji:',
-            privacyS3S1P1: 'Cel przetwarzania: Udzielanie odpowiedzi na zapytania skierowane poprzez e-mail lub telefon, przedstawienie oferty oraz zawarcie i realizacja umowy o świadczenie usług (rezerwacji).',
-            privacyS3S1P2: 'Zakres danych: Imię i nazwisko, adres e-mail, numer telefonu, treść wiadomości oraz inne dane podane dobrowolnie w trakcie kontaktu.',
-            privacyS3S1P3: 'Podstawa prawna: Art. 6 ust. 1 lit. b RODO – przetwarzanie jest niezbędne do podjęcia działań na żądanie osoby, której dane dotyczą, przed zawarciem umowy lub do wykonania umowy.',
-            privacyS3S1P4: 'Okres przechowywania: Dane będą przechowywane przez czas niezbędny do obsługi zapytania. W przypadku zawarcia umowy, dane będą przechowywane przez cały okres jej obowiązywania, a po jej zakończeniu – przez okres wymagany przepisami prawa, np. dla celów podatkowych i księgowych (tj. 5 lat, licząc od końca roku kalendarzowego, w którym upłynął termin płatności podatku).',
-            privacyS3S2Title: 'Działania marketingowe:',
-            privacyS3S2P1: 'Cel przetwarzania: Przesyłanie informacji handlowych i marketingowych dotyczących oferty Administratora.',
-            privacyS3S2P2: 'Zakres danych: Adres e-mail, numer telefonu.',
-            privacyS3S2P3: 'Forma kontaktu: Wiadomości e-mail, SMS, wiadomości w aplikacjach WhatsApp oraz Messenger.',
-            privacyS3S2P4: 'Podstawa prawna: Art. 6 ust. 1 lit. a RODO – Twoja dobrowolna zgoda. Wyrażenie zgody na marketing jest całkowicie dobrowolne.',
-            privacyS3S2P5: 'Okres przechowywania: Do momentu wycofania przez Ciebie zgody na przetwarzanie danych w tym celu. Uwaga: Przesyłanie informacji handlowych za pomocą środków komunikacji elektronicznej (e-mail, SMS, WhatsApp, Messenger) wymaga Twojej odrębnej, wyraźnej zgody zgodnie z Ustawą o świadczeniu usług drogą elektroniczną oraz Prawem telekomunikacyjnym.',
-            privacyS4Title: '§4 Odbiorcy Danych',
-            privacyS4P1: 'W celu prawidłowego funkcjonowania Serwisu i świadczenia usług, Administrator korzysta z usług podmiotów zewnętrznych. Przekazujemy Twoje dane wyłącznie wtedy, gdy jest to niezbędne do realizacji danego celu przetwarzania i tylko w koniecznym zakresie.',
-            privacyS4P2: 'Odbiorcami Twoich danych mogą być:',
-            privacyS4R1: 'Dostawca hostingu: GitHub, Inc. – w celu przechowywania danych Serwisu na serwerze.',
-            privacyS4R2: 'Dostawcy komunikatorów internetowych: Meta Platforms, Inc. (właściciel WhatsApp i Messenger) – w celu prowadzenia komunikacji marketingowej, jeśli wyrazisz na to zgodę.',
-            privacyS4R3: 'Operatorzy telekomunikacyjni: w celu realizacji wysyłki marketingowych wiadomości SMS.',
-            privacyS4P3: 'Twoje dane są przetwarzane przez naszych partnerów z zachowaniem wszelkich zasad bezpieczeństwa i zgodnie z umowami powierzenia przetwarzania danych.',
-            privacyS5Title: '§5 Prawa Osób, Których Dane Dotyczą',
-            privacyS5P1: 'W związku z przetwarzaniem Twoich danych osobowych przysługują Ci następujące prawa:',
-            privacyS5R1: 'Prawo dostępu do danych (art. 15 RODO).',
-            privacyS5R2: 'Prawo do sprostowania danych (art. 16 RODO).',
-            privacyS5R3: 'Prawo do usunięcia danych („prawo do bycia zapomnianym”) (art. 17 RODO).',
-            privacyS5R4: 'Prawo do ograniczenia przetwarzania (art. 18 RODO).',
-            privacyS5R5: 'Prawo do przenoszenia danych (art. 20 RODO).',
-            privacyS5R6: 'Prawo do wniesienia sprzeciwu wobec przetwarzania danych (art. 21 RODO).',
-            privacyS5R7: 'Prawo do wycofania zgody w dowolnym momencie, bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem. Dotyczy to w szczególności przetwarzania danych w celach marketingowych.',
-            privacyS5R8: 'Prawo do wniesienia skargi do organu nadzorczego, tj. Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa), jeśli uznasz, że przetwarzanie Twoich danych narusza przepisy RODO.',
-            privacyS5P2: 'Aby skorzystać z powyższych praw, skontaktuj się z Administratorem, korzystając z danych kontaktowych podanych w §2.',
-            privacyS6Title: '§6 Pliki Cookies',
-            privacyS6P1: 'Serwis nie zbiera w sposób automatyczny żadnych informacji, z wyjątkiem informacji zawartych w plikach cookies.',
+            footerRights: '© 2025 Amber & Azure Residences. Alle Rechte vorbehalten.',
+            footerPrivacy: 'Datenschutz-Bestimmungen',
+            cookieTitle: 'We value your privacy',
+            cookieText: 'We use cookies to personalize content, provide social media features, and analyze our traffic. We also share information about your use of our site with our partners.',
+            cookieDeny: 'Deny',
+            cookieCustomize: 'Customize',
+            cookieAccept: 'Allow all',
+            cookieDetailsTitle: 'Customize consent',
+            cookieNecessaryDesc: 'These cookies are essential for the proper functioning of the website and cannot be disabled.',
+            cookieAnalyticsDesc: 'These cookies allow us to analyze site traffic and improve its performance.',
+            cookieMarketingDesc: 'These cookies help us deliver personalized ads that may be of interest to you.',
+            cookieSave: 'Save settings',
+
+            privacyTitle: 'Privacy and Cookies Policy of Amber & Azure Residences Website',
+            privacyLastUpdated: 'Last updated: 16.07.2025',
+            privacyS1Title: '§1 General Provisions',
+            privacyS1P1: 'This privacy policy (hereinafter referred to as the "Policy") is for informational purposes and defines the rules for processing personal data and using cookies on the website available at: https://aaresidences.github.io/amberazure/ (hereinafter referred to as the "Service").',
+            privacyS1P2: 'We care about your privacy and the security of your personal data, processing it in accordance with the requirements of Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation), hereinafter referred to as "GDPR".',
+            privacyS2Title: '§2 Personal Data Administrator',
+            privacyS2P1: 'The administrator of your personal data is MTM Dariusz Seferyński, conducting business activity at: ul. Księcia Józefa Poniatowskiego 11, 05-230 Kobyłka (hereinafter referred to as the "Administrator").',
+            privacyS2P2: 'In all matters related to the processing of personal data and the exercise of your rights, you can contact the Administrator:',
+            privacyS2Email: 'By email: amberazure.residences@gmail.com',
+            privacyS2Phone: 'By phone: +48 602 229 707',
+            privacyS2Address: 'By traditional mail: ul. Księcia Józefa Poniatowskiego 11, 05-230 Kobyłka',
+            privacyS3Title: '§3 Purposes, Legal Bases, and Period of Data Processing',
+            privacyS3P1: 'The Administrator processes your personal data for the following purposes:',
+            privacyS3S1Title: 'Handling inquiries and reservations:',
+            privacyS3S1P1: 'Purpose of processing: Responding to inquiries sent via email or phone, presenting an offer, and concluding and performing a service agreement (reservation).',
+            privacyS3S1P2: 'Scope of data: Name and surname, email address, phone number, content of the message, and other data provided voluntarily during contact.',
+            privacyS3S1P3: 'Legal basis: Art. 6 para. 1 lit. b GDPR – processing is necessary for taking action at the request of the data subject prior to entering into a contract or for the performance of a contract.',
+            privacyS3S1P4: 'Storage period: Data will be stored for the time necessary to handle the inquiry. In the case of concluding a contract, data will be stored for the entire period of its validity, and after its termination – for the period required by law, e.g., for tax and accounting purposes (i.e., 5 years, counting from the end of the calendar year in which the tax payment deadline expired).',
+            privacyS3S2Title: 'Marketing activities:',
+            privacyS3S2P1: 'Purpose of processing: Sending commercial and marketing information regarding the Administrator\'s offer.',
+            privacyS3S2P2: 'Scope of data: Email address, phone number.',
+            privacyS3S2P3: 'Form of contact: Email messages, SMS, messages in WhatsApp and Messenger applications.',
+            privacyS3S2P4: 'Legal basis: Art. 6 para. 1 lit. a GDPR – Your voluntary consent. Expressing consent to marketing is entirely voluntary.',
+            privacyS3S2P5: 'Storage period: Until you withdraw your consent to data processing for this purpose. Note: Sending commercial information by electronic means of communication (email, SMS, WhatsApp, Messenger) requires your separate, explicit consent in accordance with the Act on Providing Services by Electronic Means and Telecommunications Law.',
+            privacyS4Title: '§4 Data Recipients',
+            privacyS4P1: 'For the proper functioning of the Service and provision of services, the Administrator uses the services of external entities. We transfer your data only when it is necessary to achieve a given processing purpose and only to the necessary extent.',
+            privacyS4P2: 'Recipients of your data may be:',
+            privacyS4R1: 'Hosting provider: GitHub, Inc. – for storing Service data on the server.',
+            privacyS4R2: 'Instant messenger providers: Meta Platforms, Inc. (owner of WhatsApp and Messenger) – for conducting marketing communication, if you give your consent.',
+            privacyS4R3: 'Telecommunications operators: in order to send marketing SMS messages.',
+            privacyS4P3: 'Your data is processed by our partners with all security principles and in accordance with data processing entrustment agreements.',
+            privacyS5Title: '§5 Rights of Data Subjects',
+            privacyS5P1: 'In connection with the processing of your personal data, you have the following rights:',
+            privacyS5R1: 'Right of access to data (Art. 15 GDPR).',
+            privacyS5R2: 'Right to rectification of data (Art. 16 GDPR).',
+            privacyS5R3: 'Right to erasure of data ("right to be forgotten") (Art. 17 GDPR).',
+            privacyS5R4: 'Right to restriction of processing (Art. 18 GDPR).',
+            privacyS5R5: 'Right to data portability (Art. 20 GDPR).',
+            privacyS5R6: 'Right to object to data processing (Art. 21 GDPR).',
+            privacyS5R7: 'Right to withdraw consent at any time, without affecting the lawfulness of processing based on consent before its withdrawal. This applies in particular to data processing for marketing purposes.',
+            privacyS5R8: 'Right to lodge a complaint with the supervisory authority, i.e., the President of the Personal Data Protection Office (ul. Stawki 2, 00-193 Warszawa), if you believe that the processing of your data violates GDPR provisions.',
+            privacyS5P2: 'To exercise the above rights, please contact the Administrator using the contact details provided in §2.',
+            privacyS6Title: '§6 Cookies',
+            privacyS6P1: 'The Service does not automatically collect any information, except for information contained in the files cookies.',
             privacyS6P2: 'Pliki cookies (tzw. „ciasteczka”) stanowią dane informatyczne, w szczególności pliki tekstowe, które przechowywane są w Twoim urządzeniu końcowym (np. komputerze, smartfonie) i przeznaczone są do korzystania ze stron internetowych Serwisu.',
-            privacyS6P3: 'W ramach Serwisu stosowane są przede wszystkim niezbędne pliki cookies, które są wymagane do prawidłowego działania strony. Serwis jest hostowany na platformie GitHub Pages i może wykorzystywać techniczne pliki cookies do utrzymania sesji i zapewnienia podstawowych funkcjonalności.',
-            privacyS6P4: 'Serwis nie wykorzystuje plików cookies do celów analitycznych (śledzenia ruchu) ani marketingowych (wyświetlania spersonalizowanych reklam).',
-            privacyS6P5: 'Jeśli na stronie znajduje się baner cookies, masz możliwość zarządzania swoimi preferencjami.',
-            privacyS7Title: '§7 Przekazywanie Danych Poza Europejski Obszar Gospodarczy (EOG)',
-            privacyS7P1: 'W związku z korzystaniem przez Administratora z usług podmiotów takich jak GitHub, Inc. oraz Meta Platforms, Inc. (WhatsApp, Messenger), Twoje dane osobowe mogą być przekazywane do państw trzecich, w szczególności do Stanów Zjednoczonych Ameryki (USA).',
-            privacyS7P2: 'Przekazywanie danych odbywa się na podstawie mechanizmów zgodnych z RODO, przede wszystkim z wykorzystaniem standardowych klauzul umownych (SCC) zatwierdzonych przez Komisję Europejską, które zapewniają odpowiedni poziom ochrony Twoich danych osobowych.',
-            privacyS8Title: '§8 Postanowienia Końcowe',
-            privacyS8P1: 'Administrator zastrzega sobie prawo do wprowadzania zmian w niniejszej Polityce Prywatności. Zmiany mogą być podyktowane rozwojem technologii, zmianami w przepisach prawa lub rozwojem Serwisu.',
-            privacyS8P2: 'O wszelkich zmianach będziemy informować poprzez opublikowanie nowej wersji Polityki w Serwisie.',
-            privacyS8P3: 'Niniejsza Polityka obowiązuje od dnia 16.07.2025 r.',
+            privacyS6P3: 'W ramach Serwisu stosowane są przede wszystkim niezbędne pliki cookies, które są wymagane do prawidłowego działania strony. Serwis jest hostowany na platformie GitHub Pages and may use technical cookies to maintain sessions and provide basic functionalities.',
+            privacyS6P4: 'The Service does not use cookies for analytical purposes (traffic tracking) or marketing purposes (displaying personalized ads).',
+            privacyS6P5: 'If there is a cookie banner on the site, you have the option to manage your preferences.',
+            privacyS7Title: '§7 Transfer of Data Outside the European Economic Area (EEA)',
+            privacyS7P1: 'In connection with the Administrator\'s use of services from entities such as GitHub, Inc. and Meta Platforms, Inc. (WhatsApp, Messenger), your personal data may be transferred to third countries, in particular to the United States of America (USA).',
+            privacyS7P2: 'Data transfer takes place on the basis of mechanisms compliant with GDPR, primarily using standard contractual clauses (SCC) approved by the European Commission, which ensure an adequate level of protection for your personal data.',
+            privacyS8Title: '§8 Final Provisions',
+            privacyS8P1: 'The Administrator reserves the right to make changes to this Privacy Policy. Changes may be dictated by technological development, changes in legal provisions, or the development of the Service.',
+            privacyS8P2: 'We will inform about any changes by publishing a new version of the Policy on the Service.',
+            privacyS8P3: 'This Policy is effective from 16.07.2025.',
         }
     };
     
@@ -629,6 +629,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // === Logika pobierania pogody ===
+    const fetchWeather = async (city, apiKey, lang) => {
+        const tempElement = document.getElementById('current-temperature');
+        const weatherPrefixElement = document.querySelector('.weather-prefix');
+        
+        if (!tempElement || !weatherPrefixElement) return;
+
+        // Ustawienie tekstu ładowania
+        tempElement.textContent = '--°C';
+        weatherPrefixElement.textContent = translations[lang].weatherLoading;
+
+        try {
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=${lang}`);
+            const data = await response.json();
+
+            if (data.main && data.main.temp) {
+                tempElement.textContent = `${Math.round(data.main.temp)}°C`;
+                weatherPrefixElement.textContent = translations[lang].weatherPrefix;
+            } else {
+                tempElement.textContent = 'N/A';
+                weatherPrefixElement.textContent = translations[lang].weatherError;
+                console.error('Błąd pobierania pogody: Nieprawidłowe dane', data);
+            }
+        } catch (error) {
+            tempElement.textContent = 'N/A';
+            weatherPrefixElement.textContent = translations[lang].weatherError;
+            console.error('Błąd pobierania pogody:', error);
+        }
+    };
+
 
     // Inicjalizacja galerii tylko dla Azure
     initializeGallery('azure-suite');
@@ -659,4 +689,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ustawienie języka na starcie (z pamięci lub domyślny)
     const savedLang = localStorage.getItem('preferredLanguage') || 'pl';
     setLanguage(savedLang);
+
+    // Pobieranie pogody po załadowaniu języka (aby prefix był w odpowiednim języku)
+    // UWAGA: Zastąp 'YOUR_OPENWEATHERMAP_API_KEY' swoim kluczem API OpenWeatherMap
+    fetchWeather('Miedzyzdroje', 'YOUR_OPENWEATHERMAP_API_KEY', savedLang);
 });
