@@ -8,9 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
             navPhilosophy: 'Filozofia',
             navApartments: 'Apartamenty',
             navAzureCalendar: 'Kalendarz Azure',
+            navPackageInfo: 'Szczegóły Pakietu', // Nowy element nawigacji
             navAmenities: 'Udogodnienia',
             navAttractions: 'Atrakcje',
-            navPracticalInfo: 'Informacje praktyczne', // Nowy element nawigacji
+            navPracticalInfo: 'Informacje praktyczne',
             navContact: 'Kontakt',
             videoError: 'Twoja przeglądarka nie obsługuje wideo w tle.',
             heroTitle: 'Amber & Azure Residences',
@@ -23,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
             apartmentsMainSubtitle: 'Każdy z naszych apartamentów to unikalna historia opowiedziana przez design, komfort i bliskość natury. Wybierz swoją idealną przestrzeň do relaksu.',
             
             // Zaktualizowane tłumaczenia dla sekcji "Amber wkrótce dostępny"
-            amberSoonTitle: 'Apartament Amber Suite - Wkrótce Dostępny!',
-            amberSoonDesc: 'Z niecierpliwością oczekujemy na otwarcie Apartamentu Amber Suite, który wkrótce będzie gotowy, aby gościć Państwa w swoich progach. Ten zupełnie nowy, wyjątkowy apartament, inspirowany ciepłem bursztynu, oferuje niezapomniane wrażenia z pobytu w sercu Wolińskiego Parku Narodowego. Idealny dla tych, którzy cenią sobie przytulny luksus i bliskość natury.',
-            amberSoonContact: 'Chcesz być pierwszym, który dowie się o dostępności i specjalnych ofertach? Skontaktuj się z nami już dziś, aby wyrazić swoje zainteresowanie i otrzymać powiadomienie o otwarciu rezerwacji!',
+            amberSoonTitle: 'Apartament Amber Suite - Już Dostępny!',
+            amberSoonDesc: 'Z radością informujemy, że Apartament Amber Suite jest już dostępny! Ten zupełnie nowy, wyjątkowy apartament, inspirowany ciepłem bursztynu, czeka, aby gościć Państwa w swoich progach. Oferuje niezapomniane wrażenia z pobytu w sercu Wolińskiego Parku Narodowego. Idealny dla tych, którzy cenią sobie przytulny luksus i bliskość natury.',
+            amberSoonContact: 'Nie czekaj, zarezerwuj swój wymarzony pobyt już dziś i odkryj piękno Międzyzdrojów w luksusowym otoczeniu!',
 
             azureTitle: 'Apartament Azure Suite',
             azureDesc: 'Zanurz się w klasycznej elegancji połączonej z nowoczesną funkcjonalnością. Apartament Azure o powierzchni 37 m² to przestrzeń, która otula i pozwala w pełni cieszyć się każdą chwilą pobytu. Jasne, przestronne wnętrza i starannie dobrane dodatki tworzą atmosferę spokoju, a imponujący, 15-metrowy taras z widokiem na las jest idealnym miejscem na poranną kawę i wieczorny relaks.',
@@ -69,10 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
             wellnessSaunaDesc: 'Poczujcie, jak uchodzi z Was całe napięcie w saunie o delikatnym, leśnym aromacie żywicy. To prawdziwy detoks dla ciała i umysłu.',
             wellnessSpaTitle: 'Strefa SPA "Shept"',
             wellnessSpaDesc: 'Dwa kameralne gabinety, w których można doświadczyć autorskich zabiegów i masaży inspirowanych bogactwem lasu, aby zapewnić pełną regenerację.',
-            kidsAmenitiesTitle: 'Udogodnienia dla dzieci', // Nowe udogodnienie
-            kidsAmenitiesDesc: 'Dla najmłodszych Gości przygotowaliśmy salę zabaw, zewnętrzny plac zabaw oraz sezonowe programy animacyjne, zapewniające rozrywkę na najwyższym poziomie.', // Nowe udogodnienie
-            sportEntertainmentTitle: 'Sport i rozrywka', // Nowe udogodnienie
-            sportEntertainmentDesc: 'Kompleks oferuje siłownię, baseny, a także dostęp do terenów zielonych idealnych do aktywności na świeżym powietrzu, takich jak spacery i jogging.', // Nowe udogodnienie
+            kidsAmenitiesTitle: 'Udogodnienia dla dzieci',
+            kidsAmenitiesDesc: 'Dla najmłodszych Gości przygotowaliśmy salę zabaw, zewnętrzny plac zabaw oraz sezonowe programy animacyjne, zapewniające rozrywkę na najwyższym poziomie.',
+            sportEntertainmentTitle: 'Sport i rozrywka',
+            sportEntertainmentDesc: 'Kompleks oferuje siłownię, baseny, a także dostęp do terenów zielonych idealnych do aktywności na świeżym powietrzu, takich jak spacery i jogging.',
             restoBarTitle: "Restauracja i Bar \"For Rest\"",
             restoBarDesc: 'Restauracja a\'la carte serwująca dania oparte na lokalnych, sezonowych produktach oraz elegancki Lobby Café & Bar na poranną kawę lub wieczornego drinka.',
             attractionsTitle: 'Odkryj Skarby Wyspy Wolin',
@@ -84,18 +85,18 @@ document.addEventListener('DOMContentLoaded', () => {
             attraction3Title: 'Uroki Międzyzdrojów',
             attraction3Desc: 'Spaceruj słynną Aleją Gwiazd, wejdź na 395-metrowe molo, odwiedź Oceanarium i Gabinet Figur Woskowych.',
             infoTitle: 'Informacje praktyczne',
-            additionallyPaidTitle: 'Dodatkowo płatne', // Nowe
-            infoParking: 'Miejsce parkingowe w garażu podziemnym (70 PLN/doba).', // Zaktualizowano
-            infoPets: 'Pobyt zwierzęcia (100 PLN/doba).', // Zaktualizowano
-            goodToKnowTitle: 'Warto wiedzieć', // Nowe
-            goodToKnowWifi: 'Szybkie, darmowe Wi-Fi dostępne w całym apartamencie.', // Nowe
-            goodToKnowBedding: 'Pościel i ręczniki wliczone w cenę.', // Nowe
-            goodToKnowCleaning: 'Sprzątanie końcowe wliczone w cenę.', // Nowe
+            additionallyPaidTitle: 'Dodatkowo płatne',
+            infoParking: 'Miejsce parkingowe w garażu podziemnym (70 PLN/doba).',
+            infoPets: 'Pobyt zwierzęcia (100 PLN/doba).',
+            goodToKnowTitle: 'Warto wiedzieć',
+            goodToKnowWifi: 'Szybkie, darmowe Wi-Fi dostępne w całym apartamencie.',
+            goodToKnowBedding: 'Pościel i ręczniki wliczone w cenę.',
+            goodToKnowCleaning: 'Sprzątanie końcowe wliczone w cenę.',
             locationTitle: 'Nasza Lokalizacja',
             locationDesc: 'Znajdziesz nas w kompleksie Sea & Forest, w otulinie Wolińskiego Parku Narodowego, zaledwie krótki spacer od plaży.',
             contactTitle: 'Zarezerwuj Pobyt',
             contactDesc: 'Wybierz Amber lub Azure Suite i zanurz się w luksusie, spokoju i naturze. Czekamy na Twój kontakt.',
-            contactRole: 'Twoja Luksusowa Przystań w Sea & Forest',
+            contactRole: 'Twoja Luksusowa Przystaň w Sea & Forest',
             contactBtnMail: 'Napisz: amberazure.residences@gmail.com',
             contactBtnCallDarek: 'Darek: +48 602 229 707',
             contactBtnCallBeata: 'Beata: +48 606 410 041',
