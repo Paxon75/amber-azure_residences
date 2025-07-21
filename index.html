@@ -18,6 +18,10 @@
         <div class="container nav-container">
             <a href="#hero" class="logo" data-key="logo">Amber & Azure <span class="logo-accent">Residences</span></a>
             <div class="header-controls">
+                <div class="weather-display">
+                    <span data-key="weatherPrefix" class="weather-prefix"></span>
+                    <span id="current-temperature" class="current-temperature">--°C</span>
+                </div>
                 <div class="language-switcher">
                     <img src="https://flagcdn.com/w40/pl.png" alt="Język Polski" data-lang="pl">
                     <img src="https://flagcdn.com/w40/gb.png" alt="English Language" data-lang="en">
@@ -42,7 +46,7 @@
     <main>
         <section id="hero">
             <video class="hero-video" autoplay loop muted playsinline>
-                <source src="header.mp4" type="video/mp4">
+                <source src="https://paxon75.github.io/amber-azure_residences/header.mp4" type="video/mp4">
                 <span data-key="videoError">Twoja przeglądarka nie obsługuje wideo w tle.</span>
             </video>
             <div class="hero-overlay"></div>
