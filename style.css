@@ -83,9 +83,15 @@ h2 {
 }
 
 section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 4rem; /* Zmniejszone odstępy */
+    padding-bottom: 4rem; /* Zmniejszone odstępy */
 }
+/* Zwiększone odstępy dla niektórych sekcji, aby zachować czytelność */
+#hero { padding-bottom: 6rem; }
+#filozofia { padding-top: 6rem; padding-bottom: 6rem; }
+#apartamenty { padding-top: 6rem; padding-bottom: 6rem; }
+#kontakt { padding-top: 6rem; padding-bottom: 6rem; }
+
 
 /* === Nagłówek i Nawigacja === */
 .main-header {
@@ -134,7 +140,6 @@ section {
 .hero-cta:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 25px 30px -15px var(--color-amber); }
 
 /* --- Sekcja Filozofii --- */
-#filozofia { background-color: var(--color-light-bg); }
 #filozofia .intro-box { max-width: 900px; margin: 0 auto; text-align: center; }
 #filozofia .intro-box h2 { font-size: 2.25rem; margin-bottom: 1.5rem; }
 #filozofia .intro-text { margin-top: 2.5rem; font-size: 1.1rem; line-height: 1.8; color: var(--color-text-medium); text-align: justify; }
@@ -444,10 +449,10 @@ section {
 }
 
 /* Nowe style dla sekcji pakietu i akordeonów */
-#food, #sport-entertainment, #wellness-spa-details, #kids-details, #pakiet-info, #info-praktyczne {
+#detailed-info-accordion {
     background-color: var(--color-light-bg);
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 4rem; /* Zmniejszone odstępy */
+    padding-bottom: 4rem; /* Zmniejszone odstępy */
 }
 
 .info-card-grid {
@@ -513,7 +518,7 @@ section {
 /* Accordion Styles */
 .accordion-container {
     max-width: 900px;
-    margin: 4rem auto 0 auto;
+    margin: 2rem auto 0 auto; /* Zmniejszony górny margines */
     border: 1px solid #e0e0e0;
     border-radius: var(--radius);
     overflow: hidden;
@@ -542,17 +547,18 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Dodano transition dla koloru */
 }
 
 .accordion-header:hover {
     background-color: var(--color-light-bg);
+    color: var(--color-amber); /* Zmiana koloru na żółty po najechaniu */
 }
 
 .accordion-header h3 {
     margin: 0;
     font-size: 1.25rem;
-    color: var(--color-dark-blue);
+    color: inherit; /* Dziedziczy kolor z .accordion-header */
     flex-grow: 1;
 }
 
@@ -563,12 +569,13 @@ section {
 }
 
 /* Specific accordion icon colors */
-#food .accordion-icon-title { color: var(--color-amber); }
-#sport-entertainment .accordion-icon-title { color: var(--color-green-600); } /* Assuming green for sport */
-#wellness-spa-details .accordion-icon-title { color: var(--color-pink-500); } /* Assuming pink for spa */
-#kids-details .accordion-icon-title { color: var(--color-purple-600); } /* Assuming purple for kids */
-#attractions .accordion-icon-title { color: var(--color-blue-600); } /* Assuming blue for attractions */
-#info-praktyczne .accordion-icon-title { color: var(--color-gray-700); } /* Assuming gray for practical info */
+#detailed-info-accordion .accordion-item:nth-child(1) .accordion-icon-title { color: var(--color-amber); } /* Wyżywienie */
+#detailed-info-accordion .accordion-item:nth-child(2) .accordion-icon-title { color: #28a745; } /* Sport i rozrywka (zielony) */
+#detailed-info-accordion .accordion-item:nth-child(3) .accordion-icon-title { color: #e83e8c; } /* Wellness & SPA (różowy) */
+#detailed-info-accordion .accordion-item:nth-child(4) .accordion-icon-title { color: #6f42c1; } /* Udogodnienia dla dzieci (fioletowy) */
+#detailed-info-accordion .accordion-item:nth-child(5) .accordion-icon-title { color: #007bff; } /* Atrakcje i lokalizacja (niebieski) */
+#detailed-info-accordion .accordion-item:nth-child(6) .accordion-icon-title { color: #dc3545; } /* Dodatkowo płatne (czerwony) */
+#detailed-info-accordion .accordion-item:nth-child(7) .accordion-icon-title { color: #6c757d; } /* Warto wiedzieć (szary) */
 
 
 .accordion-icon {
@@ -591,6 +598,12 @@ section {
 .accordion-content .info-list {
     padding: 1rem 0 1.5rem 0; /* Adjust padding for content */
 }
+.accordion-content .accordion-text-description {
+    padding: 1rem 0 0.5rem 0;
+    color: var(--color-text-medium);
+    font-size: 1rem;
+    line-height: 1.6;
+}
 
 .accordion-content h4 {
     font-family: var(--font-primary); /* Ensure consistent font for subheadings */
@@ -601,26 +614,7 @@ section {
 }
 
 
-/* --- Sekcja Info Praktyczne & Kontakt --- */
-#info-praktyczne { background-color: var(--color-white); text-align: center; }
-#info-praktyczne h2 { margin-bottom: 2rem; }
-/* Zmieniono info-grid na info-card-grid dla spójności */
-#info-praktyczne .info-card-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-@media (min-width: 768px) {
-    #info-praktyczne .info-card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-#info-praktyczne .info-card p { /* Usunięto, teraz używamy info-list */
-    flex: 1; padding: 1.5rem; background-color: var(--color-light-bg); border: 1px solid #e9ecef; border-radius: var(--radius); color: var(--color-text-medium);
-}
+/* --- Sekcja Kontakt --- */
 #kontakt { background-color: var(--color-dark-blue); color: var(--color-white); padding-bottom: 6rem; }
 #kontakt h3, #kontakt h2 { color: var(--color-white); }
 .contact-grid { margin-top: 4rem; display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: stretch; }
