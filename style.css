@@ -443,8 +443,8 @@ section {
     transform: translateY(-2px);
 }
 
-/* Nowe style dla sekcji pakietu */
-#food, #pakiet-info {
+/* Nowe style dla sekcji pakietu i akordeonów */
+#food, #sport-entertainment, #wellness-spa-details, #kids-details, #pakiet-info, #info-praktyczne {
     background-color: var(--color-light-bg);
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -508,6 +508,96 @@ section {
     margin-right: 0.75rem;
     font-size: 1.2rem;
     margin-top: 0.2rem;
+}
+
+/* Accordion Styles */
+.accordion-container {
+    max-width: 900px;
+    margin: 4rem auto 0 auto;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    background-color: var(--color-white);
+    color: var(--color-dark-blue);
+    cursor: pointer;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: var(--color-light-bg);
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--color-dark-blue);
+    flex-grow: 1;
+}
+
+.accordion-icon-title { /* Icon next to title in accordion header */
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: var(--color-azure); /* Default icon color */
+}
+
+/* Specific accordion icon colors */
+#food .accordion-icon-title { color: var(--color-amber); }
+#sport-entertainment .accordion-icon-title { color: var(--color-green-600); } /* Assuming green for sport */
+#wellness-spa-details .accordion-icon-title { color: var(--color-pink-500); } /* Assuming pink for spa */
+#kids-details .accordion-icon-title { color: var(--color-purple-600); } /* Assuming purple for kids */
+#attractions .accordion-icon-title { color: var(--color-blue-600); } /* Assuming blue for attractions */
+#info-praktyczne .accordion-icon-title { color: var(--color-gray-700); } /* Assuming gray for practical info */
+
+
+.accordion-icon {
+    margin-left: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 0 2rem;
+    background-color: var(--color-white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content .info-list {
+    padding: 1rem 0 1.5rem 0; /* Adjust padding for content */
+}
+
+.accordion-content h4 {
+    font-family: var(--font-primary); /* Ensure consistent font for subheadings */
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark-blue);
 }
 
 
