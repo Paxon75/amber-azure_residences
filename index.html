@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Meta Tags -->
     <title data-key="pageTitle">Amber & Azure Residences | Luksusowe Apartamenty w Sea & Forest</title>
-    
+    <meta name="description" content="Odkryj luksusowe apartamenty Amber & Azure w Międzyzdrojach. Twoja prywatna przystań w sercu kompleksu Sea & Forest, gdzie natura spotyka się z komfortem. Zarezerwuj pobyt." data-key="metaDescription">
+    <meta name="keywords" content="apartamenty Międzyzdroje, luksusowe apartamenty, wynajem apartamentów, Sea & Forest, Woliński Park Narodowy, Amber & Azure, noclegi Międzyzdroje" data-key="metaKeywords">
+
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,12 +23,8 @@
         <div class="container nav-container">
             <a href="#hero" class="logo" data-key="logo">Amber & Azure <span class="logo-accent">Residences</span></a>
             <div class="header-controls">
-                <div class="weather-display">
-                    <span data-key="weatherPrefix" class="weather-prefix"></span>
-                    <span id="current-temperature" class="current-temperature">--°C</span>
-                </div>
                 <div class="language-switcher">
-                    <img src="https://flagcdn.com/w40/pl.png" alt="Język Polski" data-lang="pl">
+                    <img src="https://flagcdn.com/w40/pl.png" alt="Język Polski" data-lang="pl" class="lang-active">
                     <img src="https://flagcdn.com/w40/gb.png" alt="English Language" data-lang="en">
                     <img src="https://flagcdn.com/w40/de.png" alt="Deutsche Sprache" data-lang="de">
                 </div>
@@ -39,13 +40,14 @@
     <nav class="nav-links" id="nav-links">
         <a href="#filozofia" data-key="navPhilosophy">Filozofia</a>
         <a href="#apartamenty" data-key="navApartments">Apartamenty</a>
-        <a href="#detailed-info-accordion" data-key="navAmenities">Udogodnienia</a>
+        <a href="#udogodnienia" data-key="navAmenities">Udogodnienia</a>
+        <a href="#opinie" data-key="navTestimonials">Opinie</a>
         <a href="#kontakt" data-key="navContact">Kontakt</a>
     </nav>
 
     <main>
         <section id="hero">
-            <video class="hero-video" autoplay loop muted playsinline>
+            <video class="hero-video" autoplay loop muted playsinline poster="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
                 <source src="https://paxon75.github.io/amber-azure_residences/header.mp4" type="video/mp4">
                 <span data-key="videoError">Twoja przeglądarka nie obsługuje wideo w tle.</span>
             </video>
@@ -62,7 +64,7 @@
                 <div class="intro-box">
                     <h2 data-key="philosophyTitle">Prawdziwy luksus to czas i przestrzeň.</h2>
                     <p class="section-subtitle" data-key="philosophySubtitle">W Amber & Azure Residences wierzymy, że autentyczny odpoczynek rodzi się z harmonii z naturą. Stworzyliśmy dwa wyjątkowe apartamenty w sercu kompleksu Sea & Forest, które pozwalają zwolnić, odetchnąć i na nowo połączyć się ze sobą i z otoczeniem.</p>
-                    <p data-key="introText">Jako nasi Goście, otrzymujecie klucze nie tylko do luksusowego wnętrza, ale także do bogactwa udogodnień całego resortu, wkomponowanego w malowniczą otulinę Wolińskiego Parku Narodowego. To zaproszenie do doświadczania, odczuwania i czerpania z natury pełnymi garściami.</p>
+                    <p class="intro-text" data-key="introText">Jako nasi Goście, otrzymujecie klucze nie tylko do luksusowego wnętrza, ale także do bogactwa udogodnień całego resortu, wkomponowanego w malowniczą otulinę Wolińskiego Parku Narodowego. To zaproszenie do doświadczania, odczuwania i czerpania z natury pełnymi garściami.</p>
                 </div>
             </div>
         </section>
@@ -80,19 +82,19 @@
                      <div class="suite-body">
                         <div class="gallery-container">
                             <div class="gallery-main-image">
-                                <img src="https://picsum.photos/seed/azure1/800/600" alt="Azure Suite" id="azure-main-img">
+                                <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800&h=600" alt="Elegancki salon w Apartamencie Azure Suite" id="azure-main-img">
                             </div>
                             <div class="thumbnail-scroll-wrapper">
-                                <button class="scroll-arrow left" id="azure-scroll-left">&lt;</button>
-                                <div class="thumbnail-scroll-container" id="azure-thumbnails">
-                                    <img src="https://picsum.photos/seed/azure1/150/100" data-image="https://picsum.photos/seed/azure1/800/600" class="thumbnail-item active-thumb" alt="Azure Suite - Widok 1">
-                                    <img src="https://picsum.photos/seed/azure2/150/100" data-image="https://picsum.photos/seed/azure2/800/600" class="thumbnail-item" alt="Azure Suite - Widok 2">
-                                    <img src="https://picsum.photos/seed/azure3/150/100" data-image="https://picsum.photos/seed/azure3/800/600" class="thumbnail-item" alt="Azure Suite - Widok 3">
-                                    <img src="https://picsum.photos/seed/azure4/150/100" data-image="https://picsum.photos/seed/azure4/800/600" class="thumbnail-item" alt="Azure Suite - Widok 4">
-                                    <img src="https://picsum.photos/seed/azure5/150/100" data-image="https://picsum.photos/seed/azure5/800/600" class="thumbnail-item" alt="Azure Suite - Widok 5">
-                                    <img src="https://picsum.photos/seed/azure6/150/100" data-image="https://picsum.photos/seed/azure6/800/600" class="thumbnail-item" alt="Azure Suite - Widok 6">
+                                <button class="scroll-arrow left" aria-label="Previous image">&lt;</button>
+                                <div class="thumbnail-scroll-container">
+                                    <div class="thumbnail-item active-thumb" data-image="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"><img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Miniatura salonu"></div>
+                                    <div class="thumbnail-item" data-image="https://images.pexels.com/photos/6492397/pexels-photo-6492397.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"><img src="https://images.pexels.com/photos/6492397/pexels-photo-6492397.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Miniatura sypialni"></div>
+                                    <div class="thumbnail-item" data-image="https://images.pexels.com/photos/6585620/pexels-photo-6585620.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"><img src="https://images.pexels.com/photos/6585620/pexels-photo-6585620.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Miniatura aneksu kuchennego"></div>
+                                    <div class="thumbnail-item" data-image="https://images.pexels.com/photos/6434623/pexels-photo-6434623.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"><img src="https://images.pexels.com/photos/6434623/pexels-photo-6434623.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Miniatura łazienki"></div>
+                                    <div class="thumbnail-item" data-image="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"><img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Miniatura części jadalnianej"></div>
+                                    <div class="thumbnail-item" data-image="https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"><img src="https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Miniatura tarasu z widokiem na las"></div>
                                 </div>
-                                <button class="scroll-arrow right" id="azure-scroll-right">&gt;</button>
+                                <button class="scroll-arrow right" aria-label="Next image">&gt;</button>
                             </div>
                         </div>
                         <div class="suite-content">
@@ -109,179 +111,201 @@
                     </div>
                 </article>
 
-                <!-- Informacja o apartamencie Amber - Zaktualizowana sekcja -->
-                <article class="suite-showcase amber-soon-available" id="amber-suite-info">
+                <article class="suite-showcase amber-soon-available" id="amber-suite">
                     <header class="suite-header">
-                        <h3 class="suite-title" data-key="amberSoonTitle">Apartament Amber Suite - Wkrótce Dostępny!</h3>
+                        <h3 class="suite-title" data-key="amberSoonTitle">Apartament Amber Suite – Wkrótce Dostępny!</h3>
                     </header>
-                    <div class="amber-soon-content">
-                        <p data-key="amberSoonDesc"></p>
-                        <p data-key="amberSoonContact"></p>
-                        <div class="contact-buttons-inline">
-                            <a href="mailto:amberazure.residences@gmail.com" class="btn-email" data-key="contactBtnMail">Napisz do nas</a>
-                            <a href="tel:+48602229707" class="btn-call" data-key="contactBtnCallDarek">Darek: +48 602 229 707</a>
-                            <a href="tel:+48606410041" class="btn-call" data-key="contactBtnCallBeata">Beata: +48 606 410 041</a>
+                    <div class="suite-body">
+                        <div class="gallery-container">
+                             <div class="gallery-main-image">
+                                <img src="https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=800&h=600" alt="Wizualizacja ciepłego i przytulnego Apartamentu Amber Suite">
+                            </div>
+                        </div>
+                        <div class="suite-content amber-soon-content">
+                            <p data-key="amberSoonDesc">Ten zupełnie nowy, wyjątkowy apartament, inspirowany ciepłem bursztynu, czeka, aby gościć Państwa w swoich progach. Oferuje niezapomniane wrażenia z pobytu w sercu Wolińskiego Parku Narodowego. Idealny dla tych, którzy cenią sobie przytulny luksus i bliskość natury.</p>
+                            <p data-key="amberSoonContact">Przygotuj się na swój wymarzony pobyt! Skontaktuj się z nami, aby dowiedzieć się więcej o terminach dostępności i rezerwacji.</p>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- Nowa sekcja z akordeonami -->
-        <section id="detailed-info-accordion">
+        <section id="udogodnienia">
             <div class="container">
-                <h2 class="section-title" data-key="detailedInfoMainTitle">Szczegółowe Informacje i Udogodnienia</h2>
+                <h2 data-key="detailedInfoMainTitle">Szczegółowe Informacje i Udogodnienia</h2>
                 <p class="section-subtitle" data-key="detailedInfoMainSubtitle">Wszystko, co musisz wiedzieć o Twoim pobycie w Sea & Forest Resort.</p>
 
                 <div class="accordion-container">
-                    <!-- Wyżywienie Accordion Item -->
+                    <!-- Wyżywienie -->
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <i class="fas fa-utensils accordion-icon-title"></i>
-                            <h3 data-key="mealsTitle">Wyżywienie</h3>
+                            <div class="accordion-title-wrapper"><i class="fas fa-utensils accordion-icon-title"></i><h3 data-key="mealsTitle">Wyżywienie</h3></div>
                             <i class="fas fa-chevron-down accordion-icon"></i>
                         </button>
                         <div class="accordion-content">
-                            <p data-key="mealsDesc" class="accordion-text-description"></p>
-                            <h4><i class="fas fa-star"></i> <span data-key="foodFeaturesTitle">Co wyróżnia naszą kuchnię:</span></h4>
-                            <ul class="info-list">
-                                <li><i class="fas fa-leaf text-green-600"></i> <span data-key="foodFeature1"><b>Zero waste na talerzu</b> – nie mamy bufetów, za to przygotowujemy pyszne zestawy, tylko tyle ile potrzeba, wykorzystujemy każdy składnik do końca.</span></li>
-                                <li><i class="fas fa-fish text-blue-600"></i> <span data-key="foodFeature2"><b>Sea & Forest to Table</b> – współpracujemy z lokalnymi rybakami i dostawcami, by podawać świeże i sezonowe produkty.</span></li>
-                                <li><i class="fas fa-sun text-yellow-600"></i> <span data-key="foodFeature3"><b>Jemy na świeżym powietrzu</b> – posiłki smakują lepiej, gdy można je zjeść na tarasie lub zabrać na piknik.</span></li>
-                                <li><i class="fas fa-hourglass-half text-gray-600"></i> <span data-key="foodFeature4"><b>Kameralnie i w rytmie slow</b> – bez pośpiechu, tylko dobre jedzenie i spokój wokół.</span></li>
-                            </ul>
-                            <h4 class="mt-4 mb-2 text-lg font-semibold"><i class="fas fa-clock"></i> <span data-key="restaurantHoursTitle">Godziny otwarcia gastronomii:</span></h4>
-                            <ul class="info-list">
-                                <li><i class="fas fa-utensils text-orange-500"></i> <span data-key="restaurantHours">Restauracja a la carte For Rest: codziennie 12:00 – 23:00</span></li>
-                                <li><i class="fas fa-coffee text-brown-500"></i> <span data-key="lobbyBarHours">Lobby Café & Bar: codziennie 12:00 – 23:00</span></li>
-                                <li><i class="fas fa-shopping-bag text-purple-500"></i> <span data-key="takeawaySnacks">Przekąski na wynos: oferujemy zestawy piknikowe, chrupiące kanapki, świeże sałatki – wszystko gotowe, by zabrać na plażę, do lasu albo na rowerową wyprawę.</span></li>
-                            </ul>
+                            <div class="accordion-content-inner">
+                                <p data-key="mealsDesc" class="accordion-text-description"></p>
+                                <h4 data-key="foodFeaturesTitle"></h4>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-leaf"></i><span data-key="foodFeature1"></span></li>
+                                    <li><i class="fas fa-fish"></i><span data-key="foodFeature2"></span></li>
+                                    <li><i class="fas fa-sun"></i><span data-key="foodFeature3"></span></li>
+                                    <li><i class="fas fa-hourglass-half"></i><span data-key="foodFeature4"></span></li>
+                                </ul>
+                                <h4 data-key="restaurantHoursTitle"></h4>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-utensils"></i><span data-key="restaurantHours"></span></li>
+                                    <li><i class="fas fa-coffee"></i><span data-key="lobbyBarHours"></span></li>
+                                    <li><i class="fas fa-shopping-bag"></i><span data-key="takeawaySnacks"></span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Sport i rozrywka Accordion Item -->
+                    <!-- Sport i rozrywka -->
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <i class="fas fa-running accordion-icon-title"></i>
-                            <h3 data-key="sportEntertainmentTitle">Sport i rozrywka</h3>
+                            <div class="accordion-title-wrapper"><i class="fas fa-running accordion-icon-title"></i><h3 data-key="sportEntertainmentTitle">Sport i rozrywka</h3></div>
                             <i class="fas fa-chevron-down accordion-icon"></i>
                         </button>
                         <div class="accordion-content">
-                            <p data-key="sportEntertainmentSubtitle" class="accordion-text-description"></p>
-                            <ul class="info-list">
-                                <li><i class="fas fa-bus text-blue-600"></i> <span data-key="sportEntertainment1"><b>Transport na plażę melexem</b> – kilka razy dziennie nasz hotelowy melex wygodnie dowiezie Cię na plażę.</span></li>
-                                <li><i class="fas fa-biking text-green-600"></i> <span data-key="sportEntertainment2"><b>Rowerowe przygody</b> – wypożyczasz rower (dodatkowa opłata) i ruszasz w trasę. Leśne ścieżki, klify, dzikie plaże – wybór należy do Ciebie.</span></li>
-                                <li><i class="fas fa-dumbbell text-red-600"></i> <span data-key="sportEntertainment3"><b>Ruch dla ciała, oddech dla głowy</b> – sala fitness, baseny, jacuzzi, sauny i zajęcia sportowe. Grafik fitness dostępny w opisie pakietu i/lub na miejscu.</span></li>
-                                <li><i class="fas fa-music text-purple-600"></i> <span data-key="sportEntertainment4"><b>Sezon pełny atrakcji</b> – koncerty, ogniska i sezonowe animacje dla dzieci. Można słuchać, tańczyć albo po prostu patrzeć na ogień. Grafik atrakcji dostępny w opisie pakietu i/lub na miejscu.</span></li>
-                                <li><i class="fas fa-tree text-green-700"></i> <span data-key="sportEntertainment5"><b>Las, który koi</b> – Woliński Park Narodowy, dzikie ścieżki i cisza, która pozwala usłyszeć własne myśli.</span></li>
-                                <li><i class="fas fa-mobile-alt text-gray-700"></i> <span data-key="sportEntertainment6"><b>Digital Detox</b> – nasze rytuały wspierające analogowe poranki, wieczory i weekendy oraz strefy „no phone zone” dla tych, którzy chcą odpocząć od ekranu i naprawdę być tu i teraz.</span></li>
-                            </ul>
+                             <div class="accordion-content-inner">
+                                <p data-key="sportEntertainmentSubtitle" class="accordion-text-description"></p>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-bus"></i><span data-key="sportEntertainment1"></span></li>
+                                    <li><i class="fas fa-biking"></i><span data-key="sportEntertainment2"></span></li>
+                                    <li><i class="fas fa-dumbbell"></i><span data-key="sportEntertainment3"></span></li>
+                                    <li><i class="fas fa-music"></i><span data-key="sportEntertainment4"></span></li>
+                                    <li><i class="fas fa-tree"></i><span data-key="sportEntertainment5"></span></li>
+                                    <li><i class="fas fa-mobile-alt"></i><span data-key="sportEntertainment6"></span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Wellness & SPA Accordion Item -->
+                    <!-- Wellness & SPA -->
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <i class="fas fa-spa accordion-icon-title"></i>
-                            <h3 data-key="wellnessSpaTitle">Wellness & SPA</h3>
+                             <div class="accordion-title-wrapper"><i class="fas fa-spa accordion-icon-title"></i><h3 data-key="wellnessSpaTitle">Wellness & SPA</h3></div>
                             <i class="fas fa-chevron-down accordion-icon"></i>
                         </button>
                         <div class="accordion-content">
-                            <p data-key="wellnessSpaSubtitle" class="accordion-text-description"></p>
-                            <ul class="info-list">
-                                <li><i class="fas fa-water text-blue-500"></i> <span data-key="wellnessSpa1"><b>Baseny i jacuzzi</b> – wewnętrzny basen z brodzikiem dla dzieci oraz całoroczny, podgrzewany basen zewnętrzny. Do tego dwa jacuzzi – na wieczorne odprężenie pod gwiazdami.</span></li>
-                                <li><i class="fas fa-hot-tub text-red-500"></i> <span data-key="wellnessSpa2"><b>Sauna fińska</b> – Rozgrzewasz ciało, chłodzisz się pod pryszwerem, a potem odpoczywasz w leśnej strefie relaksu.</span></li>
-                                <li><i class="fas fa-dumbbell text-green-500"></i> <span data-key="wellnessSpa3"><b>Siłownia</b> – oferujemy nowoczesny sprzęt do ćwiczeń siłowych i wytrzymałościowych. Organizujemy zajęcia fitness.</span></li>
-                                <li><i class="fas fa-hand-holding-heart text-pink-500"></i> <span data-key="wellnessSpa4"><b>SPA Shept</b> – autorskie zabiegi inspirowane naturą, bazujące na nauce i holistycznym podejściu do ciała i umysłu.</span></li>
-                                <li><i class="fas fa-snowflake text-cyan-500"></i> <span data-key="wellnessSpa5"><b>Cryo-sauna & kąpiele leśne</b> – gorąco polecamy terapie zimnem i spacery wśród drzew - idealne dla tych, którzy chcą się wzmocnić i dotlenić.</span></li>
-                            </ul>
-                            <h4 class="mt-4 mb-2 text-lg font-semibold"><i class="fas fa-clock"></i> <span data-key="restaurantHoursTitle">Godziny otwarcia:</span></h4>
-                            <ul class="info-list">
-                                <li><i class="fas fa-clock text-gray-600"></i> <span data-key="spaSheptHours">SPA Shept: codziennie 9:00 – 21:00</span></li>
-                                <li><i class="fas fa-clock text-gray-600"></i> <span data-key="poolGymSaunaHours">Basen, siłownia, sauny: codziennie 7:00 – 21:00, 21:00 – 23:00 adults only</span></li>
-                                <li><i class="fas fa-clock text-gray-600"></i> <span data-key="fitnessClasses">Zajęcia Fitness: według grafiku</span></li>
-                            </ul>
+                            <div class="accordion-content-inner">
+                                <p data-key="wellnessSpaSubtitle" class="accordion-text-description"></p>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-water"></i><span data-key="wellnessSpa1"></span></li>
+                                    <li><i class="fas fa-hot-tub"></i><span data-key="wellnessSpa2"></span></li>
+                                    <li><i class="fas fa-dumbbell"></i><span data-key="wellnessSpa3"></span></li>
+                                    <li><i class="fas fa-hand-holding-heart"></i><span data-key="wellnessSpa4"></span></li>
+                                    <li><i class="fas fa-snowflake"></i><span data-key="wellnessSpa5"></span></li>
+                                </ul>
+                                <h4>Godziny otwarcia:</h4>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-clock"></i><span data-key="spaSheptHours"></span></li>
+                                    <li><i class="fas fa-clock"></i><span data-key="poolGymSaunaHours"></span></li>
+                                    <li><i class="fas fa-clock"></i><span data-key="fitnessClasses"></span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Udogodnienia dla dzieci Accordion Item -->
+                    <!-- Udogodnienia dla dzieci -->
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <i class="fas fa-child accordion-icon-title"></i>
-                            <h3 data-key="kidsAmenitiesTitle">Udogodnienia dla dzieci</h3>
+                            <div class="accordion-title-wrapper"><i class="fas fa-child accordion-icon-title"></i><h3 data-key="kidsAmenitiesTitle">Udogodnienia dla dzieci</h3></div>
                             <i class="fas fa-chevron-down accordion-icon"></i>
                         </button>
                         <div class="accordion-content">
-                            <p data-key="kidsAmenitiesSubtitle" class="accordion-text-description"></p>
-                            <ul class="info-list">
-                                <li><i class="fas fa-gamepad text-purple-600"></i> <span data-key="kidsAmenities1">Sala zabaw Mewa Śmieszka</span></li>
-                                <li><i class="fas fa-tree text-green-600"></i> <span data-key="kidsAmenities2">Zewnętrzny plac zabaw</span></li>
-                                <li><i class="fas fa-theater-masks text-orange-600"></i> <span data-key="kidsAmenities3">Zorganizowane animacje (atrakcja sezonowa, szczegółowy plan atrakcji dostępy w hotelu i/lub pakiecie)</span></li>
-                                <li><i class="fas fa-map-marked-alt text-blue-600"></i> <span data-key="kidsAmenities4">Quest of the Wolin Tribe – nasza gra terenowa dla dzieci 7+.</span></li>
-                                <li><i class="fas fa-flask text-yellow-600"></i> <span data-key="kidsAmenities5">Eko-Detektywi – edukacyjna gra dla najmłodszych, pełna eksperymentów i sensorycznych odkryć.</span></li>
-                                <li><i class="fas fa-swimmer text-cyan-600"></i> <span data-key="kidsAmenities6">Całoroczny podgrzewany basen zewnętrzny oraz basen wewnętrzny z brodzikiem, akcesoria do pływania</span></li>
-                                <li><i class="fas fa-baby-carriage text-pink-600"></i> <span data-key="kidsAmenities7">Na życzenie Gości udostępniamy bezpłatnie do apartamentów wanienkę, podest oraz nakładka na toaletę</span></li>
-                                <li><i class="fas fa-chair text-brown-600"></i> <span data-key="kidsAmenities8">W restauracji znajdują się krzesełka do karmienia, a w toaletach ogólnodostępne przewijaki.</span></li>
-                                <li><i class="fas fa-bed text-gray-600"></i> <span data-key="kidsAmenities9">Dzieci do 3 lat, śpiące z rodzicami, pobyt bez opłat</span></li>
-                                <li><i class="fas fa-baby text-red-600"></i> <span data-key="kidsAmenities10">Dodatkowe łóżeczko - 30 PLN/doba</span></li>
-                            </ul>
+                            <div class="accordion-content-inner">
+                                <p data-key="kidsAmenitiesSubtitle" class="accordion-text-description"></p>
+                                <ul class="info-list">
+                                    <li><i class="fas fa-gamepad"></i><span data-key="kidsAmenities1"></span></li>
+                                    <li><i class="fas fa-tree"></i><span data-key="kidsAmenities2"></span></li>
+                                    <li><i class="fas fa-theater-masks"></i><span data-key="kidsAmenities3"></span></li>
+                                    <li><i class="fas fa-map-marked-alt"></i><span data-key="kidsAmenities4"></span></li>
+                                    <li><i class="fas fa-flask"></i><span data-key="kidsAmenities5"></span></li>
+                                    <li><i class="fas fa-swimmer"></i><span data-key="kidsAmenities6"></span></li>
+                                    <li><i class="fas fa-baby-carriage"></i><span data-key="kidsAmenities7"></span></li>
+                                    <li><i class="fas fa-chair"></i><span data-key="kidsAmenities8"></span></li>
+                                    <li><i class="fas fa-bed"></i><span data-key="kidsAmenities9"></span></li>
+                                    <li><i class="fas fa-baby"></i><span data-key="kidsAmenities10"></span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Atrakcje i lokalizacja Accordion Item -->
+                    <!-- Dodatkowo płatne -->
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <i class="fas fa-map-marker-alt accordion-icon-title"></i>
-                            <h3 data-key="attractionsLocationTitle">Atrakcje i lokalizacja</h3>
+                            <div class="accordion-title-wrapper"><i class="fas fa-money-bill-wave accordion-icon-title"></i><h3 data-key="additionallyPaidTitle">Dodatkowo płatne</h3></div>
                             <i class="fas fa-chevron-down accordion-icon"></i>
                         </button>
                         <div class="accordion-content">
-                            <p data-key="attractionsLocationSubtitle" class="accordion-text-description"></p>
-                            <ul class="info-list">
-                                <li><i class="fas fa-umbrella-beach text-orange-500"></i> <span data-key="attraction1Title"><b>Plaża na Wyciągnięcie Ręki</b></span></li>
-                                <li><span data-key="attraction1Desc">Na piękną, szeroką plażę dotrzesz malowniczym spacerem przez las (ok. 10 minut) lub korzystając z komfortowego, cichego busika elektrycznego (kursuje sezonowo).</span></li>
-                                <li><i class="fas fa-mountain text-green-700"></i> <span data-key="attraction2Title"><b>Woliński Park Narodowy</b></span></li>
-                                <li><span data-key="attraction2Desc">Ruszaj na szlaki prosto z apartamentu. Czekają na Ciebie zapierające dech w piersiach widoki z klifu Gosaň, urokliwe Jezioro Turkusowe oraz edukacyjna Zagroda Pokazowa Żubrów.</span></li>
-                                <li><i class="fas fa-city text-blue-700"></i> <span data-key="attraction3Title"><b>Uroki Międzyzdrojów</b></span></li>
-                                <li><span data-key="attraction3Desc">Spaceruj słynną Aleją Gwiazd, podziwiaj widoki z 395-metrowego molo, odwiedź fascynujące Oceanarium i realistyczny Gabinet Figur Woskowych.</span></li>
-                            </ul>
+                           <div class="accordion-content-inner">
+                                <ul class="info-list">
+                                    <li><i class="fas fa-parking"></i><span data-key="infoParking"></span></li>
+                                    <li><i class="fas fa-paw"></i><span data-key="infoPets"></span></li>
+                                    <li><i class="fas fa-baby"></i><span data-key="infoCrib"></span></li>
+                                    <li><i class="fas fa-biking"></i><span data-key="infoBikeRental"></span></li>
+                                    <li><i class="fas fa-charging-station"></i><span data-key="infoEVCharging"></span></li>
+                                    <li><i class="fas fa-money-check-alt"></i><span data-key="infoClimateTax"></span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Dodatkowo płatne Accordion Item -->
+                    <!-- Warto wiedzieć -->
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            <i class="fas fa-money-bill-wave accordion-icon-title"></i>
-                            <h3 data-key="additionallyPaidTitle">Dodatkowo płatne</h3>
+                            <div class="accordion-title-wrapper"><i class="fas fa-info-circle accordion-icon-title"></i><h3 data-key="goodToKnowTitle">Warto wiedzieć</h3></div>
                             <i class="fas fa-chevron-down accordion-icon"></i>
                         </button>
                         <div class="accordion-content">
-                            <ul class="info-list">
-                                <li><i class="fas fa-car text-blue-600"></i> <span data-key="attractionsLocationParking">Parking – 70 PLN/doba.</span></li>
-                                <li><i class="fas fa-paw text-blue-600"></i> <span data-key="attractionsLocationPetStay">Pobyt zwierzaka: 90 PLN/doba.</span></li>
-                                <li><i class="fas fa-baby text-blue-600"></i> <span data-key="attractionsLocationCrib">Łóżeczko dla dzieci (0-3 lat): 30 PLN/doba.</span></li>
-                                <li><i class="fas fa-biking text-blue-600"></i> <span data-key="attractionsLocationBikeRental">Wypożyczalnia rowerów – więcej informacji na recepcji.</span></li>
-                                <li><i class="fas fa-charging-station text-blue-600"></i> <span data-key="attractionsLocationEVCharging">Stacja do ładowania samochodów elektrycznych.</span></li>
-                                <li><i class="fas fa-money-check-alt text-blue-600"></i> <span data-key="attractionsLocationClimateTax">Obowiązkowa opłata klimatyczna naliczana zgodnie z oficjalnymi stawkami na dany rok.</span></li>
-                            </ul>
+                            <div class="accordion-content-inner">
+                                <ul class="info-list">
+                                    <li><i class="fas fa-wifi"></i><span data-key="goodToKnowWifi"></span></li>
+                                    <li><i class="fas fa-bed"></i><span data-key="goodToKnowBedding"></span></li>
+                                    <li><i class="fas fa-broom"></i><span data-key="goodToKnowCleaning"></span></li>
+                                    <li><i class="fas fa-clock"></i><span data-key="goodToKnowCheckIn"></span></li>
+                                    <li><i class="fas fa-clock"></i><span data-key="goodToKnowCheckOut"></span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Warto wiedzieć Accordion Item -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <i class="fas fa-info-circle accordion-icon-title"></i>
-                            <h3 data-key="goodToKnowTitle">Warto wiedzieć</h3>
-                            <i class="fas fa-chevron-down accordion-icon"></i>
-                        </button>
-                        <div class="accordion-content">
-                            <ul class="info-list">
-                                <li><i class="fas fa-wifi text-green-600"></i> <span data-key="goodToKnowWifi">Szybkie, darmowe Wi-Fi dostępne w całym apartamencie i na terenie resortu.</span></li>
-                                <li><i class="fas fa-bed text-green-600"></i> <span data-key="goodToKnowBedding">Pościel i ręczniki wliczone w cenę pobytu.</span></li>
-                                <li><i class="fas fa-broom text-green-600"></i> <span data-key="goodToKnowCleaning">Sprzątanie końcowe apartamentu wliczone w cenę.</span></li>
-                                <li><i class="fas fa-clock text-green-600"></i> <span data-key="goodToKnowCheckIn">Zameldowanie od godziny 16:00.</span></li>
-                                <li><i class="fas fa-clock text-green-600"></i> <span data-key="goodToKnowCheckOut">Wymeldowanie do godziny 11:00.</span></li>
-                            </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- NEW Testimonials Section -->
+        <section id="opinie">
+            <div class="container">
+                <h2 data-key="testimonialsTitle">Co Mówią Nasi Goście</h2>
+                <p class="section-subtitle" data-key="testimonialsSubtitle">Twoje wspomnienia są dla nas najważniejsze. Zobacz, jak oceniają nas goście, którzy już odkryli magię Amber & Azure.</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://i.pravatar.cc/100?u=anna" alt="Zdjęcie gościa - Anna">
+                            <div class="testimonial-author">
+                                <h4 data-key="testimonialAuthor1">Anna i Tomasz</h4>
+                                <p data-key="testimonialDate1">Pobyt w lipcu 2024</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text" data-key="testimonialText1">"Niezapomniany pobyt! Apartament Azure to kwintesencja luksusu i komfortu. Czysto, nowocześnie, a taras z widokiem na las to absolutny hit. Wrócimy na pewno!"</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://i.pravatar.cc/100?u=karolina" alt="Zdjęcie gościa - Karolina">
+                            <div class="testimonial-author">
+                                <h4 data-key="testimonialAuthor2">Karolina z rodziną</h4>
+                                <p data-key="testimonialDate2">Pobyt w sierpniu 2024</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-text" data-key="testimonialText2">"Idealne miejsce na wypoczynek z dziećmi. Bliskość natury, dostęp do basenów i placu zabaw. Sam apartament przepięknie urządzony i w pełni wyposażony. Polecamy z całego serca."</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
                 </div>
@@ -304,15 +328,13 @@
                         </div>
                     </div>
                     <div class="contact-column">
-                        <h3 data-key="contactTitle">Zarezerwuj Pobyt</h3>
-                        <p data-key="contactDesc">Wybierz Amber lub Azure Suite i zanurz się w luksusie, spokoju i naturze. Czekamy na Twój kontakt.</p>
-                         <div class="contact-card">
-                            <h4 class="card-title">Amber & Azure Residences</h4>
-                            <p class="role" data-key="contactRole">Twoja Luksusowa Przystaň w Sea & Forest</p>
+                        <div class="contact-card">
+                            <h3 data-key="contactTitle">Zarezerwuj Pobyt</h3>
+                            <p data-key="contactDesc">Wybierz Amber lub Azure Suite i zanurz się w luksusie, spokoju i naturze. Czekamy na Twój kontakt.</p>
                             <div class="contact-buttons">
-                                <a href="mailto:amberazure.residences@gmail.com" class="btn-email" data-key="contactBtnMail">Napisz: amberazure.residences@gmail.com</a>
-                                <a href="tel:+48602229707" class="btn-call" data-key="contactBtnCallDarek">Darek: +48 602 229 707</a>
-                                <a href="tel:+48606410041" class="btn-call" data-key="contactBtnCallBeata">Beata: +48 606 410 041</a>
+                                <a href="mailto:amberazure.residences@gmail.com" class="btn-email"><i class="fas fa-envelope"></i> <span data-key="contactBtnMail">Napisz do nas</span></a>
+                                <a href="tel:+48602229707" class="btn-call"><i class="fas fa-phone"></i> <span data-key="contactBtnCallDarek">Darek: +48 602 229 707</span></a>
+                                <a href="tel:+48606410041" class="btn-call"><i class="fas fa-phone"></i> <span data-key="contactBtnCallBeata">Beata: +48 606 410 041</span></a>
                             </div>
                         </div>
                     </div>
@@ -323,28 +345,28 @@
     
     <div class="floating-cta">
         <div class="cta-bubble" id="cta-bubble">
-            <button class="close-bubble" id="close-bubble">&times;</button>
+            <button class="close-bubble" id="close-bubble" aria-label="Close contact bubble">&times;</button>
             <h4 data-key="ctaTitle">Chcesz zarezerwować pobyt?</h4>
             <p data-key="ctaDesc">Skontaktuj się z nami bezpośrednio:<br><a href="mailto:amberazure.residences@gmail.com">amberazure.residences@gmail.com</a><br>Darek: <a href="tel:+48602229707">+48 602 229 707</a><br>Beata: <a href="tel:+48606410041">+48 606 410 041</a></p>
         </div>
-        <button class="cta-button" id="cta-button">
+        <button class="cta-button" id="cta-button" aria-label="Open contact bubble">
             <i class="fas fa-bullhorn"></i>
         </button>
     </div>
 
     <footer>
-        <div class="footer-links">
+        <div class="container">
             <span data-key="footerRights">© 2025 Amber & Azure Residences. Wszelkie prawa zastrzeżone.</span> | 
-            <a href="#privacy-policy" class="privacy-link" data-key="footerPrivacy">Polityka Prywatności</a>
+            <a href="#" class="privacy-link" data-key="footerPrivacy">Polityka Prywatności</a>
         </div>
     </footer>
     
     <div class="cookie-overlay" id="cookie-overlay"></div>
-    <div class="cookie-consent-popup" id="cookie-consent-popup">
+    <div class="cookie-consent-popup" id="cookie-consent-popup" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
         <div class="cookie-content">
             <div class="cookie-main-content" id="cookie-main">
-                <h3 data-key="cookieTitle">Cenimy Twoją prywatność</h3>
-                <p data-key="cookieText">Używamy plików cookie, aby personalizować treści, udostępniać funkcje mediów społecznościowych i analizować nasz ruch. Udostępniamy również informacje o Twoim korzystaniu z naszej witryny naszym partnerom.</p>
+                <h3 id="cookie-title" data-key="cookieTitle">Cenimy Twoją prywatność</h3>
+                <p id="cookie-desc" data-key="cookieText">Używamy plików cookie, aby personalizować treści, udostępniać funkcje mediów społecznościowych i analizować nasz ruch. Udostępniamy również informacje o Twoim korzystaniu z naszej witryny naszym partnerom.</p>
                 <div class="cookie-main-buttons">
                     <button class="cookie-btn-secondary" id="cookie-reject" data-key="cookieDeny">Odrzuć</button>
                     <button class="cookie-btn-secondary" id="cookie-customize" data-key="cookieCustomize">Dostosuj</button>
@@ -382,81 +404,30 @@
     </div>
 
     <div class="privacy-policy-page" id="privacy-policy-page">
-        <div class="privacy-content">
-            <a href="#" class="privacy-close-btn">×</a>
-            <h2 data-key="privacyTitle">Polityka Prywatności i Plików Cookies Strony Internetowej Amber & Azure Residences</h2>
-            <p><strong data-key="privacyLastUpdated">Data ostatniej aktualizacji: 16.07.2025 r.</strong></p>
-
-            <h3 data-key="privacyS1Title">§1 Postanowienia Ogólne</h3>
-            <p data-key="privacyS1P1"></p>
-            <p data-key="privacyS1P2"></p>
-
-            <h3 data-key="privacyS2Title">§2 Administrator Danych Osobowych</h3>
-            <p data-key="privacyS2P1"></p>
-            <p data-key="privacyS2P2"></p>
-            <ul>
-                <li data-key="privacyS2Email"></li>
-                <li data-key="privacyS2Phone"></li>
-                <li data-key="privacyS2Address"></li>
-            </ul>
-
-            <h3 data-key="privacyS3Title">§3 Cele, Podstawy Prawne i Okres Przetwarzania Danych</h3>
-            <p data-key="privacyS3P1"></p>
-            <div class="privacy-subsection">
-                <h4 data-key="privacyS3S1Title"></h4>
-                <p data-key="privacyS3S1P1"></p>
-                <p data-key="privacyS3S1P2"></p>
-                <p data-key="privacyS3S1P3"></p>
-                <p data-key="privacyS3S1P4"></p>
+        <div class="privacy-content-wrapper">
+            <a href="#" class="privacy-close-btn" aria-label="Close privacy policy">×</a>
+            <div class="privacy-content">
+                <h2 data-key="privacyTitle">Polityka Prywatności i Plików Cookies</h2>
+                <p><strong data-key="privacyLastUpdated"></strong></p>
+                
+                <h3 data-key="privacyS1Title"></h3><p data-key="privacyS1P1"></p><p data-key="privacyS1P2"></p>
+                <h3 data-key="privacyS2Title"></h3><p data-key="privacyS2P1"></p><p data-key="privacyS2P2"></p>
+                <ul><li data-key="privacyS2Email"></li><li data-key="privacyS2Phone"></li><li data-key="privacyS2Address"></li></ul>
+                <h3 data-key="privacyS3Title"></h3><p data-key="privacyS3P1"></p>
+                <div class="privacy-subsection">
+                    <h4 data-key="privacyS3S1Title"></h4><p data-key="privacyS3S1P1"></p><p data-key="privacyS3S1P2"></p><p data-key="privacyS3S1P3"></p><p data-key="privacyS3S1P4"></p>
+                </div>
+                <div class="privacy-subsection">
+                    <h4 data-key="privacyS3S2Title"></h4><p data-key="privacyS3S2P1"></p><p data-key="privacyS3S2P2"></p><p data-key="privacyS3S2P3"></p><p data-key="privacyS3S2P4"></p><p data-key="privacyS3S2P5"></p>
+                </div>
+                <h3 data-key="privacyS4Title"></h3><p data-key="privacyS4P1"></p><p data-key="privacyS4P2"></p>
+                <ul><li data-key="privacyS4R1"></li><li data-key="privacyS4R2"></li><li data-key="privacyS4R3"></li></ul><p data-key="privacyS4P3"></p>
+                <h3 data-key="privacyS5Title"></h3><p data-key="privacyS5P1"></p>
+                <ul><li data-key="privacyS5R1"></li><li data-key="privacyS5R2"></li><li data-key="privacyS5R3"></li><li data-key="privacyS5R4"></li><li data-key="privacyS5R5"></li><li data-key="privacyS5R6"></li><li data-key="privacyS5R7"></li><li data-key="privacyS5R8"></li></ul><p data-key="privacyS5P2"></p>
+                <h3 data-key="privacyS6Title"></h3><p data-key="privacyS6P1"></p><p data-key="privacyS6P2"></p><p data-key="privacyS6P3"></p><p data-key="privacyS6P4"></p><p data-key="privacyS6P5"></p>
+                <h3 data-key="privacyS7Title"></h3><p data-key="privacyS7P1"></p><p data-key="privacyS7P2"></p>
+                <h3 data-key="privacyS8Title"></h3><p data-key="privacyS8P1"></p><p data-key="privacyS8P2"></p><p data-key="privacyS8P3"></p>
             </div>
-            <div class="privacy-subsection">
-                <h4 data-key="privacyS3S2Title"></h4>
-                <p data-key="privacyS3S2P1"></p>
-                <p data-key="privacyS3S2P2"></p>
-                <p data-key="privacyS3S2P3"></p>
-                <p data-key="privacyS3S2P4"></p>
-                <p data-key="privacyS3S2P5"></p>
-            </div>
-
-            <h3 data-key="privacyS4Title">§4 Odbiorcy Danych</h3>
-            <p data-key="privacyS4P1"></p>
-            <p data-key="privacyS4P2"></p>
-            <ul>
-                <li data-key="privacyS4R1"></li>
-                <li data-key="privacyS4R2"></li>
-                <li data-key="privacyS4R3"></li>
-            </ul>
-            <p data-key="privacyS4P3"></p>
-
-            <h3 data-key="privacyS5Title">§5 Prawa Osób, Których Dane Dotyczą</h3>
-            <p data-key="privacyS5P1"></p>
-            <ul>
-                <li data-key="privacyS5R1"></li>
-                <li data-key="privacyS5R2"></li>
-                <li data-key="privacyS5R3"></li>
-                <li data-key="privacyS5R4"></li>
-                <li data-key="privacyS5R5"></li>
-                <li data-key="privacyS5R6"></li>
-                <li data-key="privacyS5R7"></li>
-                <li data-key="privacyS5R8"></li>
-            </ul>
-            <p data-key="privacyS5P2"></p>
-
-            <h3 data-key="privacyS6Title">§6 Pliki Cookies</h3>
-            <p data-key="privacyS6P1"></p>
-            <p data-key="privacyS6P2"></p>
-            <p data-key="privacyS6P3"></p>
-            <p data-key="privacyS6P4"></p>
-            <p data-key="privacyS6P5"></p>
-
-            <h3 data-key="privacyS7Title">§7 Przekazywanie Danych Poza Europejski Obszar Gospodarczy (EOG)</h3>
-            <p data-key="privacyS7P1"></p>
-            <p data-key="privacyS7P2"></p>
-
-            <h3 data-key="privacyS8Title">§8 Postanowienia Końcowe</h3>
-            <p data-key="privacyS8P1"></p>
-            <p data-key="privacyS8P2"></p>
-            <p data-key="privacyS8P3"></p>
         </div>
     </div>
     
