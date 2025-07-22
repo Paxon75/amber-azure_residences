@@ -85,13 +85,8 @@
                             </div>
                             <div class="thumbnail-scroll-wrapper">
                                 <button class="scroll-arrow left" aria-label="Previous image">&lt;</button>
-                                <div class="thumbnail-scroll-container">
-                                    <div class="thumbnail-item active-thumb" data-image="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"><img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Miniatura salonu"></div>
-                                    <div class="thumbnail-item" data-image="https://images.pexels.com/photos/6492397/pexels-photo-6492397.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"><img src="https://images.pexels.com/photos/6492397/pexels-photo-6492397.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Miniatura sypialni"></div>
-                                    <div class="thumbnail-item" data-image="https://images.pexels.com/photos/6585620/pexels-photo-6585620.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"><img src="https://images.pexels.com/photos/6585620/pexels-photo-6585620.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Miniatura aneksu kuchennego"></div>
-                                    <div class="thumbnail-item" data-image="https://images.pexels.com/photos/6434623/pexels-photo-6434623.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"><img src="https://images.pexels.com/photos/6434623/pexels-photo-6434623.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Miniatura łazienki"></div>
-                                    <div class="thumbnail-item" data-image="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"><img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Miniatura części jadalnianej"></div>
-                                    <div class="thumbnail-item" data-image="https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"><img src="https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=150&h=100" alt="Miniatura tarasu z widokiem na las"></div>
+                                <div class="thumbnail-scroll-container" id="azure-thumbnails-container">
+                                    <!-- Miniaturki będą generowane dynamicznie przez JavaScript -->
                                 </div>
                                 <button class="scroll-arrow right" aria-label="Next image">&gt;</button>
                             </div>
@@ -305,6 +300,37 @@
                 </div>
             </div>
         </section>
+
+        <!-- Panel Administratora - ukryty domyślnie -->
+        <section id="admin-panel" class="hidden">
+            <div class="container">
+                <h2>Panel Administratora Galerii</h2>
+                <div class="admin-gallery-manager">
+                    <h3>Zarządzaj galerią Apartamentu Azure</h3>
+                    <div class="add-photo-form">
+                        <h4>Dodaj nowe zdjęcie</h4>
+                        <div class="form-group">
+                            <label for="photo-url">URL zdjęcia:</label>
+                            <input type="text" id="photo-url" placeholder="https://example.com/image.jpg">
+                        </div>
+                         <div class="form-group">
+                            <label for="photo-alt">Opis zdjęcia (tekst alternatywny):</label>
+                            <input type="text" id="photo-alt" placeholder="Elegancki salon z widokiem na las">
+                        </div>
+                        <button id="add-photo-btn" class="admin-btn">Dodaj Zdjęcie</button>
+                    </div>
+
+                    <div class="photo-previews">
+                        <h4>Obecne zdjęcia (przeciągnij, aby zmienić kolejność):</h4>
+                        <div id="azure-admin-previews" class="admin-previews-container">
+                            <!-- Podglądy zdjęć będą generowane przez JavaScript -->
+                        </div>
+                    </div>
+                    <button id="save-gallery-btn" class="admin-btn save-btn">Zapisz Zmiany w Galerii</button>
+                </div>
+            </div>
+        </section>
+
     </main>
     
     <div class="floating-cta">
