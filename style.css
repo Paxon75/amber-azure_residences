@@ -95,7 +95,7 @@ section {
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(240, 242, 245, 0.9);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -298,8 +298,8 @@ section {
 
 /* --- Stopka --- */
 footer { background-color: var(--color-dark-blue); color: var(--color-text-medium); padding: 2rem 1.5rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
-footer a { color: var(--color-amber); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
+footer .privacy-link { color: var(--color-amber); text-decoration: none; }
+footer .privacy-link:hover { text-decoration: underline; }
 
 /* --- Pływający przycisk CTA --- */
 .floating-cta { position: fixed; bottom: 2rem; right: 2rem; z-index: 1010; }
@@ -350,11 +350,32 @@ input:checked + .slider:before { transform: translateX(20px); }
 .privacy-content h4 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-family: var(--font-primary); }
 .privacy-content ul { padding-left: 2rem; margin-top: 1rem; }
 
+/* --- Panel Administratora --- */
+#admin-panel { background-color: var(--color-dark-blue); color: var(--color-white); }
+#admin-panel h2, #admin-panel h3, #admin-panel h4 { color: var(--color-white); }
+.admin-gallery-manager { background-color: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: var(--radius); }
+.add-photo-form { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+.form-group input { width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--color-text-medium); background-color: #2c3e50; color: var(--color-white); font-size: 1rem; }
+.admin-btn { background-color: var(--color-azure); color: var(--color-white); border: none; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 700; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; }
+.admin-btn:hover { background-color: #0056b3; }
+.admin-btn.save-btn { background-color: var(--color-amber); color: var(--color-dark-blue); margin-top: 2rem; width: 100%; }
+.admin-btn.save-btn:hover { background-color: #ffca28; }
+
+.admin-previews-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
+.admin-preview-item { position: relative; background-color: #2c3e50; border-radius: var(--radius); overflow: hidden; cursor: grab; }
+.admin-preview-item.dragging { opacity: 0.5; }
+.admin-preview-item img { width: 100%; height: 100px; object-fit: cover; }
+.admin-preview-item .delete-btn { position: absolute; top: 5px; right: 5px; background-color: rgba(220, 53, 69, 0.8); color: white; border: none; width: 25px; height: 25px; border-radius: 50%; cursor: pointer; font-weight: bold; line-height: 25px; text-align: center; }
+.hidden { display: none !important; }
+
 /* --- POPRAWKI MOBILNE --- */
 @media (max-width: 767px) {
     .container { padding-left: 1rem; padding-right: 1rem; }
+    .nav-container { padding-left: 1.5rem; padding-right: 1.5rem; }
     section { padding: 3rem 0; }
-    .logo { font-size: 1.2rem; }
+    .logo { font-size: 1.1rem; }
     .header-controls { gap: 1rem; }
     .language-switcher img { width: 24px; height: 24px; }
     .suite-body { grid-template-columns: 1fr; }
