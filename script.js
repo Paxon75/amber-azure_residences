@@ -684,8 +684,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!mainImage || !thumbnailsContainer || thumbnails.length === 0) return;
 
+        // Click to change image
         thumbnails.forEach(thumb => {
-            thumb.addEventListener('click', function() {
+            thumb.addEventListener('click', function(e) {
+                // Prevent drag from triggering click
+                if(thumbnailsContainer.dataset.dragged === 'true') {
+                    e.preventDefault();
+                    return;
+                }
                 const newImageSrc = this.dataset.image;
                 thumbnails.forEach(t => t.classList.remove('active-thumb'));
                 this.classList.add('active-thumb');
@@ -698,10 +704,49 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        // Arrow button scrolling
         if (scrollLeftBtn && scrollRightBtn) {
             scrollLeftBtn.addEventListener('click', () => thumbnailsContainer.scrollBy({ left: -200, behavior: 'smooth' }));
             scrollRightBtn.addEventListener('click', () => thumbnailsContainer.scrollBy({ left: 200, behavior: 'smooth' }));
         }
+
+        // Touch and mouse drag scrolling
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        thumbnailsContainer.addEventListener('mousedown', (e) => {
+            isDown = true;
+            thumbnailsContainer.classList.add('grabbing');
+            startX = e.pageX - thumbnailsContainer.offsetLeft;
+            scrollLeft = thumbnailsContainer.scrollLeft;
+            thumbnailsContainer.dataset.dragged = 'false';
+        });
+
+        thumbnailsContainer.addEventListener('mouseleave', () => {
+            isDown = false;
+            thumbnailsContainer.classList.remove('grabbing');
+        });
+
+        thumbnailsContainer.addEventListener('mouseup', () => {
+            isDown = false;
+            thumbnailsContainer.classList.remove('grabbing');
+            // Use a timeout to reset dragged state, allowing click to process
+            setTimeout(() => {
+                thumbnailsContainer.dataset.dragged = 'false';
+            }, 0);
+        });
+
+        thumbnailsContainer.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - thumbnailsContainer.offsetLeft;
+            const walk = (x - startX) * 2; //scroll-fast
+            if (Math.abs(walk) > 10) { // Threshold to detect drag
+                 thumbnailsContainer.dataset.dragged = 'true';
+            }
+            thumbnailsContainer.scrollLeft = scrollLeft - walk;
+        });
     }
 
     // === Logika Pływającego Przycisku CTA ===
